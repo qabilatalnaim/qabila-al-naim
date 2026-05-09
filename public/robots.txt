@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://6bh9h38c0ivq.space.minimax.io/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow unnecessary files
+Disallow: /assets/
+Disallow: /images/
