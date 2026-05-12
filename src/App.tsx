@@ -174,10 +174,10 @@ function App() {
   }
 
   const stats = [
-    { number: 563, label: 'مشترك على يوتيوب', suffix: '+' },
+    { number: 591, label: 'مشترك على يوتيوب', suffix: '' },
     { number: 103, label: 'متابع على فيسبوك', suffix: 'K' },
     { number: 150, label: 'ألف مشاهدة', suffix: 'K+' },
-    { number: 153, label: 'فيديو توثيقي', suffix: '+' },
+    { number: 164, label: 'فيديو توثيقي', suffix: '' },
   ]
 
   const featuredVideo = {
