@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://6bh9h38c0ivq.space.minimax.io/sitemap.xml
+Sitemap: https://qabilat-al-naim.netlify.app/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
@@ -11,3 +11,7 @@ Crawl-delay: 1
 # Disallow unnecessary files
 Disallow: /assets/
 Disallow: /images/
+
+# Allow important resources
+Allow: /images/logo.png
+Allow: /images/banner.jpg

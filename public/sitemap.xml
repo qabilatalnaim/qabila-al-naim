@@ -4,54 +4,81 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://6bh9h38c0ivq.space.minimax.io/</loc>
-    <lastmod>2026-04-04</lastmod>
+    <loc>https://qabilat-al-naim.netlify.app/</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://6bh9h38c0ivq.space.minimax.io/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.netlify.app/"/>
     <image:image>
-      <image:loc>https://6bh9h38c0ivq.space.minimax.io/images/logo.png</image:loc>
-      <image:title>شعار قبيلة السادة النعيم</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://6bh9h38c0ivq.space.minimax.io/images/banner.jpg</image:loc>
-      <image:title>بيرق قبيلة السادة النعيم</image:title>
+      <image:loc>https://qabilat-al-naim.netlify.app/images/logo.png</image:loc>
+      <image:title>قبيلة السادة النعيم - Al-Naim Tribe</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://6bh9h38c0ivq.space.minimax.io/#about</loc>
-    <lastmod>2026-04-04</lastmod>
+    <loc>https://qabilat-al-naim.netlify.app/history</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.netlify.app/history"/>
   </url>
 
   <url>
-    <loc>https://6bh9h38c0ivq.space.minimax.io/#content</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://6bh9h38c0ivq.space.minimax.io/#videos</loc>
-    <lastmod>2026-04-04</lastmod>
+    <loc>https://qabilat-al-naim.netlify.app/camels</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.netlify.app/camels"/>
   </url>
 
   <url>
-    <loc>https://6bh9h38c0ivq.space.minimax.io/#council</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://qabilat-al-naim.netlify.app/sheep</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.netlify.app/sheep"/>
   </url>
 
   <url>
-    <loc>https://6bh9h38c0ivq.space.minimax.io/#contact</loc>
-    <lastmod>2026-04-04</lastmod>
+    <loc>https://qabilat-al-naim.netlify.app/horses</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://qabilat-al-naim.netlify.app/poetry</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://qabilat-al-naim.netlify.app/coffee</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://qabilat-al-naim.netlify.app/tent</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://qabilat-al-naim.netlify.app/traditions</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://qabilat-al-naim.netlify.app/wasm</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
