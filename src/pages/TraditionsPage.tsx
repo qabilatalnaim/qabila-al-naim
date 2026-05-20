@@ -71,7 +71,7 @@ export default function TraditionsPage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">التراث البدوي الأصيل</h3>
-                <p className="text-cyan-200">من أعرق Traditions في الجزيرة العربية وبلاد الشام</p>
+                <p className="text-cyan-200">من أعرق العادات في الجزيرة العربية وبلاد الشام</p>
               </div>
             </div>
           </div>
