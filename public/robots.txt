@@ -10,8 +10,3 @@ Crawl-delay: 1
 
 # Disallow unnecessary files
 Disallow: /assets/
-Disallow: /images/
-
-# Allow important resources
-Allow: /images/logo.png
-Allow: /images/banner.jpg
