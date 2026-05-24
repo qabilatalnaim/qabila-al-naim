@@ -180,7 +180,7 @@ function HistoryPage() {
             </div>
             <div className="text-gray-300 text-lg leading-loose space-y-6">
               <p>
-                ترجع قبيلة السادة النعيم إلى <span className="text-[#D4AF37] font-bold">السادة آل الرفاعي</span>، فهي قبيلة رفاعية موسوية حسينية.
+                تنتسب قبيلة السادة النعيم إلى <span className="text-[#D4AF37] font-bold">السادة آل الرفاعي</span>، فهي قبيلة رفاعية موسوية حسينية.
               </p>
             </div>
           </div>
