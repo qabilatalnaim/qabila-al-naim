@@ -194,7 +194,7 @@ function HistoryPage() {
               <h2 className="text-3xl font-bold text-white">من هم آل الرفاعي؟</h2>
             </div>
             <div className="text-gray-300 text-lg leading-loose space-y-4">
-              <p>يرجع الرفاعيون إلى رفاعة، واسمه:</p>
+              <p>ينتسب الرفاعيون إلى رفاعة، واسمه:</p>
               <div className="bg-[#D4AF37]/10 rounded-2xl p-6 border border-[#D4AF37]/20">
                 <div className="space-y-2">
                   {[
