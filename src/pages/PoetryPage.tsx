@@ -172,11 +172,11 @@ export default function PoetryPage() {
             </div>
           </div>
 
-          {/* Featured Verses Section */}
+          {/* Featured Verses Section - New Comprehensive Poetry */}
           <div className="bg-gradient-to-br from-[#0a1628] to-[#1a1520] rounded-3xl p-10 border border-rose-600/30 mb-12">
             <h4 className="text-xl font-bold text-rose-400 mb-8 flex items-center gap-3">
               <span className="text-2xl">🏆</span>
-              <span>من أبيات الفخر التي تعبّر عن روح القبيلة وعراقتها</span>
+              <span>قصيدة أهل الطيب - من أعظم قصائد الفخر النبطي</span>
             </h4>
 
             {/* Main Verses Card */}
@@ -188,65 +188,156 @@ export default function PoetryPage() {
               {/* Verse 1 */}
               <div className="mb-8 pb-8 border-b border-rose-600/30">
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  حنّا عيال النعيم أهل الوفا والطيب
+                  حنّا هل الطيب لا ضاقت على الناس الأيام
                 </p>
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  ساس المراجل إلى ضاقت على رجالها
+                  نرخص غوالي العمر دون الوجيه الطيّبة
                 </p>
                 <p className="text-rose-400 text-center text-sm mt-4">
-                  ✨ أبيات تعبّر عن أصالة النعيم وكرم أهله
+                  ✨ البيت الأول: يرمز إلى كرم النعيم وتفانيهم حتى في أصعب الأوقات
                 </p>
               </div>
 
               {/* Verse 2 */}
               <div className="mb-8 pb-8 border-b border-rose-600/30">
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  أهل الكرم لا لفى الضيف الغريب القريب
+                  سادات فعلٍ على العليا تروّضها الأقدام
                 </p>
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  تُفرش له القلوب قبل تُمدّ فنجالها
+                  ما هي بلبس البشوت ولا حكي به هيبة
                 </p>
                 <p className="text-rose-400 text-center text-sm mt-4">
-                  ✨ رمز الكرم العربي والضيافة الأصيلة
+                  ✨ البيت الثاني: يصف سؤدد الأفعال لا الأقاويل، والهيبة بالفعال لا بالملبس
                 </p>
               </div>
 
               {/* Verse 3 */}
               <div className="mb-8 pb-8 border-b border-rose-600/30">
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  حنّا هل الصفرا أهل العز والتجريب
+                  حنّا عيال النعيم أهل المواقف والإقدام
                 </p>
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  كم موقفٍ يشهد التاريخ بأفعالها
+                  إلى دعا داعي الوفا نلحق دروب الصعيبة
                 </p>
                 <p className="text-rose-400 text-center text-sm mt-4">
-                  ✨ شاهدة على عزة القبيلة ومواقفها المشرفة
+                  ✨ البيت الثالث: وصف أهل النخوة والاقدام عند دعوة الوفاء
                 </p>
               </div>
 
               {/* Verse 4 */}
               <div className="mb-8 pb-8 border-b border-rose-600/30">
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  ما هزّنا وقت ولا مالت بنا الأساليب
+                  أهل الكرم والجود من سالف الوقت لأعوام
                 </p>
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  نبقى على الطيب ما دامت رجالها
+                  تُعرف منافعنا قبل تُعرف أسامينا القريبة
                 </p>
                 <p className="text-rose-400 text-center text-sm mt-4">
-                  ✨ رمز الثبات والوفاء على المبادئ
+                  ✨ البيت الرابع: منافعهم معروفة قبل أسماءقبهم، والكرم والجود متجذر فيهم
                 </p>
               </div>
 
-              {/* Final Verse */}
-              <div>
+              {/* Verse 5 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  لنا من البيد تاريخٍ يشرف الطيبين
+                  حنّا هل الصفرا إلى هبّت هبوب الأوهام
                 </p>
                 <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
-                  ولنا من المجد ذكرٍ ما تغيّبه السنين
+                  تبقى معاني الوفا بصدورنا ما تغيبة
                 </p>
                 <p className="text-rose-400 text-center text-sm mt-4">
-                  ✨ توثيق للمجد والتاريخ العريق
+                  ✨ البيت الخامس: ذكر النخوة "أهل الصفرا" والوفاء راسخ في الصدور
+                </p>
+              </div>
+
+              {/* Verse 6 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  لنا من البيد تاريخٍ ومن الطيب وسام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  ولنا مع العزوة مواقف تشهد القريبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ البيت السادس: تاريخ من البيد والشرف، ومواقف مع العزوة شاهدة
+                </p>
+              </div>
+
+              {/* Verse 7 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  نرعى الوفا مثل ما تُرعى مطاليع الأنعام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  نصون حق الجار لو جتنا الليالي الكئيبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ البيت السابع: حفظ الوفاء وصون حق الجار في الليالي الصعبة
+                </p>
+              </div>
+
+              {/* Verse 8 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  ساس العرب من قديم الوقت لين اليوم ما ضام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  نبني على الطيب مجدٍ ما تهزّه مصيبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ البيت الثامن:ساس العرب بالطيب، والمجد مبني على أساس ثابت
+                </p>
+              </div>
+
+              {/* Verse 9 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  حنّا هل العادات وأهل الشهامة والإحشام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  لا جا نهار اللزوم تبان فعول النجيبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ البيت التاسع: أهل العادات والشهامة والاحشام، فعولهم نجيبة عند اللزوم
+                </p>
+              </div>
+
+              {/* Verse 10 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  من دارنا يطلع الطيب وتتعطّر به الشام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  ومن فعلنا تنكتب سيرة رجالٍ مهيبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ البيت العاشر: الطيب يملأ الشام، وسيرتهم مكتوبة بالهيبة
+                </p>
+              </div>
+
+              {/* Verse 11 */}
+              <div className="mb-8 pb-8 border-b border-rose-600/30">
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  ما ننثني دون حق ولا نهاب الخصام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  واللي يجي دارنا يلقى المراجل رحيبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ البيت الحادي عشر: لا人员进行退缩 دون حق، وضيوفهم يلقون الترحيب
+                </p>
+              </div>
+
+              {/* Final Verse - Closing */}
+              <div>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  يبقى النعيم بعزّه ما تغيّره الأعوام
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-4 text-center font-medium">
+                  قبيلةٍ بالمجد والتاريخ دومٍ قريبة
+                </p>
+                <p className="text-rose-400 text-center text-sm mt-4">
+                  ✨ الختام: النعيم باقٍ بعزه عبر الأعوام، قريبون من المجد والتاريخ
                 </p>
               </div>
             </div>
