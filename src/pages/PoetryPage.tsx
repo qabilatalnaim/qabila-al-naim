@@ -343,6 +343,125 @@ export default function PoetryPage() {
             </div>
           </div>
 
+          {/* ملحمة النعيم - Malhama Section */}
+          <div className="bg-gradient-to-br from-[#1a1520] to-[#0a1628] rounded-3xl p-8 md:p-12 border border-rose-600/30 mb-12">
+            <div className="text-center mb-8">
+              <span className="text-4xl mb-4 block">📜</span>
+              <h2 className="text-3xl font-bold text-rose-400 mb-2">ملحمة النعيم</h2>
+              <p className="text-gray-400">منظومة شعرية في تاريخ قبيلة السادة النعيم وعزتها</p>
+            </div>
+
+            <section className="poem space-y-8">
+              {/* Opening */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-rose-400 mb-4">✦ الافتتاح المبارك ✦</h3>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  بِسْمِ الإله الواحد الديّـان ✦✦✦ ربّ العباد ومنزِّل الفرقـان
+                </p>
+                <p className="text-gray-200 text-xl leading-loose">
+                  ثمّ الصلاة على النبي العدنان ✦✦✦ محمدٍ نور الهدى والبيان
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 my-6">
+                <div className="h-px bg-gradient-to-r from-transparent to-rose-600/50 flex-1"></div>
+                <span className="text-rose-400">❈ ✦ ❈ ✦ ❈</span>
+                <div className="h-px bg-gradient-to-l from-transparent to-rose-600/50 flex-1"></div>
+              </div>
+
+              {/* راية آل البيت */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-rose-400 mb-4">✦ راية آل البيت ✦</h3>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  جدّنا عليّ الكرّار يوم الطعان ✦✦✦ سيفه على روس العدا ما يلان
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  باب خيبر درع بيمناه القويّه ✦✦✦ يكسر جموع البأس كسر المنيّه
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  فاطمة تاجٍ فوق روس البريّه ✦✦✦ من نسلها ورثنا العلا والحمِيّه
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  حسنٍ وحسينٍ رايات حقٍ رضيّه ✦✦✦ فعولهم بالمواقف مثل برقٍ بسريّه
+                </p>
+                <p className="text-gray-200 text-xl leading-loose">
+                  من بني هاشم لنا ساس مجدٍ ✦✦✦ راسخٍ رسوخ الجبال الشامخات
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 my-6">
+                <div className="h-px bg-gradient-to-r from-transparent to-rose-600/50 flex-1"></div>
+                <span className="text-rose-400">❈ ✦ ❈ ✦ ❈</span>
+                <div className="h-px bg-gradient-to-l from-transparent to-rose-600/50 flex-1"></div>
+              </div>
+
+              {/* عزّ النعيم */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-rose-400 mb-4">✦ عزّ النعيم ✦</h3>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  عزّ الدين أرضٍ جذورها بالدم مرويّه ✦✦✦ عاصمة النعيم دارٍ على الضيم عصيّه
+                </p>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  دار النعيم اللي تعزّ المراجل ✦✦✦ لا ثار نقع الحرب بان الشجعان
+                </p>
+                <p className="text-gray-200 text-xl leading-loose">
+                  ما نحني الراس من جور الليالي العتيّه ✦✦✦ تشهد لنا الأيام بكل صبحٍ وعشيّه
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 my-6">
+                <div className="h-px bg-gradient-to-r from-transparent to-rose-600/50 flex-1"></div>
+                <span className="text-rose-400">❈ ✦ ❈ ✦ ❈</span>
+                <div className="h-px bg-gradient-to-l from-transparent to-rose-600/50 flex-1"></div>
+              </div>
+
+              {/* صهيل الوغى */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-rose-400 mb-4">✦ صهيل الوغى ✦</h3>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  صهيل خيلٍ فوق نقع المعارك ✦✦✦ يهزّ دجى ليل الوغى والسنان
+                </p>
+                <p className="text-gray-200 text-xl leading-loose">
+                  برق المنايا يوم هزّ الطعان ✦✦✦ يخلي دجى ليل الوغى كالنهار
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 my-6">
+                <div className="h-px bg-gradient-to-r from-transparent to-rose-600/50 flex-1"></div>
+                <span className="text-rose-400">❈ ✦ ❈ ✦ ❈</span>
+                <div className="h-px bg-gradient-to-l from-transparent to-rose-600/50 flex-1"></div>
+              </div>
+
+              {/* أثر الهجن */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-rose-400 mb-4">✦ أثر الهجن ✦</h3>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  أخفاف الهجن لا دارت رحاها ✦✦✦ ترسم على وجه الصخا عنوان
+                </p>
+                <p className="text-gray-200 text-xl leading-loose">
+                  تسبق هبوب الريح لا ثار عجاجـها ✦✦✦ كأن الصحارى من خطاها بركان
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 my-6">
+                <div className="h-px bg-gradient-to-r from-transparent to-rose-600/50 flex-1"></div>
+                <span className="text-rose-400">❈ ✦ ❈ ✦ ❈</span>
+                <div className="h-px bg-gradient-to-l from-transparent to-rose-600/50 flex-1"></div>
+              </div>
+
+              {/* يوم الهيّه */}
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-rose-400 mb-4">✦ يوم الهيّه ✦</h3>
+                <p className="text-gray-200 text-xl leading-loose mb-2">
+                  أهل الصفرة ليا دعا داعي الهيّه ✦✦✦ تلقاهم أول من يلبّي الحميّه
+                </p>
+                <p className="text-gray-200 text-xl leading-loose">
+                  حنّا نعيم الفخر لا هبّت الهيّه ✦✦✦ نرسي كما ترسي الرواسي القويّه
+                </p>
+              </div>
+            </section>
+          </div>
+
           {/* Final Paragraph */}
           <div className="bg-gradient-to-r from-rose-900/30 to-rose-800/30 rounded-3xl p-10 border border-rose-600/30 mb-12">
             <div className="flex items-start gap-6">
