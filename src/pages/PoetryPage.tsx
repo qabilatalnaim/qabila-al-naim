@@ -361,6 +361,11 @@ export default function PoetryPage() {
                 <p className="text-gray-200 text-xl leading-loose">
                   ثمّ الصلاة على النبي العدنان ✦✦✦ محمدٍ نور الهدى والبيان
                 </p>
+                <div className="bg-rose-900/20 rounded-xl p-6 mt-6 border border-rose-600/20">
+                  <p className="text-rose-300 text-base leading-relaxed">
+                    تُستهل هذه الملحمة بكلمات التوحيد والثناء، إذ لا يُرفع بناء المجد إلا على أساس الإيمان، ولا تُروى مآثر الرجال إلا مقرونة بذكر الخالق سبحانه وتعالى والصلاة على خاتم الأنبياء والمرسلين محمد ﷺ، الذي أضاء للناس دروب الهدى والبيان.
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center justify-center gap-4 my-6">
@@ -387,6 +392,11 @@ export default function PoetryPage() {
                 <p className="text-gray-200 text-xl leading-loose">
                   من بني هاشم لنا ساس مجدٍ ✦✦✦ راسخٍ رسوخ الجبال الشامخات
                 </p>
+                <div className="bg-rose-900/20 rounded-xl p-6 mt-6 border border-rose-600/20">
+                  <p className="text-rose-300 text-base leading-relaxed">
+                    في هذا المقطع تستحضر الأبيات الجذور الأصيلة الممتدة إلى آل البيت الأطهار، وتستذكر سيرة الإمام علي الكرّار رضي الله عنه وما عُرف به من شجاعة وبأس وثبات في ميادين الوغى. كما تُبرز مكانة السيدة فاطمة الزهراء رضي الله عنها، وتستحضر رايات الحق التي حملها الحسن والحسين رضي الله عنهما، لتؤكد أن المجد الراسخ لا يقوم إلا على أصل كريم وموروث عريق تضرب جذوره في أعماق التاريخ.
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center justify-center gap-4 my-6">
@@ -407,6 +417,11 @@ export default function PoetryPage() {
                 <p className="text-gray-200 text-xl leading-loose">
                   ما نحني الراس من جور الليالي العتيّه ✦✦✦ تشهد لنا الأيام بكل صبحٍ وعشيّه
                 </p>
+                <div className="bg-rose-900/20 rounded-xl p-6 mt-6 border border-rose-600/20">
+                  <p className="text-rose-300 text-base leading-relaxed">
+                    يرسم هذا المقطع صورةً للفخر والاعتزاز بأرض النعيم وأهلها، تلك الأرض التي ارتوت صفحات تاريخها بالتضحيات والمواقف المشرفة، وظلت عصية على الذل والانكسار. وهو وصف يجسد ما عُرف به أبناء النعيم من تمسك بالعزة والكرامة، وثبات أمام الشدائد، حتى أصبحت مواقفهم شاهداً على أصالة معدنهم وقوة بأسهم عبر الأزمان.
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center justify-center gap-4 my-6">
@@ -424,6 +439,11 @@ export default function PoetryPage() {
                 <p className="text-gray-200 text-xl leading-loose">
                   برق المنايا يوم هزّ الطعان ✦✦✦ يخلي دجى ليل الوغى كالنهار
                 </p>
+                <div className="bg-rose-900/20 rounded-xl p-6 mt-6 border border-rose-600/20">
+                  <p className="text-rose-300 text-base leading-relaxed">
+                    هنا تنتقل الأبيات إلى مشهد من مشاهد البطولة والفروسية، حيث يتعالى صهيل الخيل فوق غبار المعارك، وتلوح في الأفق صور الشجاعة والإقدام. ويعكس هذا الوصف المكانة التي احتلتها الفروسية في حياة العرب، وما تمثله من رمز للعزة والقوة والقدرة على مواجهة الأخطار بثبات لا يعرف التراجع.
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center justify-center gap-4 my-6">
@@ -441,6 +461,11 @@ export default function PoetryPage() {
                 <p className="text-gray-200 text-xl leading-loose">
                   تسبق هبوب الريح لا ثار عجاجـها ✦✦✦ كأن الصحارى من خطاها بركان
                 </p>
+                <div className="bg-rose-900/20 rounded-xl p-6 mt-6 border border-rose-600/20">
+                  <p className="text-rose-300 text-base leading-relaxed">
+                    تستحضر هذه الأبيات مشهد الهجن وهي تشق الفيافي والصحارى بخفة وسرعة، تاركةً آثارها شاهدة على أصالة الحياة البدوية وارتباط الإنسان بأرضه وبيئته. فالهجن كانت ولا تزال رمزاً للصبر والتحمل والقدرة على اجتياز المسافات، وحاضرةً في ذاكرة البادية بوصفها عنواناً للمجد والترحال والنجاة.
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center justify-center gap-4 my-6">
@@ -458,8 +483,22 @@ export default function PoetryPage() {
                 <p className="text-gray-200 text-xl leading-loose">
                   حنّا نعيم الفخر لا هبّت الهيّه ✦✦✦ نرسي كما ترسي الرواسي القويّه
                 </p>
+                <div className="bg-rose-900/20 rounded-xl p-6 mt-6 border border-rose-600/20">
+                  <p className="text-rose-300 text-base leading-relaxed">
+                    يختتم هذا النص بمشهد يجسد قيم النخوة والفزعة التي اشتهر بها أبناء النعيم، حيث يتقدمون الصفوف كلما نادى المنادي واستدعت المواقف حضور الرجال. وتؤكد الأبيات أن الثبات على المبدأ والوقوف إلى جانب الأهل والعشيرة من الصفات الراسخة التي تناقلتها الأجيال، حتى أصبحت جزءاً من هوية القبيلة وسيرتها المشهودة بين القبائل.
+                  </p>
+                </div>
               </div>
             </section>
+
+            {/* Closing Note */}
+            <div className="mt-8 text-center">
+              <div className="bg-rose-900/30 rounded-2xl p-8 border border-rose-600/30">
+                <p className="text-rose-300 text-lg leading-relaxed">
+                  وتبقى هذه الأبيات شاهداً على ما تحمله قبيلة النعيم من إرثٍ عربي أصيل، وقيمٍ متوارثة من الشجاعة والوفاء والكرم والاعتزاز بالجذور، لتبقى صفحات التاريخ شاهدة على مآثر الرجال ومواقفهم التي تتناقلها الأجيال جيلاً بعد جيل.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Final Paragraph */}
