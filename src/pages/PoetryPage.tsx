@@ -439,10 +439,10 @@ export default function PoetryPage() {
                   </p>
                 </div>
                 <p className="text-gray-200 text-xl leading-loose mb-2">
-                  صهيل خيلٍ فوق نقع المعارك ✦✦✦ يهزّ دجى ليل الوغى والسنان
+                  صهيل خيلٍ فوق نقع المعارك ✦✦✦ يدوّي صليل الوطني وحدّ السنان
                 </p>
                 <p className="text-gray-200 text-xl leading-loose">
-                  برق المنايا يوم هزّ الطعان ✦✦✦ يخلي دجى ليل الوغى كالنهار
+                  برق المنايا يوم هزّ الطعان ✦✦✦ يخلّي ظلام الحرب مثل النهار
                 </p>
               </div>
 
