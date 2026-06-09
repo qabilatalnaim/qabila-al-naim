@@ -411,86 +411,196 @@ function App() {
                 </div>
 
                 <div className="bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-3xl p-10 md:p-14 border border-[#D4AF37]/30">
-                  <div className="text-gray-200 text-lg leading-loose space-y-6">
-                    {/* نبذة القبيلة - النص الجديد */}
+                  <div className="text-gray-200 text-lg leading-loose space-y-8">
+
+                    {/* النص الرئيسي للنبذة */}
                     <div className="bg-gradient-to-l from-[#D4AF37]/10 to-transparent p-6 rounded-r-2xl border-r-4 border-[#D4AF37]">
-                      <p className="text-xl font-semibold text-[#D4AF37]">
-                        قبيلة السادة النعيم
+                      <p className="text-gray-200 leading-relaxed">
+                        تُعدّ قبيلة السادة النعيم من القبائل العربية العريقة التي رسخت حضورها في بلاد الشام عبر أجيال متعاقبة، وحافظت على مكانتها المرموقة بين القبائل العربية بما تمتلكه من إرثٍ اجتماعي وتاريخي أصيل. وقد عُرف أبناء القبيلة بالسيادة والوجاهة والتمسك بالقيم العربية النبيلة، فكان لهم دورٌ بارز في تعزيز أواصر التآلف والتكافل الاجتماعي، والإسهام في مساعي الصلح والإصلاح، والمحافظة على الأعراف العربية الأصيلة التي شكّلت جزءًا من هويتهم المتوارثة.
                       </p>
-                      <p className="mt-3 leading-relaxed">
-                        من القبائل العربية العريقة ذات الجذور الهاشمية الشريفة، تمتد في عمق التاريخ العربي،
-                        وكان لها حضورٌ راسخ في بلاد الشام عبر العصور.
+                      <p className="text-gray-200 leading-relaxed mt-4">
+                        كما مثّلت القبيلة عبر تاريخها نموذجًا للتلاحم الاجتماعي ووحدة الانتماء، وظلت روابط القربى والتعاون بين أبنائها من أبرز السمات التي حافظت على تماسكها واستمرار حضورها بين القبائل العربية.
                       </p>
                     </div>
 
+                    {/* أبيات الشعر */}
+                    <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
+                      <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
+                      <p className="text-white text-xl leading-relaxed">يا دار النعيمِ بالمكارم مهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">دارٍ لها بين القبايل قدرٍ وهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">قبيلةٍ لها بين العرب عزٍّ وطيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">مثل الجبال الراسيات الرهيبـه</p>
+                      <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
+                    </div>
+
+                    {/* المكانة والقيادة */}
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                         <span className="text-2xl">👑</span>
                       </div>
                       <div>
-                        <p className="font-bold text-white text-lg">المكانة والقيادة</p>
-                        <p className="text-gray-300 mt-1">
-                          عُرفت بمكانتها الاجتماعية الرفيعة ودورها البارز في الإصلاح والقيادة بين القبائل العربية.
+                        <h3 className="font-bold text-white text-xl mb-2">المكانة والقيادة</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          احتلت قبيلة النعيم مكانة رفيعة بين القبائل العربية، مستندةً إلى ما عُرف عن شيوخها ووجهائها من حكمةٍ وسداد رأي وحسن تدبير. وقد كانت مجالسهم عبر السنين محافل للمشورة وملتقى لأهل الرأي، يسعون من خلالها إلى إصلاح ذات البين وترسيخ قيم العدل والتسامح والتوافق الاجتماعي.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed mt-3">
+                          ولم تقتصر مكانة القيادة على الوجاهة الاجتماعية فحسب، بل ارتبطت بمسؤولية الحفاظ على وحدة الصف وخدمة أبناء القبيلة والوقوف إلى جانب المحتاج والمظلوم، وهي قيم ظلت حاضرة في الذاكرة الجمعية للقبيلة جيلاً بعد جيل.
                         </p>
                       </div>
                     </div>
 
+                    {/* أبيات المكانة */}
+                    <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
+                      <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
+                      <p className="text-white text-xl leading-relaxed">شيخٍ تشدّ له المواقف العصيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">لا قال بالحقّ يحسم بهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">حسـامٍ ليا شبّت النار اللهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">يشهد له التاريخ بفعالٍ رهيبـه</p>
+                      <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
+                    </div>
+
+                    {/* القيم العربية */}
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                         <span className="text-2xl">⚔️</span>
                       </div>
                       <div>
-                        <p className="font-bold text-white text-lg">القيم العربية الأصيلة</p>
-                        <p className="text-gray-300 mt-1">
-                          وتميّز أبناؤها بالتمسّك بالقيم العربية الأصيلة من كرمٍ وشهامةٍ ونخوةٍ وحفظٍ للعهود.
+                        <h3 className="font-bold text-white text-xl mb-2">القيم العربية الأصيلة</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          حافظ أبناء النعيم على منظومةٍ راسخة من القيم العربية الأصيلة التي توارثوها عبر الأجيال، فجعلوا الكرم عنوانًا لمجالسهم، والشهامة خُلُقًا لمواقفهم، والنخوة منهجًا يسيرون عليه في مختلف الظروف. كما ظل الوفاء بالعهود وإكرام الضيف وإغاثة الملهوف واحترام الجار من الصفات التي شكّلت جزءًا من الموروث الاجتماعي للقبيلة.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed mt-3">
+                          وقد أسهم هذا الإرث الأخلاقي في ترسيخ مكانة القبيلة وتعزيز روابطها الاجتماعية، لتبقى هذه القيم حاضرة في سلوك أبنائها ومواقفهم وموروثهم الثقافي.
                         </p>
                       </div>
                     </div>
 
+                    {/* أبيات القيم */}
+                    <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
+                      <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
+                      <p className="text-white text-xl leading-relaxed">لنا مع الطيب والمراجل سلايل</p>
+                      <p className="text-white text-xl leading-relaxed">للضيف نرخي واجب الطيب كلّه</p>
+                      <p className="text-white text-xl leading-relaxed">وقت الشدايد ما نهاب المنيّه</p>
+                      <p className="text-white text-xl leading-relaxed">نحمي حِمى روس الطنايا ونجلّه</p>
+                      <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
+                    </div>
+
+                    {/* الجد الجامع */}
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                         <span className="text-2xl">🏠</span>
                       </div>
                       <div>
-                        <p className="font-bold text-white text-lg">الجد المؤسس</p>
-                        <p className="text-gray-300 mt-1">
-                          ويعود نسبها إلى الجدّ الجامع الشيخ عزّ الدين أبو حمرة (أحمد بن نعيم)، وقد سُمّيت بلدة عزّ الدين باسمه تخليدًا لمكانته، وتُعدُّ إحدى أبرز حواضن هذه القبيلة العريقة، حيث تمثل رمزًا حيًا للأصالة والترابط القبلي.
+                        <h3 className="font-bold text-white text-xl mb-2">الجدّ الجامع</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          يُعدّ الشيخ عزّ الدين أبو حمرة (أحمد بن نعيم) الجدّ الجامع لقبيلة النعيم، وأحد أبرز الشخصيات التاريخية المرتبطة بمسيرتها وامتدادها. وقد ارتبط اسمه بمرحلة مهمة من تاريخ القبيلة، وظل حاضرًا في الذاكرة المتوارثة بوصفه رمزًا لوحدة النسب وعمق الجذور والأصالة الممتدة عبر الأجيال.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed mt-3">
+                          كما حملت بلدة عزّ الدين اسمه تخليدًا لذكراه وتقديرًا لمكانته، لتبقى شاهدًا على حضور اسمه في الوجدان الاجتماعي لأبناء القبيلة، وعلى ما يمثله من معاني الانتماء والترابط والاعتزاز بالموروث التاريخي.
                         </p>
                       </div>
                     </div>
 
-                    <div className="bg-[#D4AF37]/10 rounded-2xl p-6 border border-[#D4AF37]/20 mt-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-3xl">🏆</span>
-                        <p className="text-[#D4AF37] font-bold text-xl">شعار القبيلة</p>
+                    {/* أبيات الجد */}
+                    <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
+                      <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
+                      <p className="text-white text-xl leading-relaxed">عزّ الدين شيخٍ له من المجد هيبه</p>
+                      <p className="text-white text-xl leading-relaxed">بنى صروح العزّ والمجد بيده</p>
+                      <p className="text-white text-xl leading-relaxed">أبو حمرة اللي خلّد الطيب ذكره</p>
+                      <p className="text-white text-xl leading-relaxed">تشهد له الدنيا بفعايل حميده</p>
+                      <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
+                    </div>
+
+                    {/* النسب والانتماء */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-2xl">📜</span>
                       </div>
-                      <p className="text-white font-semibold text-lg text-center">
-                        فبقي اسم السادة النعيم عنوانًا للعزّ والسيادة،
+                      <div>
+                        <h3 className="font-bold text-white text-xl mb-2">النسب والانتماء</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          تعتز قبيلة النعيم بأصولها العربية العريقة وبما تحمله من موروثٍ قبلي متجذر، وقد حافظ أبناء القبيلة على روابطهم الأسرية والاجتماعية ووحدة انتمائهم عبر الأجيال، مما أسهم في استمرار تماسك البنية القبلية وتعزيز روح التضامن والتكافل بين أفرادها.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed mt-3">
+                          ويشكّل الاعتزاز بالانتماء والوفاء للموروث أحد الركائز الأساسية التي حافظت على حضور القبيلة ومكانتها في محيطها الاجتماعي عبر مختلف المراحل التاريخية.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* أبيات النسب */}
+                    <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
+                      <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
+                      <p className="text-white text-xl leading-relaxed">حَنّا بني هاشم هل الدين والطيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">أهل الوفا والمجد والسيرة النبيله</p>
+                      <p className="text-white text-xl leading-relaxed">لنا من صميم العرب ساسٍ وقبيله</p>
+                      <p className="text-white text-xl leading-relaxed">ونصون نهج الجدود وعاداتٍ أصيله</p>
+                      <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
+                    </div>
+
+                    {/* الفاصل */}
+                    <div className="text-[#D4AF37] font-bold text-xl text-center">✦ ✦ ✦</div>
+
+                    {/* الانتشار الجغرافي */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-2xl">🌍</span>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-white text-xl mb-2">الانتشار الجغرافي</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          تنتشر عشائر وأفخاذ قبيلة النعيم في عددٍ من مناطق بلاد الشام، حيث أسهم هذا الانتشار في تعزيز حضور القبيلة الاجتماعي وترسيخ روابطها الممتدة بين أبنائها. وعلى الرغم من تباعد أماكن الإقامة وتنوع البيئات، فقد حافظ أبناء القبيلة على وحدة الانتماء والتواصل المستمر، وظلت الروابط الاجتماعية والعائلية عاملًا أساسيًا في توثيق الصلات بينهم.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* الفاصل */}
+                    <div className="text-[#D4AF37] font-bold text-xl text-center">✦ ✦ ✦</div>
+
+                    {/* البطون الكبرى */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 bg-[#D4AF37]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-2xl">🛡️</span>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-white text-xl mb-3">البطون الكبرى لقبيلة النعيم</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          تتألف قبيلة النعيم من أربعة بطون رئيسية شكّلت الأساس التاريخي لتركيبتها القبلية، وتفرعت عنها عشائر وأفخاذ عديدة حافظت على وحدة الانتماء والروابط الاجتماعية المتينة عبر الأجيال، وهي:
+                        </p>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                            <span className="text-[#D4AF37] font-bold">١-</span>
+                            <span className="text-white font-semibold mr-2">الفخر</span>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                            <span className="text-[#D4AF37] font-bold">٢-</span>
+                            <span className="text-white font-semibold mr-2">المحمدية (المحاميد)</span>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                            <span className="text-[#D4AF37] font-bold">٣-</span>
+                            <span className="text-white font-semibold mr-2">الحزومين</span>
+                          </div>
+                          <div className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                            <span className="text-[#D4AF37] font-bold">٤-</span>
+                            <span className="text-white font-semibold mr-2">البو طارق</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* الفاصل */}
+                    <div className="text-[#D4AF37] font-bold text-xl text-center">✦ ✦ ✦</div>
+
+                    {/* الكلمة الختامية */}
+                    <div className="bg-gradient-to-l from-[#D4AF37]/20 to-transparent p-6 rounded-r-2xl border-r-4 border-[#D4AF37]">
+                      <h3 className="font-bold text-[#D4AF37] text-xl mb-3 text-center">✦ كلمة ختامية ✦</h3>
+                      <p className="text-gray-200 leading-relaxed">
+                        وتبقى قبيلة السادة النعيم صفحةً مشرقة في سجل القبائل العربية الأصيلة، بما تحمله من إرثٍ تاريخي واجتماعي وثقافي عريق. وقد حافظ أبناؤها على قيم الكرم والشهامة والوفاء والتكاتف، وظلت هذه القيم ركيزةً أساسية في مسيرتهم جيلاً بعد جيل.
                       </p>
-                      <p className="text-gray-200 text-center mt-2">
-                        ورمزًا للأصالة والامتداد المجيد في تاريخ القبائل العربية.
+                      <p className="text-gray-200 leading-relaxed mt-4">
+                        وتمثل هذه الصفحة نافذةً للتعريف بتاريخ القبيلة وموروثها ورجالاتها، وتأكيدًا على الاعتزاز بالجذور والأصالة والانتماء، واستمرارًا لرسالة الآباء والأجداد في حفظ الهوية وصون الموروث للأجيال القادمة.
                       </p>
                     </div>
 
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                      <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-                        <div className="text-3xl font-black text-[#D4AF37]">1210</div>
-                        <div className="text-gray-400 text-sm mt-1">عام التأسيس</div>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-                        <div className="text-3xl font-black text-[#D4AF37]">700+</div>
-                        <div className="text-gray-400 text-sm mt-1">سنة من التاريخ</div>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-                        <div className="text-3xl font-black text-[#D4AF37]">٥١٥</div>
-                        <div className="text-gray-400 text-sm mt-1">وسم القبيلة</div>
-                      </div>
-                      <div className="bg-white/5 rounded-xl p-4 text-center border border-white/10">
-                        <div className="text-2xl font-black text-[#D4AF37]">عزالدين أبو حمرة</div>
-                        <div className="text-gray-400 text-sm mt-1">الجد المؤسس</div>
-                      </div>
-                    </div>
                   </div>
 
                   {/* الهوية البصرية Section */}
