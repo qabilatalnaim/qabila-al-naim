@@ -426,10 +426,10 @@ function App() {
                     {/* أبيات الشعر */}
                     <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
                       <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
-                      <p className="text-white text-xl leading-relaxed">يا دار النعيمِ بالمكارم مهيبـه</p>
-                      <p className="text-white text-xl leading-relaxed">دارٍ لها بين القبايل قدرٍ وهيبـه</p>
-                      <p className="text-white text-xl leading-relaxed">قبيلةٍ لها بين العرب عزٍّ وطيبـه</p>
-                      <p className="text-white text-xl leading-relaxed">مثل الجبال الراسيات الرهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">يا دار النعيم يا عزّ العرب والسيوف الصقيله</p>
+                      <p className="text-white text-xl leading-relaxed">دارٍ للهواشم نسبها من جذورٍ راسخةٍ قويه</p>
+                      <p className="text-white text-xl leading-relaxed">قبيلةٍ لها من صميم العرب عزٍّ وطيبه</p>
+                      <p className="text-white text-xl leading-relaxed">شامخه مثل الجبال الراسيات الرصينه</p>
                       <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
                     </div>
 
@@ -452,10 +452,10 @@ function App() {
                     {/* أبيات المكانة */}
                     <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
                       <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
-                      <p className="text-white text-xl leading-relaxed">شيخٍ تشدّ له المواقف العصيبـه</p>
-                      <p className="text-white text-xl leading-relaxed">لا قال بالحقّ يحسم بهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">شيخٍ تشهد له سود الليالي العصيبه</p>
+                      <p className="text-white text-xl leading-relaxed">لا نطق بالحقّ ردّ الشكوك المريبه</p>
                       <p className="text-white text-xl leading-relaxed">حسـامٍ ليا شبّت النار اللهيبـه</p>
-                      <p className="text-white text-xl leading-relaxed">يشهد له التاريخ بفعالٍ رهيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">يشهد له التاريخ بفعولٍ ثقيله</p>
                       <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
                     </div>
 
@@ -479,9 +479,9 @@ function App() {
                     <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
                       <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
                       <p className="text-white text-xl leading-relaxed">لنا مع الطيب والمراجل سلايل</p>
-                      <p className="text-white text-xl leading-relaxed">للضيف نرخي واجب الطيب كلّه</p>
-                      <p className="text-white text-xl leading-relaxed">وقت الشدايد ما نهاب المنيّه</p>
-                      <p className="text-white text-xl leading-relaxed">نحمي حِمى روس الطنايا ونجلّه</p>
+                      <p className="text-white text-xl leading-relaxed">للضيف نقدّم واجب الطيب كلّه</p>
+                      <p className="text-white text-xl leading-relaxed">وقت الشدايد لا ذكرنا المنيّه</p>
+                      <p className="text-white text-xl leading-relaxed">نحمي حمى روس الطنايا العليّه</p>
                       <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
                     </div>
 
@@ -530,10 +530,10 @@ function App() {
                     {/* أبيات النسب */}
                     <div className="bg-[#D4AF37]/5 rounded-2xl p-6 border border-[#D4AF37]/20 text-center">
                       <div className="text-[#D4AF37] font-bold text-xl mb-4">✦ ✦ ✦</div>
-                      <p className="text-white text-xl leading-relaxed">حَنّا بني هاشم هل الدين والطيبـه</p>
+                      <p className="text-white text-xl leading-relaxed">حَنّا بني هاشم على الدين والطيبـه</p>
                       <p className="text-white text-xl leading-relaxed">أهل الوفا والمجد والسيرة النبيله</p>
                       <p className="text-white text-xl leading-relaxed">لنا من صميم العرب ساسٍ وقبيله</p>
-                      <p className="text-white text-xl leading-relaxed">ونصون نهج الجدود وعاداتٍ أصيله</p>
+                      <p className="text-white text-xl leading-relaxed">ونصون عهد الجدود وعاداتٍ أصيله</p>
                       <div className="text-[#D4AF37] font-bold text-xl mt-4">✦ ✦ ✦</div>
                     </div>
 
