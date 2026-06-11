@@ -407,7 +407,7 @@ function App() {
                     <span className="text-[#D4AF37] font-bold">نبذة تاريخية</span>
                   </div>
                   <h2 className="text-4xl md:text-5xl font-black text-white mb-4">قبيلة السادة النعيم</h2>
-                  <p className="text-gray-400 text-lg">قبيلة عريقة من قبائل الشام العربية الأصيلة</p>
+                  <p className="text-gray-400 text-lg">قبيلة عريقة من قبائل الشام العربية الأصيلة - تراث وتاريخ</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-3xl p-10 md:p-14 border border-[#D4AF37]/30">
