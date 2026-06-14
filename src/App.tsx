@@ -9,6 +9,7 @@ import PoetryPage from './pages/PoetryPage'
 import CoffeePage from './pages/CoffeePage'
 import TraditionsPage from './pages/TraditionsPage'
 import TentPage from './pages/TentPage'
+import TownPage from './pages/TownPage'
 
 // Icons
 const MenuIcon = () => (
@@ -249,6 +250,13 @@ function App() {
       description: 'الخيمة العربية، دخلة البادية، كرم الضيافة',
       link: '/tent',
       color: 'bg-yellow-600/20 text-yellow-400'
+    },
+    {
+      icon: <span className="text-4xl">🏘️</span>,
+      title: 'بلدة عز الدين',
+      description: 'موطن القبيلة النعيم التاريخي، معالم البلدة، قصة التسمية',
+      link: '/town',
+      color: 'bg-teal-600/20 text-teal-400'
     },
   ]
 
@@ -942,6 +950,7 @@ function App() {
       <Route path="/coffee" element={<CoffeePage />} />
       <Route path="/traditions" element={<TraditionsPage />} />
       <Route path="/tent" element={<TentPage />} />
+      <Route path="/town" element={<TownPage />} />
     </Routes>
   )
 }
