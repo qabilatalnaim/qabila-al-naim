@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import OptimizedImage from '../components/OptimizedImage'
+import Breadcrumbs from '../components/Breadcrumbs'
+import { seoConfig } from '../lib/seo-config'
 
 const ArrowRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -8,7 +12,10 @@ const ArrowRightIcon = () => (
 
 export default function HorsesPage() {
   return (
-    <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
+    <>
+      <SEO {...seoConfig.horses} />
+      <Breadcrumbs items={[{ label: 'الخيل' }]} />
+      <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
       {/* Header */}
       <div className="bg-gradient-to-b from-[#162544] to-[#0a1628] py-16">
         <div className="container mx-auto px-4">
@@ -129,5 +136,6 @@ export default function HorsesPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

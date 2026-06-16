@@ -3,82 +3,123 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/"/>
     <image:image>
       <image:loc>https://qabilat-al-naim.vercel.app/images/logo.png</image:loc>
-      <image:title>قبيلة السادة النعيم - Al-Naim Tribe</image:title>
+      <image:title>قبيلة السادة النعيم - أهل الصفرا - شعار القبيلة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qabilat-al-naim.vercel.app/images/banner.jpg</image:loc>
+      <image:title>بيرق قبيلة السادة النعيم</image:title>
     </image:image>
   </url>
 
+  <!-- النسب والتاريخ -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/history</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/history"/>
+    <image:image>
+      <image:loc>https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.jpg</image:loc>
+      <image:title>سلسلة النسب - قبيلة السادة النعيم</image:title>
+    </image:image>
   </url>
 
+  <!-- الإبل -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/camels</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/camels"/>
   </url>
 
+  <!-- الخيل -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/horses</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/horses"/>
+  </url>
+
+  <!-- الغنم -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/sheep</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/sheep"/>
   </url>
 
-  <url>
-    <loc>https://qabilat-al-naim.vercel.app/horses</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://qabilat-al-naim.vercel.app/poetry</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://qabilat-al-naim.vercel.app/coffee</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://qabilat-al-naim.vercel.app/tent</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://qabilat-al-naim.vercel.app/traditions</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  <!-- الوسم -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/wasm</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/wasm"/>
+  </url>
+
+  <!-- الشعر النبطي -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/poetry</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/poetry"/>
+  </url>
+
+  <!-- القهوة العربية -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/coffee</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/coffee"/>
+  </url>
+
+  <!-- بيت الشعر -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/tent</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/tent"/>
+  </url>
+
+  <!-- العادات والتقاليد -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/traditions</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/traditions"/>
+  </url>
+
+  <!-- بلدة عز الدين -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/town</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/town"/>
+    <image:image>
+      <image:loc>https://qabilat-al-naim.vercel.app/images/nasb-al-jadd-al-moassese.jpg</image:loc>
+      <image:title>نصب الجد المؤسس - عز الدين أبو حمرة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qabilat-al-naim.vercel.app/images/wafat-wa-maqam.jpg</image:loc>
+      <image:title>مقام الشيخ عز الدين أبو حمرة</image:title>
+    </image:image>
   </url>
 
 </urlset>

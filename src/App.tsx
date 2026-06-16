@@ -1,15 +1,30 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, lazy, Suspense } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import HistoryPage from './pages/HistoryPage'
-import CamelsPage from './pages/CamelsPage'
-import HorsesPage from './pages/HorsesPage'
-import SheepPage from './pages/SheepPage'
-import WasmPage from './pages/WasmPage'
-import PoetryPage from './pages/PoetryPage'
-import CoffeePage from './pages/CoffeePage'
-import TraditionsPage from './pages/TraditionsPage'
-import TentPage from './pages/TentPage'
-import TownPage from './pages/TownPage'
+import SEO from './components/SEO'
+import { seoConfig } from './lib/seo-config'
+import OptimizedImage from './components/OptimizedImage'
+
+// Lazy load all heritage pages (code splitting)
+const HistoryPage = lazy(() => import('./pages/HistoryPage'))
+const CamelsPage = lazy(() => import('./pages/CamelsPage'))
+const HorsesPage = lazy(() => import('./pages/HorsesPage'))
+const SheepPage = lazy(() => import('./pages/SheepPage'))
+const WasmPage = lazy(() => import('./pages/WasmPage'))
+const PoetryPage = lazy(() => import('./pages/PoetryPage'))
+const CoffeePage = lazy(() => import('./pages/CoffeePage'))
+const TraditionsPage = lazy(() => import('./pages/TraditionsPage'))
+const TentPage = lazy(() => import('./pages/TentPage'))
+const TownPage = lazy(() => import('./pages/TownPage'))
+
+// Loading fallback
+const PageLoader = () => (
+  <div className="min-h-screen bg-[#0a1628] flex items-center justify-center">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-[#D4AF37] font-bold">جاري التحميل...</p>
+    </div>
+  </div>
+)
 
 // Icons
 const MenuIcon = () => (
@@ -263,13 +278,15 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={
-        <div className="min-h-screen bg-[#0a1628]">
+        <>
+          <SEO {...seoConfig.home} />
+          <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}
           <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#0a1628]/95 backdrop-blur-lg shadow-xl py-2' : 'bg-transparent py-4'}`}>
             <div className="container mx-auto px-4">
               <div className="flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-3">
-                  <img src="/images/logo.png" alt="شعار قبيلة النعيم" className="w-12 h-12 rounded-full object-cover border-2 border-[#D4AF37]" />
+                  <OptimizedImage src="/images/logo.png" alt="شعار قبيلة النعيم" className="w-12 h-12 rounded-full object-cover border-2 border-[#D4AF37]" />
                   <div className="hidden sm:block">
                     <h1 className="font-bold text-lg text-white">قبيلة السادة النعيم</h1>
                     <p className="text-xs text-gray-400">أهل الصفرا</p>
@@ -331,7 +348,7 @@ function App() {
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#162544] to-[#0a1628]">
               <div className="absolute inset-0 opacity-10">
-                <img src="/images/banner.jpg" alt="" className="w-full h-full object-cover" />
+                <OptimizedImage src="/images/banner.jpg" alt="" className="w-full h-full object-cover" />
               </div>
               <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-10 blur-[150px]"></div>
               <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-10 blur-[150px]"></div>
@@ -340,8 +357,7 @@ function App() {
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
               {/* Logo */}
               <div className="mb-10">
-                <img
-                  src="/images/logo.png"
+                <OptimizedImage src="/images/logo.png"
                   alt="شعار قبيلة النعيم"
                   className="w-36 h-36 mx-auto rounded-full object-cover border-4 border-[#D4AF37] shadow-[0_0_60px_rgba(212,175,55,0.4)]"
                 />
@@ -349,8 +365,7 @@ function App() {
 
               {/* Banner */}
               <div className="mb-10">
-                <img
-                  src="/images/banner.jpg"
+                <OptimizedImage src="/images/banner.jpg"
                   alt="بيرق قبيلة النعيم"
                   className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-[#D4AF37]/30"
                 />
@@ -627,8 +642,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex justify-center mb-6">
-                          <img
-                            src="/images/tribe-logo-calligraphy.jpg"
+                          <OptimizedImage src="/images/tribe-logo-calligraphy.jpg"
                             alt="شعار قبيلة السادة النعيم"
                             className="max-w-[200px] w-full rounded-xl shadow-lg border-2 border-[#D4AF37]/30"
                           />
@@ -677,8 +691,7 @@ function App() {
                           </div>
                         </div>
                         <div className="flex justify-center mb-6">
-                          <img
-                            src="/images/tribe-flag.jpg"
+                          <OptimizedImage src="/images/tribe-flag.jpg"
                             alt="راية قبيلة السادة النعيم"
                             className="max-w-[250px] w-full rounded-xl shadow-lg border-2 border-green-500/30"
                           />
@@ -796,8 +809,7 @@ function App() {
                   className="group relative bg-gradient-to-br from-white/10 to-white/5 rounded-3xl overflow-hidden border-2 border-red-600/50 hover:border-red-600 transition-all duration-500 block"
                 >
                   <div className="relative aspect-video">
-                    <img
-                      src={`https://i.ytimg.com/vi/${featuredVideo.id}/maxresdefault.jpg`}
+                    <OptimizedImage src={`https://i.ytimg.com/vi/${featuredVideo.id}/maxresdefault.jpg`}
                       alt={featuredVideo.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {
@@ -892,7 +904,7 @@ function App() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
                   <div className="flex items-center gap-4 mb-4">
-                    <img src="/images/logo.png" alt="شعار قبيلة النعيم" className="w-14 h-14 rounded-full object-cover border-2 border-[#D4AF37]" />
+                    <OptimizedImage src="/images/logo.png" alt="شعار قبيلة النعيم" className="w-14 h-14 rounded-full object-cover border-2 border-[#D4AF37]" />
                     <div>
                       <h3 className="font-bold text-lg text-white">قبيلة السادة النعيم</h3>
                       <p className="text-gray-400 text-sm">أهل الصفرا</p>
@@ -938,19 +950,21 @@ function App() {
             </div>
           </footer>
         </div>
+        </>
       }/>
 
-      {/* Heritage Pages */}
-      <Route path="/history" element={<HistoryPage />} />
-      <Route path="/camels" element={<CamelsPage />} />
-      <Route path="/horses" element={<HorsesPage />} />
-      <Route path="/sheep" element={<SheepPage />} />
-      <Route path="/wasm" element={<WasmPage />} />
-      <Route path="/poetry" element={<PoetryPage />} />
-      <Route path="/coffee" element={<CoffeePage />} />
-      <Route path="/traditions" element={<TraditionsPage />} />
-      <Route path="/tent" element={<TentPage />} />
-      <Route path="/town" element={<TownPage />} />
+      {/* Heritage Pages - lazy loaded with Suspense */}
+      <Route path="/history" element={<Suspense fallback={<PageLoader />}><HistoryPage /></Suspense>} />
+      <Route path="/camels" element={<Suspense fallback={<PageLoader />}><CamelsPage /></Suspense>} />
+      <Route path="/horses" element={<Suspense fallback={<PageLoader />}><HorsesPage /></Suspense>} />
+      <Route path="/sheep" element={<Suspense fallback={<PageLoader />}><SheepPage /></Suspense>} />
+      <Route path="/wasm" element={<Suspense fallback={<PageLoader />}><WasmPage /></Suspense>} />
+      <Route path="/poetry" element={<Suspense fallback={<PageLoader />}><PoetryPage /></Suspense>} />
+      <Route path="/coffee" element={<Suspense fallback={<PageLoader />}><CoffeePage /></Suspense>} />
+      <Route path="/traditions" element={<Suspense fallback={<PageLoader />}><TraditionsPage /></Suspense>} />
+      <Route path="/tent" element={<Suspense fallback={<PageLoader />}><TentPage /></Suspense>} />
+      <Route path="/town" element={<Suspense fallback={<PageLoader />}><TownPage /></Suspense>} />
+      <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFoundPage /></Suspense>} />
     </Routes>
   )
 }

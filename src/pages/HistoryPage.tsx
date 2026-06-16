@@ -1,5 +1,9 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import OptimizedImage from '../components/OptimizedImage'
+import Breadcrumbs from '../components/Breadcrumbs'
+import { seoConfig } from '../lib/seo-config'
 
 const ArrowLeftIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -95,7 +99,10 @@ function HistoryPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#0a1628]">
+    <>
+      <SEO {...seoConfig.history} />
+      <Breadcrumbs items={[{ label: 'النسب والتاريخ' }]} />
+      <div className="min-h-screen bg-[#0a1628]">
       {/* Header */}
       <div className="bg-gradient-to-b from-[#162544] to-[#0a1628] py-16">
         <div className="container mx-auto px-4">
@@ -157,8 +164,7 @@ function HistoryPage() {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
-                  <img
-                    src="/images/silsilat-al-nasb.jpg"
+                  <OptimizedImage src="/images/silsilat-al-nasb.jpg"
                     alt="شجرة نسب قبيلة السادة النعيم - سلسلة النسب الهاشمي الرفاعي الموسوي الحسيني"
                     className="w-full h-auto object-contain"
                   />
@@ -402,8 +408,7 @@ function HistoryPage() {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
-                  <img
-                    src="/images/nasb-al-jadd-al-moassese.jpg"
+                  <OptimizedImage src="/images/nasb-al-jadd-al-moassese.jpg"
                     alt="نسب الجد المؤسس - السيد أحمد عزالدين أبو حمرة"
                     className="w-full h-auto object-contain"
                   />
@@ -433,8 +438,7 @@ function HistoryPage() {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
-                  <img
-                    src="/images/mawlid-wa-nashaa.jpg"
+                  <OptimizedImage src="/images/mawlid-wa-nashaa.jpg"
                     alt="المولد والنشأة - عز الدين أبو حمرة"
                     className="w-full h-auto object-contain"
                   />
@@ -571,8 +575,7 @@ function HistoryPage() {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
-                  <img
-                    src="/images/wafat-wa-maqam.jpg"
+                  <OptimizedImage src="/images/wafat-wa-maqam.jpg"
                     alt="وفاته ومقامه - قرية عز الدين"
                     className="w-full h-auto object-contain"
                   />
@@ -656,8 +659,7 @@ function HistoryPage() {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
-                  <img
-                    src="/images/abnaa-izz-din-abu-himara.jpg"
+                  <OptimizedImage src="/images/abnaa-izz-din-abu-himara.jpg"
                     alt="أبناء عز الدين أبو حمرة وأفخاذ قبيلة النعيم"
                     className="w-full h-auto object-contain"
                   />
@@ -809,8 +811,7 @@ function HistoryPage() {
               </div>
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
-                  <img
-                    src="/images/nasb-kull-ibn.jpg"
+                  <OptimizedImage src="/images/nasb-kull-ibn.jpg"
                     alt="نسب كل ابن وما تفرّع عنه"
                     className="w-full h-auto object-contain"
                   />
@@ -930,6 +931,7 @@ function HistoryPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

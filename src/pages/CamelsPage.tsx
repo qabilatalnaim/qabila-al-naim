@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import OptimizedImage from '../components/OptimizedImage'
+import Breadcrumbs from '../components/Breadcrumbs'
+import { seoConfig } from '../lib/seo-config'
 import { useState, useRef, useEffect } from 'react'
 
 // Icons
@@ -165,7 +169,10 @@ export default function CamelsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
+    <>
+      <SEO {...seoConfig.camels} />
+      <Breadcrumbs items={[{ label: 'الإبل' }]} />
+      <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#162544] via-[#0a1628] to-[#162544]">
@@ -391,5 +398,6 @@ export default function CamelsPage() {
         </Link>
       </div>
     </div>
+    </>
   )
 }
