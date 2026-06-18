@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import SEO from './components/SEO'
 import { seoConfig } from './lib/seo-config'
 import OptimizedImage from './components/OptimizedImage'
+import PWAInstallPrompt from './components/PWAInstallPrompt'
 
 // Lazy load all heritage pages (code splitting)
 const HistoryPage = lazy(() => import('./pages/HistoryPage'))
@@ -15,6 +16,9 @@ const CoffeePage = lazy(() => import('./pages/CoffeePage'))
 const TraditionsPage = lazy(() => import('./pages/TraditionsPage'))
 const TentPage = lazy(() => import('./pages/TentPage'))
 const TownPage = lazy(() => import('./pages/TownPage'))
+const SearchPage = lazy(() => import('./pages/SearchPage'))
+const BlogPage = lazy(() => import('./pages/BlogPage'))
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'))
 
 // Loading fallback
 const PageLoader = () => (
@@ -276,6 +280,7 @@ function App() {
   ]
 
   return (
+    <>
     <Routes>
       <Route path="/" element={
         <>
@@ -304,6 +309,22 @@ function App() {
                       {item.label}
                     </button>
                   ))}
+                  <Link
+                    to="/search"
+                    className="text-white hover:text-[#D4AF37] transition-colors font-medium flex items-center gap-2"
+                    aria-label="بحث"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                    </svg>
+                    <span>بحث</span>
+                  </Link>
+                  <Link
+                    to="/blog"
+                    className="text-white hover:text-[#D4AF37] transition-colors font-medium"
+                  >
+                    المدونة
+                  </Link>
                 </div>
 
                 {/* CTA Button */}
@@ -333,11 +354,28 @@ function App() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="block w-full text-right py-3 text-white hover:text-[#D4AF37] border-b border-white/10 last:border-0"
+                      className="block w-full text-right py-3 text-white hover:text-[#D4AF37] border-b border-white/10"
                     >
                       {item.label}
                     </button>
                   ))}
+                  <Link
+                    to="/search"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center justify-end gap-2 w-full text-right py-3 text-white hover:text-[#D4AF37] border-b border-white/10"
+                  >
+                    <span>بحث</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                    </svg>
+                  </Link>
+                  <Link
+                    to="/blog"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block w-full text-right py-3 text-white hover:text-[#D4AF37]"
+                  >
+                    المدونة
+                  </Link>
                 </div>
               )}
             </div>
@@ -964,8 +1002,13 @@ function App() {
       <Route path="/traditions" element={<Suspense fallback={<PageLoader />}><TraditionsPage /></Suspense>} />
       <Route path="/tent" element={<Suspense fallback={<PageLoader />}><TentPage /></Suspense>} />
       <Route path="/town" element={<Suspense fallback={<PageLoader />}><TownPage /></Suspense>} />
+      <Route path="/search" element={<Suspense fallback={<PageLoader />}><SearchPage /></Suspense>} />
+      <Route path="/blog" element={<Suspense fallback={<PageLoader />}><BlogPage /></Suspense>} />
+      <Route path="/blog/:id" element={<Suspense fallback={<PageLoader />}><BlogPostPage /></Suspense>} />
       <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFoundPage /></Suspense>} />
     </Routes>
+    <PWAInstallPrompt />
+    </>
   )
 }
 

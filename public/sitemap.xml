@@ -122,4 +122,60 @@
     </image:image>
   </url>
 
+  <!-- بحث -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/search</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/search"/>
+  </url>
+
+  <!-- مدونة -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/blog"/>
+  </url>
+
+  <!-- مقالات المدونة -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog/tribe-history-overview</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog/camels-heritage</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog/horses-knightly</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog/town-izz-din</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog/wasm-515</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/blog/poetry-fakhr</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

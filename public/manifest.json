@@ -1,0 +1,51 @@
+{
+  "name": "قبيلة السادة النعيم - أهل الصفرا",
+  "short_name": "قبيلة النعيم",
+  "description": "تطبيق قبيلة السادة النعيم - توثيق التراث والتاريخ العربي الأصيل. نسب هاشمي، فروسية، إبل، شعر نبطي، وكرم ضيافة.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a1628",
+  "theme_color": "#0a1628",
+  "categories": ["education", "lifestyle", "books"],
+  "icons": [
+    {
+      "src": "/images/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "النسب والتاريخ",
+      "short_name": "التاريخ",
+      "description": "سلسلة النسب وتاريخ القبيلة",
+      "url": "/history",
+      "icons": [{ "src": "/images/logo.webp", "sizes": "192x192" }]
+    },
+    {
+      "name": "بلدة عز الدين",
+      "short_name": "البلدة",
+      "description": "موطن القبيلة التاريخي",
+      "url": "/town",
+      "icons": [{ "src": "/images/logo.webp", "sizes": "192x192" }]
+    },
+    {
+      "name": "الإبل",
+      "short_name": "الإبل",
+      "description": "تراث تربية الإبل",
+      "url": "/camels",
+      "icons": [{ "src": "/images/logo.webp", "sizes": "192x192" }]
+    }
+  ]
+}

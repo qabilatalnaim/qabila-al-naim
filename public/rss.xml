@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>قبيلة السادة النعيم - مدونة التراث</title>
+    <link>https://qabilat-al-naim.vercel.app</link>
+    <description>مقالات وأخبار عن تاريخ وتراث قبيلة السادة النعيم. السادة الرفاعية الموسوية الحسينية - أهل الصفرا.</description>
+    <language>ar</language>
+    <copyright>© 2026 قبيلة السادة النعيم</copyright>
+    <managingEditor>qabilaaalnaim@gmail.com (قبيلة السادة النعيم)</managingEditor>
+    <webMaster>qabilaaalnaim@gmail.com (قبيلة السادة النعيم)</webMaster>
+    <lastBuildDate>Mon, 16 Jun 2026 09:00:00 GMT</lastBuildDate>
+    <pubDate>Mon, 16 Jun 2026 09:00:00 GMT</pubDate>
+    <ttl>60</ttl>
+    <atom:link href="https://qabilat-al-naim.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://qabilat-al-naim.vercel.app/images/logo.webp</url>
+      <title>قبيلة السادة النعيم</title>
+      <link>https://qabilat-al-naim.vercel.app</link>
+      <width>200</width>
+      <height>200</height>
+    </image>
+
+    <item>
+      <title>قبيلة السادة النعيم: إرث عريق في بلاد الشام</title>
+      <link>https://qabilat-al-naim.vercel.app/blog/tribe-history-overview</link>
+      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/tribe-history-overview</guid>
+      <pubDate>Mon, 15 Jun 2026 10:00:00 GMT</pubDate>
+      <dc:creator>قبيلة السادة النعيم</dc:creator>
+      <category>تاريخ</category>
+      <description>تعرّف على تاريخ قبيلة السادة النعيم العريقة، نسبها الهاشمي، ودورها في المنطقة عبر القرون.</description>
+    </item>
+
+    <item>
+      <title>الإبل في حياة قبيلة النعيم: تراث يتجدد</title>
+      <link>https://qabilat-al-naim.vercel.app/blog/camels-heritage</link>
+      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/camels-heritage</guid>
+      <pubDate>Wed, 10 Jun 2026 10:00:00 GMT</pubDate>
+      <dc:creator>قبيلة السادة النعيم</dc:creator>
+      <category>تراث</category>
+      <description>الإبل ليست مجرد ثروة حيوانية، بل هي رمز الهوية والكرامة عند قبيلة النعيم. اكتشف قصتها.</description>
+    </item>
+
+    <item>
+      <title>الفروسية العربية عند النعيم: إرث يحيا</title>
+      <link>https://qabilat-al-naim.vercel.app/blog/horses-knightly</link>
+      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/horses-knightly</guid>
+      <pubDate>Fri, 05 Jun 2026 10:00:00 GMT</pubDate>
+      <dc:creator>قبيلة السادة النعيم</dc:creator>
+      <category>تراث</category>
+      <description>منذ القدم، ارتبط اسم قبيلة النعيم بالخيل العربية الأصيلة والفروسية التي تناقلتها الأجيال.</description>
+    </item>
+
+    <item>
+      <title>بلدة عز الدين: موطن الكرم والجذور</title>
+      <link>https://qabilat-al-naim.vercel.app/blog/town-izz-din</link>
+      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/town-izz-din</guid>
+      <pubDate>Thu, 28 May 2026 10:00:00 GMT</pubDate>
+      <dc:creator>قبيلة السادة النعيم</dc:creator>
+      <category>تاريخ</category>
+      <description>بلدة عز الدين هي الموطن التاريخي لقبيلة السادة النعيم. اكتشف قصتها ومعالمها.</description>
+    </item>
+
+    <item>
+      <title>الوسم (رمز ٥١٥): هوية لا تُنسى</title>
+      <link>https://qabilat-al-naim.vercel.app/blog/wasm-515</link>
+      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/wasm-515</guid>
+      <pubDate>Wed, 20 May 2026 10:00:00 GMT</pubDate>
+      <dc:creator>قبيلة السادة النعيم</dc:creator>
+      <category>تراث</category>
+      <description>الوسم هو رمز الانتماء عند قبيلة النعيم. اكتشف تاريخه ودلالته وكيفية وسم الإبل والأغنام.</description>
+    </item>
+
+    <item>
+      <title>الشعر النبطي: لسان القبيلة وذاكرة المجد</title>
+      <link>https://qabilat-al-naim.vercel.app/blog/poetry-fakhr</link>
+      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/poetry-fakhr</guid>
+      <pubDate>Fri, 15 May 2026 10:00:00 GMT</pubDate>
+      <dc:creator>قبيلة السادة النعيم</dc:creator>
+      <category>أدب</category>
+      <description>الشعر النبطي هو وسيلة قبيلة النعيم في التعبير عن الفخر والمجد والتاريخ. تعرف على روائعه.</description>
+    </item>
+  </channel>
+</rss>
