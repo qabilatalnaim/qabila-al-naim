@@ -6,14 +6,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/html.*"
-        }
-      ],
+      "source": "/((?!api/|manifest\\.json|sw\\.js|rss\\.xml|sitemap\\.xml|robots\\.txt|use\\.txt|favicon\\.ico|images/|assets/|.*\\.(?:webp|jpg|jpeg|png|gif|svg|ico|json|xml|txt|js|css|woff|woff2|ttf)).*)",
       "destination": "/index.html"
     }
   ],
