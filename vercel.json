@@ -2,9 +2,18 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
   "framework": "vite",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/((?!api/|manifest\\.json|sw\\.js|sitemap\\.xml|rss\\.xml|robots\\.txt|favicon\\.ico|images/|assets/).*)",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/html.*"
+        }
+      ],
       "destination": "/index.html"
     }
   ],
