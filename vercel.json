@@ -2,54 +2,32 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
-    {
-      "source": "/((?!api/|manifest\\.json|sw\\.js|rss\\.xml|sitemap\\.xml|robots\\.txt|use\\.txt|favicon\\.ico|images/|assets/|.*\\.(?:webp|jpg|jpeg|png|gif|svg|ico|json|xml|txt|js|css|woff|woff2|ttf)).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*\\.(?:js|css|json|xml|txt|webp|jpg|jpeg|png|gif|svg|ico|woff|woff2|ttf))", "destination": "/$1" },
+    { "source": "/(manifest\\.json|sw\\.js|rss\\.xml|sitemap\\.xml|robots\\.txt|use\\.txt|favicon\\.ico)", "destination": "/$1" },
+    { "source": "/images/(.*)", "destination": "/images/$1" },
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
       "source": "/sw.js",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        },
-        {
-          "key": "Service-Worker-Allowed",
-          "value": "/"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
       ]
     },
     {
       "source": "/manifest.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/manifest+json"
-        }
-      ]
+      "headers": [{ "key": "Content-Type", "value": "application/manifest+json" }]
     },
     {
       "source": "/rss.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/rss+xml"
-        }
-      ]
+      "headers": [{ "key": "Content-Type", "value": "application/rss+xml" }]
     },
     {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
+      "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }]
     }
   ]
 }
