@@ -1,12 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
+
+# Updated: 2026-06-19 - Force Vercel rebuild
 User-agent: *
 Allow: /
-
-# Sitemap
 Sitemap: https://qabilat-al-naim.vercel.app/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow unnecessary files
-Disallow: /assets/
