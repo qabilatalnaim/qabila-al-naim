@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# قبيلة السادة النعيم - أهل الصفرا
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+موقع تعريفي وتوثيقي لقبيلة السادة النعيم العريقة، السادة الرفاعية الموسوية الحسينية - أهل الصفرا في بلاد الشام.
 
-Currently, two official plugins are available:
+## 🌐 الموقع الرسمي
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Cloudflare Pages:** `https://qabila-al-naim.pages.dev`
 
-## Expanding the ESLint configuration
+## ✨ المميزات
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 📱 **PWA كامل** — يثبت كأب على الأجهزة، يعمل offline
+- ⚡ **أداء عالي** — صور WebP، lazy loading، code splitting
+- 🔍 **بحث ذكي** — بحث في كل صفحات التراث
+- 📰 **مدونة** — مقالات تثقيفية عن التراث
+- 📡 **RSS Feed** — اشترك في آخر المقالات
+- 🗺️ **SEO محسّن** — Schema.org، breadcrumbs، sitemap
+- 🌐 **13 صفحة** — الرئيسية + 10 صفحات تراث + مدونة + بحث
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ التقنيات
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend:** React 18 + TypeScript + Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router v6
+- **PWA:** Service Worker + Web App Manifest
+- **Deployment:** Cloudflare Pages (auto-deploy من GitHub)
+- **Code Quality:** ESLint + TypeScript strict mode
+
+## 📦 التطوير المحلي
+
+```bash
+# تثبيت التبعيات
+npm install
+# أو
+pnpm install
+
+# تشغيل سيرفر التطوير
+npm run dev
+# الموقع على http://localhost:5173
+
+# بناء النسخة النهائية
+npm run build
+# الملفات النهائية في dist/
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 النشر
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+الموقع يُنشر تلقائياً على Cloudflare Pages عند كل push على `main`:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. **Setup مرة واحدة:** اتبع [CLOUDFLARE_DEPLOY.md](./CLOUDFLARE_DEPLOY.md)
+2. **بعدها:** فقط ادفع التغييرات على GitHub
+3. **خلال 2-3 دقائق:** الموقع يتحدث تلقائياً
+
+## 📁 هيكل المشروع
+
 ```
+qabila-al-naim/
+├── public/              # ملفات static (تنخدم كما هي)
+│   ├── images/         # صور WebP
+│   ├── manifest.json   # PWA manifest
+│   ├── sw.js           # Service Worker
+│   ├── sitemap.xml     # خريطة الموقع
+│   ├── rss.xml         # RSS feed
+│   ├── _redirects      # Cloudflare SPA routing
+│   └── _headers        # Security + caching
+├── src/
+│   ├── components/     # مكونات مشتركة (SEO, Breadcrumbs, etc.)
+│   ├── pages/          # صفحات الموقع (13 صفحة)
+│   ├── lib/            # أدوات مساعدة + SEO config + search/blog data
+│   ├── App.tsx         # المكون الرئيسي
+│   ├── main.tsx        # نقطة الدخول
+│   └── index.css       # تنسيقات CSS
+├── wrangler.toml       # إعدادات Cloudflare Pages
+└── CLOUDFLARE_DEPLOY.md # دليل النشر
+```
+
+## 📝 الترخيص
+
+© 2026 قبيلة السادة النعيم - جميع الحقوق محفوظة

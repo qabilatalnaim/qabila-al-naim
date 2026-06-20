@@ -1,0 +1,16 @@
+# SPA routing - جميع المسارات غير الموجودة تذهب لـ index.html
+# لكن نحافظ على الملفات الثابتة
+/manifest.json   /manifest.json   200
+/sw.js           /sw.js           200
+/rss.xml         /rss.xml         200
+/sitemap.xml     /sitemap.xml     200
+/robots.txt      /robots.txt      200
+
+# Images (WebP + Fallback)
+/images/*        /images/:splat   200
+
+# Static files (assets)
+/assets/*        /assets/:splat   200
+
+# Catch-all: أي مسار غير موجود → index.html (لكن مع 200)
+/*               /index.html      200
