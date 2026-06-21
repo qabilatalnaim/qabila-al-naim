@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to Vercel
 
 on:
   push:
@@ -25,28 +25,37 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build:cf
+        run: npm run build
 
-      - name: Clean dist/images (keep only WebP)
+      - name: Clean dist/images (keep only WebP for smaller deploys)
         run: |
-          cd dist/images 2>/dev/null && rm -f *.jpg *.png && cd ../..
-          echo "Dist size: $(du -sh dist/)"
+          if [ -d "dist/images" ]; then
+            cd dist/images
+            find . -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -delete
+            cd ../..
+            echo "📦 Final dist size: $(du -sh dist/ | cut -f1)"
+          fi
 
-      # Deploy to Cloudflare Pages
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+      - name: Deploy to Vercel (Production)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: amondnet/vercel-action@v25
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: qabila-al-naim
-          directory: dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod --yes'
+          working-directory: ./
         env:
-          NODE_VERSION: '20'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deployment summary
-        if: success()
-        run: |
-          echo "✅ Successfully deployed to Cloudflare Pages"
-          echo "🌐 Production: https://qabila-al-naim.pages.dev"
-          echo "🔍 Preview (for PRs): Check the PR comments"
+      - name: Deploy to Vercel (Preview for PRs)
+        if: github.event_name == 'pull_request'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--yes'
+          working-directory: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
