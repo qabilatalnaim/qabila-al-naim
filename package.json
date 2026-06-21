@@ -6,13 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "rm -rf dist && vite build",
-    "build:vercel": "rm -rf dist && vite build",
-    "build:cloudflare": "rm -rf dist && npm install && npm run tsc && vite build",
-    "build:cf": "rm -rf dist && npm ci && npx vite build",
     "build:prod": "rm -rf node_modules/.vite-temp && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "install-deps": "npm install",
     "tsc": "tsc -b",
     "clean": "rm -rf node_modules dist"
   },

@@ -4,7 +4,7 @@
 
 ## 🌐 الموقع الرسمي
 
-**Cloudflare Pages:** `https://qabila-al-naim.pages.dev`
+**Vercel:** `https://qabila-al-naim.vercel.app`
 
 ## ✨ المميزات
 
@@ -22,7 +22,8 @@
 - **Styling:** Tailwind CSS
 - **Routing:** React Router v6
 - **PWA:** Service Worker + Web App Manifest
-- **Deployment:** Cloudflare Pages (auto-deploy من GitHub)
+- **Deployment:** Vercel (auto-deploy من GitHub)
+- **CI/CD:** GitHub Actions
 - **Code Quality:** ESLint + TypeScript strict mode
 
 ## 📦 التطوير المحلي
@@ -42,13 +43,21 @@ npm run build
 # الملفات النهائية في dist/
 ```
 
-## 🚀 النشر
+## 🚀 النشر على Vercel
 
-الموقع يُنشر تلقائياً على Cloudflare Pages عند كل push على `main`:
+الموقع يُنشر تلقائياً على Vercel عند كل push على `main` عبر GitHub Actions:
 
-1. **Setup مرة واحدة:** اتبع [CLOUDFLARE_DEPLOY.md](./CLOUDFLARE_DEPLOY.md)
-2. **بعدها:** فقط ادفع التغييرات على GitHub
+1. **Setup مرة واحدة:**
+   - أنشئ مشروع على [Vercel Dashboard](https://vercel.com/dashboard)
+   - من إعدادات المشروع في GitHub، أضف الـ secrets التالية:
+     - `VERCEL_TOKEN` — من [Vercel Account Settings → Tokens](https://vercel.com/account/tokens)
+     - `VERCEL_ORG_ID` — من إعدادات الفريق في Vercel
+     - `VERCEL_PROJECT_ID` — من إعدادات المشروع في Vercel
+2. **بعدها:** فقط ادفع التغييرات على `main`
 3. **خلال 2-3 دقائق:** الموقع يتحدث تلقائياً
+4. **للنشر اليدوي:** شغّل `./scripts/deploy-vercel.sh`
+
+> ملاحظة: Vercel يكتشف تلقائياً أنه مشروع Vite (لا يحتاج `vercel.json`).
 
 ## 📁 هيكل المشروع
 
@@ -59,9 +68,7 @@ qabila-al-naim/
 │   ├── manifest.json   # PWA manifest
 │   ├── sw.js           # Service Worker
 │   ├── sitemap.xml     # خريطة الموقع
-│   ├── rss.xml         # RSS feed
-│   ├── _redirects      # Cloudflare SPA routing
-│   └── _headers        # Security + caching
+│   └── rss.xml         # RSS feed
 ├── src/
 │   ├── components/     # مكونات مشتركة (SEO, Breadcrumbs, etc.)
 │   ├── pages/          # صفحات الموقع (13 صفحة)
@@ -69,8 +76,10 @@ qabila-al-naim/
 │   ├── App.tsx         # المكون الرئيسي
 │   ├── main.tsx        # نقطة الدخول
 │   └── index.css       # تنسيقات CSS
-├── wrangler.toml       # إعدادات Cloudflare Pages
-└── CLOUDFLARE_DEPLOY.md # دليل النشر
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # GitHub Actions → Vercel
+└── scripts/            # أدوات مساعدة (نشر، تنظيف، SEO)
 ```
 
 ## 📝 الترخيص
