@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf dist && vite build",
-    "build:prod": "rm -rf node_modules/.vite-temp && vite build",
+    "build": "rm -rf dist && vite build && npm run clean:dist-images",
+    "build:prod": "rm -rf node_modules/.vite-temp && vite build && npm run clean:dist-images",
     "lint": "eslint .",
     "preview": "vite preview",
     "tsc": "tsc -b",
+    "clean:dist-images": "node scripts/clean-dist-images.js",
     "clean": "rm -rf node_modules dist"
   },
   "dependencies": {
