@@ -19,6 +19,7 @@ const TownPage = lazy(() => import('./pages/TownPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'))
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 // Loading fallback
 const PageLoader = () => (

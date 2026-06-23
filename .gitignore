@@ -7,11 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build output
 dist
 dist-ssr
-*.local
-package-lock.json
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +31,17 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+# OS files
+Thumbs.db
+
+# Temp
+*.local
+*.tmp
+
+# Wrangler (Cloudflare - kept for reference)
+.wrangler/
+.dev.vars
+
+# Vercel
+.vercel
