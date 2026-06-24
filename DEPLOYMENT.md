@@ -19,3 +19,7 @@
 - SPA rewrites (يحل مشكلة 404 على الصفحات الداخلية)
 - Cache headers للأداء الأفضل
 - Security headers
+
+## آخر تحديث
+
+- التحديث الأخير: 2026-06-24 (manual Vercel redeploy trigger)
