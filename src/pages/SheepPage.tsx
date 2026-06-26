@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import Footer from '../components/Footer'
 import OptimizedImage from '../components/OptimizedImage'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { seoConfig } from '../lib/seo-config'
@@ -354,6 +355,7 @@ export default function SheepPage() {
         </Link>
       </div>
     </div>
+          <Footer />
     </>
   )
 }

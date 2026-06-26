@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import SEO from '../components/SEO'
+import Footer from '../components/Footer'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { search, type SearchItem } from '../lib/search-data'
 
@@ -191,6 +192,7 @@ export default function SearchPage() {
           </div>
         </div>
       </div>
+          <Footer />
     </>
   )
 }

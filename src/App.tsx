@@ -4,6 +4,7 @@ import SEO from './components/SEO'
 import { seoConfig } from './lib/seo-config'
 import OptimizedImage from './components/OptimizedImage'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
+import Footer from './components/Footer'
 
 // Lazy load all heritage pages (code splitting)
 const HistoryPage = lazy(() => import('./pages/HistoryPage'))
@@ -938,56 +939,7 @@ function App() {
           </section>
 
           {/* Footer */}
-          <footer className="bg-[#0a1628] border-t border-white/10 py-12">
-            <div className="container mx-auto px-4">
-              <div className="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <OptimizedImage src="/images/logo.png" alt="شعار قبيلة النعيم" className="w-14 h-14 rounded-full object-cover border-2 border-[#D4AF37]" />
-                    <div>
-                      <h3 className="font-bold text-lg text-white">قبيلة السادة النعيم</h3>
-                      <p className="text-gray-400 text-sm">أهل الصفرا</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-400 text-sm">
-                    توثيق التاريخ والتراث العربي الأصيل من قبائل الشام
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-white mb-4">روابط سريعة</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {navItems.map((item) => (
-                      <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-gray-400 hover:text-[#D4AF37] text-sm transition-colors">
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-bold text-white mb-4">تابعونا</h4>
-                  <div className="flex gap-3">
-                    <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                      <YoutubeIcon />
-                    </a>
-                    <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                      <FacebookIcon />
-                    </a>
-                    <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                      <InstagramIcon />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-t border-white/10 pt-6 text-center">
-                <p className="text-gray-500 text-sm">
-                  جميع الحقوق محفوظة © 2026 قبيلة السادة النعيم - أبناء العم
-                </p>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
         </>
       }/>

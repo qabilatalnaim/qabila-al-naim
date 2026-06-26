@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import Footer from '../components/Footer'
 import Breadcrumbs from '../components/Breadcrumbs'
 import OptimizedImage from '../components/OptimizedImage'
 import { blogPosts, type BlogPost } from '../lib/blog-data'
@@ -102,6 +103,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
+          <Footer />
     </>
   )
 }

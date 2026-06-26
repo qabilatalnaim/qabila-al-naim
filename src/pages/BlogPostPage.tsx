@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import SEO from '../components/SEO'
+import Footer from '../components/Footer'
 import Breadcrumbs from '../components/Breadcrumbs'
 import OptimizedImage from '../components/OptimizedImage'
 import { blogPosts } from '../lib/blog-data'
@@ -159,6 +160,7 @@ export default function BlogPostPage() {
           </div>
         </div>
       </div>
+          <Footer />
     </>
   )
 }
