@@ -31,7 +31,8 @@ export default function SEO({
   modifiedTime,
   section,
   noindex = false,
-}: SEOProps) {
+  faq, // New: array of { question, answer } for FAQ schema
+}: SEOProps & { faq?: Array<{ question: string; answer: string }> }) {
   const fullUrl = url ? `${SITE_URL}${url}` : SITE_URL
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
 
@@ -204,7 +205,57 @@ export default function SEO({
       })
       document.head.appendChild(breadcrumbScript)
     }
-  }, [fullTitle, description, keywords, image, fullUrl, type, author, publishedTime, modifiedTime, section, noindex])
+
+    // FAQ schema (for pages with FAQ content)
+    if (faq && faq.length > 0) {
+      const faqScript = document.createElement('script')
+      faqScript.type = 'application/ld+json'
+      faqScript.setAttribute('data-seo-schema', 'faq')
+      faqScript.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      })
+      document.head.appendChild(faqScript)
+    }
+
+    // Person schema (for important figures)
+    if (section === 'التاريخ' || section === 'التراث') {
+      const personScript = document.createElement('script')
+      personScript.type = 'application/ld+json'
+      personScript.setAttribute('data-seo-schema', 'person')
+      personScript.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'عز الدين أبو حمرة (أحمد بن نعيم)',
+        alternateName: 'الجد الجامع لقبيلة السادة النعيم',
+        description: 'الجدّ الجامع لقبيلة السادة النعيم، رمز وحدة النسب وعمق الجذور. تحمل بلدة عز الدين اسمه تخليدًا لذكراه.',
+        jobTitle: 'الجد الجامع',
+        affiliation: {
+          '@type': 'Organization',
+          name: 'قبيلة السادة النعيم',
+        },
+        birthPlace: {
+          '@type': 'Place',
+          name: 'بلاد الشام',
+        },
+        knowsAbout: [
+          'نسب هاشمي',
+          'السادة الرفاعية',
+          'القبائل العربية',
+          'تاريخ بلاد الشام',
+        ],
+      })
+      document.head.appendChild(personScript)
+    }
+  }, [fullTitle, description, keywords, image, fullUrl, type, author, publishedTime, modifiedTime, section, noindex, faq])
 
   return null
 }

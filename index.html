@@ -5,10 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Preconnect to Google Fonts for faster loading -->
+  <!-- Performance: DNS prefetch & preconnect -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload critical Cairo font weights -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" />
+
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="/images/logo.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/images/banner.webp" type="image/webp" />
 
   <!-- SEO Meta Tags -->
   <title>قبيلة السادة النعيم | تراث عربي أصيل من الصفرا - حمص | أهل الصفرا</title>
@@ -27,16 +36,22 @@
   <meta property="og:url" content="https://qabilat-al-naim.vercel.app/" />
   <meta property="og:title" content="قبيلة السادة النعيم | أهل الصفرا - تراث عربي أصيل" />
   <meta property="og:description" content="قبيلة السادة النعيم (أهل الصفرا) من القبائل العربية العريقة. شاهد تاريخنا وتراثنا العربي الأصيل. نسب هاشمي وفروسية عربية وإبل صفراء وكرم ضيافة." />
-  <meta property="og:image" content="https://qabilat-al-naim.vercel.app/images/logo.png" />
+  <meta property="og:image" content="https://qabilat-al-naim.vercel.app/images/banner.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="قبيلة السادة النعيم - أهل الصفرا" />
   <meta property="og:locale" content="ar_AR" />
   <meta property="og:site_name" content="قبيلة السادة النعيم - أهل الصفرا" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image:type" content="image/webp" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://qabilat-al-naim.vercel.app/" />
   <meta name="twitter:title" content="قبيلة السادة النعيم | أهل الصفرا - تراث عربي أصيل" />
   <meta name="twitter:description" content="قبيلة السادة النعيم (أهل الصفرا) من القبائل العربية العريقة في بلاد الشام. توثيق التاريخ والتراث العربي الأصيل." />
-  <meta name="twitter:image" content="https://qabilat-al-naim.vercel.app/images/logo.png" />
+  <meta name="twitter:image" content="https://qabilat-al-naim.vercel.app/images/banner.webp" />
+  <meta name="twitter:image:alt" content="قبيلة السادة النعيم - أهل الصفرا" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="/images/logo.webp" />
@@ -47,6 +62,8 @@
 
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="مدونة قبيلة السادة النعيم" href="/rss.xml" />
+
+  <!-- Apple PWA -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="قبيلة النعيم" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -59,7 +76,7 @@
   <!-- Theme Color -->
   <meta name="theme-color" content="#0a1628" />
   <meta name="msapplication-navbutton-color" content="#0a1628" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -69,7 +86,7 @@
     "name": "قبيلة السادة النعيم",
     "alternateName": ["Qabila Al-Naim", "أهل الصفرا"],
     "url": "https://qabilat-al-naim.vercel.app",
-    "logo": "https://qabilat-al-naim.vercel.app/images/logo.png",
+    "logo": "https://qabilat-al-naim.vercel.app/images/logo.webp",
     "description": "قبيلة السادة النعيم (أهل الصفرا) من القبائل العربية العريقة في بلاد الشام. نسب هاشمي متصل بالإمام الحسين رضي الله عنه.",
     "areaServed": {
       "@type": "Place",

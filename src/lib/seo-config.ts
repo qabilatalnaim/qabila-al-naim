@@ -2,11 +2,32 @@ import type { SEOProps } from '../components/SEO'
 
 const BASE_KEYWORDS = 'قبيلة النعيم, السادة النعيم, أهل الصفرا, تراث عربي, قبائل الشام, حمص, الصفرا, عز الدين أبو حمرة'
 
+// Default OG image
+const DEFAULT_OG = 'https://qabilat-al-naim.vercel.app/images/logo.webp'
+
+// Page-specific OG images (using existing WebP images)
+const OG_IMAGES = {
+  home: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
+  history: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
+  town: 'https://qabilat-al-naim.vercel.app/images/wafat-wa-maqam.webp',
+  camels: 'https://qabilat-al-naim.vercel.app/images/abnaa-izz-din-abu-himara.webp',
+  horses: 'https://qabilat-al-naim.vercel.app/images/nasb-kull-ibn.webp',
+  sheep: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
+  wasm: 'https://qabilat-al-naim.vercel.app/images/tribe-flag.webp',
+  poetry: 'https://qabilat-al-naim.vercel.app/images/tribe-logo-calligraphy.webp',
+  coffee: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
+  traditions: 'https://qabilat-al-naim.vercel.app/images/tribe-flag.webp',
+  tent: 'https://qabilat-al-naim.vercel.app/images/mawlid-wa-nashaa.webp',
+  blog: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
+  search: 'https://qabilat-al-naim.vercel.app/images/logo.webp',
+} as const
+
 export const seoConfig: Record<string, SEOProps> = {
   home: {
     title: 'قبيلة السادة النعيم | تراث عربي أصيل من الصفرا - حمص',
     description: 'قبيلة السادة النعيم (أهل الصفرا) من القبائل العربية العريقة في بلاد الشام. نسب هاشمي متصل بالإمام الحسين رضي الله عنه. توثيق تاريخ قبائل الشام، الفروسية العربية، تراث الصفرا في حمص.',
     keywords: `${BASE_KEYWORDS}, نسب هاشمي, فروسية عربية, إبل صفراء, إبل أصيلة, أغنام النعيم, كرم الضيافة, تراث سوري, تاريخ عربي, قبائل سورية, شعر نبطي`,
+    image: OG_IMAGES.home,
     url: '/',
     type: 'website',
   },
@@ -14,6 +35,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'النسب والتاريخ | قبيلة السادة النعيم',
     description: 'سلسلة النسب الهاشمي لقبيلة السادة النعيم من الإمام الحسين رضي الله عنه. تاريخ القبيلة والبطون الأربعة الكبرى: الفخر، المحمدية، الحزومين، البو طارق.',
     keywords: `${BASE_KEYWORDS}, النسب الهاشمي, سلسلة النسب, البطون, الأفخاذ, الفخر, المحمدية, الحزومين, البو طارق, تاريخ القبائل العربية`,
+    image: OG_IMAGES.history,
     url: '/history',
     type: 'article',
     section: 'التاريخ',
@@ -22,6 +44,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'الإبل عند قبيلة السادة النعيم | تراث الصفرا',
     description: 'تربية الإبل عند قبيلة السادة النعيم - أهل الصفرا. سلالات الإبل الأصيلة، فنون الرعي في البادية، مكانة الإبل في التراث العربي الأصيل.',
     keywords: `${BASE_KEYWORDS}, إبل, إبل صفراء, إبل أصيلة, تربية الإبل, سلالات الإبل, البادية, رعي الإبل, تراث بدوي`,
+    image: OG_IMAGES.camels,
     url: '/camels',
     type: 'article',
     section: 'التراث',
@@ -30,6 +53,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'الخيل والفروسية | قبيلة السادة النعيم',
     description: 'الفروسية العربية الأصيلة عند قبيلة السادة النعيم. سلالات الخيل العربية الأصيلة، فنون الفروسية، الرماية على الخيل، وتاريخ الخيل في التراث العربي.',
     keywords: `${BASE_KEYWORDS}, فروسية, خيل عربي, خيل أصيلة, سلالات الخيل, فروسية عربية, الرماية على الخيل, الخيل العربية`,
+    image: OG_IMAGES.horses,
     url: '/horses',
     type: 'article',
     section: 'التراث',
@@ -38,6 +62,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'الغنم عند قبيلة السادة النعيم | أصالة السلالة',
     description: 'تربية الغنم عند قبيلة السادة النعيم. سلالات الغنم الأصيلة، فنون العناية والرعي، مكانة الغنم في التراث العربي والحياة البدوية.',
     keywords: `${BASE_KEYWORDS}, غنم, أغنام, سلالات الغنم, تربية الأغنام, الرعي, البادية, تراث الغنم`,
+    image: OG_IMAGES.sheep,
     url: '/sheep',
     type: 'article',
     section: 'التراث',
@@ -46,6 +71,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'الوسم ورمز ٥١٥ | قبيلة السادة النعيم',
     description: 'الوسم (رمز ٥١٥) عند قبيلة السادة النعيم. تاريخ الوسم، دلالته كرمز للانتماء والهوية، وكيفية وسم الإبل والأغنام في التراث العربي.',
     keywords: `${BASE_KEYWORDS}, وسم, رمز ٥١٥, وسم الإبل, وسم الأغنام, علامات القبائل, هوية الانتماء, تراث الوسم`,
+    image: OG_IMAGES.wasm,
     url: '/wasm',
     type: 'article',
     section: 'التراث',
@@ -54,6 +80,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'الشعر النبطي | قصائد قبيلة السادة النعيم',
     description: 'الشعر النبطي والفخر عند قبيلة السادة النعيم. قصائد أهل الصفرا، المدائح والأرجاز، وأبيات الشعر التي تروي أمجاد القبيلة وتاريخها.',
     keywords: `${BASE_KEYWORDS}, شعر نبطي, قصائد فخر, شعر قبائل, أهل الصفرا, مدائح, أراجز, شعر عربي, شعر تراثي`,
+    image: OG_IMAGES.poetry,
     url: '/poetry',
     type: 'article',
     section: 'الأدب',
@@ -62,6 +89,7 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'القهوة العربية | طقوس الضيافة عند قبيلة النعيم',
     description: 'القهوة العربية (الدلة) وطقوس الضيافة عند قبيلة السادة النعيم. فناجين الضيافة، كرم العرب، تقاليد إعداد القهوة واستقبال الضيف في التراث العربي.',
     keywords: `${BASE_KEYWORDS}, قهوة عربية, الدلة, فناجين, الضيافة العربية, كرم العرب, تقاليد الضيافة, قهوة بدوية`,
+    image: OG_IMAGES.coffee,
     url: '/coffee',
     type: 'article',
     section: 'التراث',
@@ -69,15 +97,17 @@ export const seoConfig: Record<string, SEOProps> = {
   traditions: {
     title: 'العادات والتقاليد | قبيلة السادة النعيم',
     description: 'العادات والتقاليد العربية الأصيلة عند قبيلة السادة النعيم. الكرم والضيافة، بيت الشعر، المجالس والأمجاد، وتقاليد القبيلة العربية العريقة.',
-    keywords: `${BASE_KEYWORDS}, عادات عربية, تقاليد, الكرم, الضيافة, المجالس, الأمجاد, تراث قبلي, أعراف عربية`,
+    keywords: `${BASE_KEYWORDS}, عادات, تقاليد, الكرم, الضيافة, المجالس, الأمجاد, أعراف عربية, قيم, أخلاق`,
+    image: OG_IMAGES.traditions,
     url: '/traditions',
     type: 'article',
     section: 'التراث',
   },
   tent: {
     title: 'بيت الشعر | الخيمة البدوية عند قبيلة النعيم',
-    description: 'بيت الشعر (الخيمة البدوية) عند قبيلة السادة النعيم. أقسام بيت الشعر، أجزاؤه، حباله وأدواته، دخلة البادية وكرم الضيافة العربية الأصيلة.',
-    keywords: `${BASE_KEYWORDS}, بيت الشعر, خيمة بدوية, الخيمة العربية, دخلة البادية, الشعر, خيمة عربية, بيوت الشعر, تقاليد الخيمة`,
+    description: 'بيت الشعر (الخيمة البدوية) عند قبيلة السادة النعيم. أقسام بيت الشعر، أجزاؤه، حباله وأدواته، دخلة البادية وكرم الضيافة في الخيمة.',
+    keywords: `${BASE_KEYWORDS}, بيت شعر, خيمة, خيمة بدوية, الخيمة العربية, دخلة البادية, الشعر, كرم الضيافة, تقاليد الخيمة`,
+    image: OG_IMAGES.tent,
     url: '/tent',
     type: 'article',
     section: 'التراث',
@@ -86,8 +116,25 @@ export const seoConfig: Record<string, SEOProps> = {
     title: 'بلدة عز الدين | موطن قبيلة السادة النعيم',
     description: 'بلدة عز الدين - موطن قبيلة السادة النعيم التاريخي. قصة تسمية البلدة بالشيخ عز الدين أبو حمرة، معالمها، ودورها الاجتماعي والاقتصادي عبر التاريخ.',
     keywords: `${BASE_KEYWORDS}, بلدة عز الدين, عز الدين أبو حمرة, موطن القبيلة, تاريخ البلدة, معالم البلدة, الجذور, الانتماء`,
+    image: OG_IMAGES.town,
     url: '/town',
     type: 'article',
     section: 'التاريخ',
+  },
+  blog: {
+    title: 'المدونة | قبيلة السادة النعيم',
+    description: 'أخبار ومقالات عن تاريخ وتراث قبيلة السادة النعيم. مقالات تثقيفية عن الإبل، الخيل، النسب، بلدة عز الدين، الشعر النبطي، والضيافة.',
+    keywords: `مدونة, أخبار, مقالات, ${BASE_KEYWORDS}`,
+    image: OG_IMAGES.blog,
+    url: '/blog',
+    type: 'website',
+  },
+  search: {
+    title: 'بحث في الموقع | قبيلة السادة النعيم',
+    description: 'ابحث في محتوى موقع قبيلة السادة النعيم - التراث، التاريخ، النسب، الإبل، الخيل، الشعر، والضيافة.',
+    keywords: `بحث, ${BASE_KEYWORDS}`,
+    image: OG_IMAGES.search,
+    url: '/search',
+    type: 'website',
   },
 }

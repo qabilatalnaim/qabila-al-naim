@@ -18,4 +18,22 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Manual chunks لتقسيم bundle بشكل أفضل
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'components-vendor': [
+            './src/components/SEO.tsx',
+            './src/components/Footer.tsx',
+            './src/components/Breadcrumbs.tsx',
+            './src/components/OptimizedImage.tsx',
+          ],
+        },
+      },
+    },
+    // تحسين حجم الـ bundle
+    chunkSizeWarningLimit: 800,
+  },
 })
