@@ -14,10 +14,10 @@ export interface SEOProps {
   noindex?: boolean
 }
 
-const SITE_NAME = 'قبيلة السادة النعيم - أهل الصفرا'
+const SITE_NAME = 'قبيلة النعيم أهل الصفرا ٥١٥ - أهل الصفرا'
 const SITE_URL = 'https://qabilat-al-naim.vercel.app'
 const DEFAULT_IMAGE = `${SITE_URL}/images/logo.png`
-const DEFAULT_AUTHOR = 'قبيلة السادة النعيم'
+const DEFAULT_AUTHOR = 'قبيلة النعيم أهل الصفرا ٥١٥'
 
 export default function SEO({
   title,
@@ -112,7 +112,7 @@ export default function SEO({
         name: SITE_NAME,
         url: SITE_URL,
         logo: DEFAULT_IMAGE,
-        description: 'قبيلة السادة النعيم (أهل الصفرا) من القبائل العربية العريقة في بلاد الشام. نسب هاشمي متصل بالإمام الحسين رضي الله عنه.',
+        description: 'قبيلة النعيم أهل الصفرا ٥١٥ (أهل الصفرا) من القبائل العربية العريقة في بلاد الشام. نسب هاشمي متصل بالإمام الحسين رضي الله عنه.',
         sameAs: [
           'https://www.youtube.com/@qabilatalnaim',
           'https://www.facebook.com/share/19n8j2XqBu/',
@@ -235,12 +235,12 @@ export default function SEO({
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'عز الدين أبو حمرة (أحمد بن نعيم)',
-        alternateName: 'الجد الجامع لقبيلة السادة النعيم',
-        description: 'الجدّ الجامع لقبيلة السادة النعيم، رمز وحدة النسب وعمق الجذور. تحمل بلدة عز الدين اسمه تخليدًا لذكراه.',
+        alternateName: 'الجد الجامع لقبيلة النعيم أهل الصفرا ٥١٥',
+        description: 'الجدّ الجامع لقبيلة النعيم أهل الصفرا ٥١٥، رمز وحدة النسب وعمق الجذور. تحمل بلدة عز الدين اسمه تخليدًا لذكراه.',
         jobTitle: 'الجد الجامع',
         affiliation: {
           '@type': 'Organization',
-          name: 'قبيلة السادة النعيم',
+          name: 'قبيلة النعيم أهل الصفرا ٥١٥',
         },
         birthPlace: {
           '@type': 'Place',

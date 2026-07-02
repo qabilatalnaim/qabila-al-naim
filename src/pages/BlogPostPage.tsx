@@ -42,7 +42,7 @@ export default function BlogPostPage() {
   return (
     <>
       <SEO
-        title={`${post.title} | مدونة قبيلة السادة النعيم`}
+        title={`${post.title} | مدونة قبيلة النعيم أهل الصفرا ٥١٥`}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         url={`/blog/${post.id}`}

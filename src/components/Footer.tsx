@@ -72,13 +72,13 @@ export default function Footer() {
             <Link to="/" className="flex items-center gap-3 mb-4 group">
               <OptimizedImage
                 src="/images/logo.webp"
-                alt="شعار قبيلة السادة النعيم"
+                alt="شعار قبيلة النعيم أهل الصفرا ٥١٥"
                 className="w-14 h-14 rounded-full object-cover border-2 border-[#D4AF37] group-hover:scale-105 transition-transform"
                 loading="lazy"
               />
               <div>
                 <h3 className="font-bold text-lg text-white group-hover:text-[#D4AF37] transition-colors">
-                  قبيلة السادة النعيم
+                  النعيم <span className="text-[#D4AF37]">٥١٥</span>
                 </h3>
                 <p className="text-xs text-gray-400">أهل الصفرا</p>
               </div>
@@ -209,7 +209,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Copyright */}
             <p className="text-gray-500 text-sm text-center md:text-right">
-              جميع الحقوق محفوظة © {currentYear} قبيلة السادة النعيم - أبناء العم
+              جميع الحقوق محفوظة © {currentYear} قبيلة النعيم أهل الصفرا ٥١٥ - أبناء العم
             </p>
 
             {/* Quick Info */}
@@ -231,7 +231,7 @@ export default function Footer() {
       <div className="bg-[#0a1628] border-t border-white/5 py-3">
         <div className="container mx-auto px-4 text-center">
           <p className="text-xs text-gray-600">
-            صُنع بـ ❤️ لتوثيق تراث قبيلة السادة النعيم | تطوير بواسطة Mavis
+            صُنع بـ ❤️ لتوثيق تراث قبيلة النعيم أهل الصفرا ٥١٥ | تطوير بواسطة Mavis
           </p>
         </div>
       </div>

@@ -204,8 +204,8 @@ function App() {
 
   const featuredVideo = {
     id: 'KiIEUqNFh4w',
-    title: 'من عاصمة قبيلة السادة النعيم إلى مدينة حمص عاصمة الثورة',
-    description: 'رحلة توثيقية من عاصمة قبيلة السادة النعيم في الصفرا إلى مدينة حمص',
+    title: 'من عاصمة قبيلة النعيم أهل الصفرا ٥١٥ إلى مدينة حمص عاصمة الثورة',
+    description: 'رحلة توثيقية من عاصمة قبيلة النعيم أهل الصفرا ٥١٥ في الصفرا إلى مدينة حمص',
   }
 
   const heritageTopics = [
@@ -295,7 +295,7 @@ function App() {
                 <Link to="/" className="flex items-center gap-3">
                   <OptimizedImage src="/images/logo.png" alt="شعار قبيلة النعيم" className="w-12 h-12 rounded-full object-cover border-2 border-[#D4AF37]" />
                   <div className="hidden sm:block">
-                    <h1 className="font-bold text-lg text-white">قبيلة السادة النعيم</h1>
+                    <h1 className="font-bold text-lg text-white">النعيم <span className="text-[#D4AF37]">٥١٥</span></h1>
                     <p className="text-xs text-gray-400">أهل الصفرا</p>
                   </div>
                 </Link>
@@ -412,12 +412,19 @@ function App() {
               </div>
 
               {/* Title */}
+              {/* Badge 515 */}
+              <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-[#F5D76E]/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                <span className="text-[#D4AF37] font-black text-2xl tracking-wider">٥١٥</span>
+                <span className="w-px h-5 bg-[#D4AF37]/40"></span>
+                <span className="text-[#D4AF37] font-bold text-sm">حيث الجذور تلتقي بالمجد</span>
+              </div>
+
               <h1 className="text-5xl md:text-7xl font-black text-white mb-4">
-                قبيلة <span className="text-[#D4AF37]">السادة</span> النعيم
+                قبيلة النعيم <span className="text-[#D4AF37]">أهل الصفرا</span>
               </h1>
-              <p className="text-2xl text-[#D4AF37] font-bold mb-6">أهل الصفرا - تراث عربي أصيل</p>
+              <p className="text-2xl text-[#D4AF37] font-bold mb-6">تراث عربي أصيل من الصفرا - حمص</p>
               <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                منصّة توثّق تاريخ قبيلة السادة النعيم العريقة - السادة الرفاعية الموسوية الحسينية - نسب هاشمي متصل بالإمام الحسين رضي الله عنه
+                منصّة توثّق تاريخ قبيلة النعيم أهل الصفرا ٥١٥ العريقة - السادة الرفاعية الموسوية الحسينية - نسب هاشمي متصل بالإمام الحسين رضي الله عنه
               </p>
 
               {/* Buttons */}
@@ -469,7 +476,7 @@ function App() {
                     <span className="text-3xl">📜</span>
                     <span className="text-[#D4AF37] font-bold">نبذة تاريخية</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-white mb-4">قبيلة السادة النعيم</h2>
+                  <h2 className="text-4xl md:text-5xl font-black text-white mb-4">قبيلة النعيم أهل الصفرا <span className="text-[#D4AF37]">٥١٥</span></h2>
                   <p className="text-gray-400 text-lg">قبيلة عريقة من قبائل الشام العربية الأصيلة - تراث وتاريخ</p>
                 </div>
 
@@ -657,7 +664,7 @@ function App() {
                     <div className="bg-gradient-to-l from-[#D4AF37]/20 to-transparent p-6 rounded-r-2xl border-r-4 border-[#D4AF37]">
                       <h3 className="font-bold text-[#D4AF37] text-xl mb-3 text-center">✦ كلمة ختامية ✦</h3>
                       <p className="text-gray-200 leading-relaxed">
-                        وتبقى قبيلة السادة النعيم صفحةً مشرقة في سجل القبائل العربية الأصيلة، بما تحمله من إرثٍ تاريخي واجتماعي وثقافي عريق. وقد حافظ أبناؤها على قيم الكرم والشهامة والوفاء والتكاتف، وظلت هذه القيم ركيزةً أساسية في مسيرتهم جيلاً بعد جيل.
+                        وتبقى قبيلة النعيم أهل الصفرا ٥١٥ صفحةً مشرقة في سجل القبائل العربية الأصيلة، بما تحمله من إرثٍ تاريخي واجتماعي وثقافي عريق. وقد حافظ أبناؤها على قيم الكرم والشهامة والوفاء والتكاتف، وظلت هذه القيم ركيزةً أساسية في مسيرتهم جيلاً بعد جيل.
                       </p>
                       <p className="text-gray-200 leading-relaxed mt-4">
                         وتمثل هذه الصفحة نافذةً للتعريف بتاريخ القبيلة وموروثها ورجالاتها، وتأكيدًا على الاعتزاز بالجذور والأصالة والانتماء، واستمرارًا لرسالة الآباء والأجداد في حفظ الهوية وصون الموروث للأجيال القادمة.

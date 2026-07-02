@@ -102,7 +102,7 @@ function HistoryPage() {
   return (
     <>
       <SEO {...seoConfig.history} faq={[
-        { question: 'من هم السادة النعيم؟', answer: 'قبيلة السادة النعيم من القبائل العربية العريقة في بلاد الشام، نسبها هاشمي متصل بالإمام الحسين رضي الله عنه. وهي من السادة الرفاعية الموسوية الحسينية.' },
+        { question: 'من هم السادة النعيم؟', answer: 'قبيلة النعيم أهل الصفرا ٥١٥ من القبائل العربية العريقة في بلاد الشام، نسبها هاشمي متصل بالإمام الحسين رضي الله عنه. وهي من السادة الرفاعية الموسوية الحسينية.' },
         { question: 'من هو الجد الجامع لقبيلة النعيم؟', answer: 'الشيخ عز الدين أبو حمرة (أحمد بن نعيم) هو الجد الجامع لقبيلة النعيم، وتحمل بلدة عز الدين اسمه تخليدًا لذكراه.' },
         { question: 'كم عدد بطون قبيلة النعيم؟', answer: 'قبيلة النعيم تتألف من أربعة بطون رئيسية: الفخر، المحمدية (المحاميد)، الحزومين، والبو طارق.' },
         { question: 'أين يقع موطن قبيلة النعيم؟', answer: 'يستقر أبناء قبيلة النعيم في مناطق عدة من بلاد الشام، وتُعدّ بلدة عز الدين موطنهم التاريخي ورمز وحدتهم وانتمائهم.' },
@@ -123,10 +123,10 @@ function HistoryPage() {
           <div className="text-center">
             <div className="inline-flex items-center gap-3 bg-[#D4AF37]/10 px-6 py-2 rounded-full mb-6">
               <span className="text-3xl"><BookIcon /></span>
-              <span className="text-[#D4AF37] font-bold tracking-wider">نسب قبيلة السادة النعيم</span>
+              <span className="text-[#D4AF37] font-bold tracking-wider">نسب قبيلة النعيم أهل الصفرا ٥١٥</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-4">
-              نسب <span className="text-[#D4AF37]">قبيلة السادة النعيم</span>
+              نسب <span className="text-[#D4AF37]">قبيلة النعيم أهل الصفرا ٥١٥</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               أصل النسب وتاريخ السلالة الرفاعية الموسوية الحسينية
@@ -135,7 +135,7 @@ function HistoryPage() {
         </div>
       </div>
 
-      {/* Content - Part 1: نسب قبيلة السادة النعيم */}
+      {/* Content - Part 1: نسب قبيلة النعيم أهل الصفرا ٥١٥ */}
       <div className="container mx-auto px-4 py-16">
 
         {/* Part 1 Header */}
@@ -144,7 +144,7 @@ function HistoryPage() {
             <div className="flex items-center gap-3">
               <span className="text-4xl"><HomeIcon /></span>
               <div>
-                <h2 className="text-2xl font-bold text-[#D4AF37]">نسب قبيلة السادة النعيم</h2>
+                <h2 className="text-2xl font-bold text-[#D4AF37]">نسب قبيلة النعيم أهل الصفرا ٥١٥</h2>
                 <p className="text-gray-400">أصل النسب وتاريخ السلالة الرفاعية</p>
               </div>
             </div>
@@ -162,7 +162,7 @@ function HistoryPage() {
                 </div>
                 <p className="text-[#D4AF37] font-bold text-2xl mb-4">سلسلة النسب الهاشمي</p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                  نسب قبيلة السادة النعيم العريقة، المتجذرة في التاريخ العربي، تنتسب إلى السلالة الرفاعية الموسوية الحسينية.
+                  نسب قبيلة النعيم أهل الصفرا ٥١٥ العريقة، المتجذرة في التاريخ العربي، تنتسب إلى السلالة الرفاعية الموسوية الحسينية.
                 </p>
                 <div className="bg-[#D4AF37]/10 rounded-xl p-4 border border-[#D4AF37]/20">
                   <p className="text-white font-semibold">الرفاعية ← الموسوية ← الحسينية</p>
@@ -171,7 +171,7 @@ function HistoryPage() {
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30">
                   <OptimizedImage src="/images/silsilat-al-nasb.jpg"
-                    alt="شجرة نسب قبيلة السادة النعيم - سلسلة النسب الهاشمي الرفاعي الموسوي الحسيني"
+                    alt="شجرة نسب قبيلة النعيم أهل الصفرا ٥١٥ - سلسلة النسب الهاشمي الرفاعي الموسوي الحسيني"
                     className="w-full h-auto object-contain"
                   />
                 </div>
@@ -192,7 +192,7 @@ function HistoryPage() {
             </div>
             <div className="text-gray-300 text-lg leading-loose space-y-6">
               <p>
-                تنتسب قبيلة السادة النعيم إلى <span className="text-[#D4AF37] font-bold">السادة آل الرفاعي</span>، فهي قبيلة رفاعية موسوية حسينية.
+                تنتسب قبيلة النعيم أهل الصفرا ٥١٥ إلى <span className="text-[#D4AF37] font-bold">السادة آل الرفاعي</span>، فهي قبيلة رفاعية موسوية حسينية.
               </p>
             </div>
           </div>

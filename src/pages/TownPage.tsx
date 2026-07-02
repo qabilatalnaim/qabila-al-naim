@@ -25,7 +25,7 @@ export default function TownPage() {
               <span className="text-4xl">🏘️</span>
               <span className="text-teal-400 font-bold">بلدة عز الدين</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">موطن قبيلة السادة النعيم</h1>
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">موطن قبيلة النعيم أهل الصفرا ٥١٥</h1>
             <p className="text-gray-400 text-lg">قصة البلدة ومعالمها وجذور الانتماء</p>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function TownPage() {
               <span className="text-6xl">🏘️</span>
             </div>
             <p className="text-gray-200 text-lg leading-loose text-center mb-6">
-              تحمل بلدة <span className="text-teal-400 font-bold">عزّ الدين</span> اسم الجدّ الجامع لقبيلة السادة النعيم، الشيخ <span className="text-teal-400 font-bold">عزّ الدين أبو حمرة (أحمد بن نعيم)</span>، تخليدًا لذكراه وتقديرًا لمكانته في تاريخ القبيلة وذاكرتها الجمعية.
+              تحمل بلدة <span className="text-teal-400 font-bold">عزّ الدين</span> اسم الجدّ الجامع لقبيلة النعيم أهل الصفرا ٥١٥، الشيخ <span className="text-teal-400 font-bold">عزّ الدين أبو حمرة (أحمد بن نعيم)</span>، تخليدًا لذكراه وتقديرًا لمكانته في تاريخ القبيلة وذاكرتها الجمعية.
             </p>
             <p className="text-gray-300 text-lg leading-loose text-center">
               وتُعدّ البلدة اليوم شاهدًا حيًّا على عراقة النسب وعمق الجذور، ومركزًا لتلاحم أبناء القبيلة وحفظ موروثها الاجتماعي عبر الأجيال.
@@ -226,7 +226,7 @@ export default function TownPage() {
             </h2>
             <div className="bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-3xl p-10 border border-teal-600/20">
               <p className="text-gray-300 leading-loose mb-6">
-                تبقى بلدة عزّ الدين عنوانًا للهوية والانتماء عند أبناء قبيلة السادة النعيم، إذ يربطون بها ذاكرة الجدّ الجامع، ويستحضرون من خلالها قصص الأجداد ومواقفهم وأمجادهم.
+                تبقى بلدة عزّ الدين عنوانًا للهوية والانتماء عند أبناء قبيلة النعيم أهل الصفرا ٥١٥، إذ يربطون بها ذاكرة الجدّ الجامع، ويستحضرون من خلالها قصص الأجداد ومواقفهم وأمجادهم.
               </p>
               <p className="text-gray-300 leading-loose mb-6">
                 وهي اليوم ليست مجرّد موقع جغرافي، بل <span className="text-teal-400 font-bold">رمزٌ لوحدة النسب</span>، و<span className="text-teal-400 font-bold">منارةٌ للموروث</span>، يلتقي عندها الأبناء في المناسبات والأعياد، ويجدّدون فيها عهود الوفاء لجذورهم وانتمائهم الأصيل.
@@ -234,7 +234,7 @@ export default function TownPage() {
               <div className="bg-gradient-to-l from-teal-600/20 to-transparent p-6 rounded-r-2xl border-r-4 border-teal-400 mt-6">
                 <h3 className="font-bold text-teal-400 text-xl mb-3 text-center">✦ كلمة ختامية ✦</h3>
                 <p className="text-gray-200 leading-loose text-center">
-                  بلدة عزّ الدين ليست مكانًا يُزار، بل هي <span className="text-teal-400 font-bold">هويةٌ تُحمل</span>، و<span className="text-teal-400 font-bold">جذورٌ تُروى</span>، و<span className="text-teal-400 font-bold">قصةٌ تستمر</span> في ذاكرة كل فرد من أبناء قبيلة السادة النعيم، جيلاً بعد جيل.
+                  بلدة عزّ الدين ليست مكانًا يُزار، بل هي <span className="text-teal-400 font-bold">هويةٌ تُحمل</span>، و<span className="text-teal-400 font-bold">جذورٌ تُروى</span>، و<span className="text-teal-400 font-bold">قصةٌ تستمر</span> في ذاكرة كل فرد من أبناء قبيلة النعيم أهل الصفرا ٥١٥، جيلاً بعد جيل.
                 </p>
               </div>
             </div>

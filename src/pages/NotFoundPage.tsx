@@ -28,7 +28,7 @@ export default function NotFoundPage() {
   return (
     <>
       <SEO
-        title="الصفحة غير موجودة (404) | قبيلة السادة النعيم"
+        title="الصفحة غير موجودة (404) | قبيلة النعيم أهل الصفرا ٥١٥"
         description="الصفحة التي تبحث عنها غير موجودة. يمكنك العودة للصفحة الرئيسية أو استكشاف قاعات التراث."
         url="/404"
         noindex={true}
@@ -103,7 +103,7 @@ export default function NotFoundPage() {
             <div className="mt-12">
               <OptimizedImage
                 src="/images/logo.webp"
-                alt="شعار قبيلة السادة النعيم"
+                alt="شعار قبيلة النعيم أهل الصفرا ٥١٥"
                 className="w-24 h-24 mx-auto rounded-full object-cover border-2 border-[#D4AF37] opacity-50"
                 loading="eager"
               />
