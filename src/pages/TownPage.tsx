@@ -31,8 +31,44 @@ export default function TownPage() {
         </div>
       </div>
 
+      {/* Hero Image - منظر بلدة عز الدين */}
+      <div className="container mx-auto px-4 -mt-4 mb-16">
+        <div className="max-w-5xl mx-auto">
+          <figure className="relative group">
+            <div className="relative h-[280px] md:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden border-2 border-teal-600/40 shadow-[0_0_60px_rgba(20,184,166,0.25)]">
+              <OptimizedImage
+                src="/images/town-overview.webp"
+                alt="منظر بانورامي لبلدة عز الدين - موطن قبيلة النعيم أهل الصفرا ٥١٥، يظهر فيها المسجد والمئذنة والقبور والطبيعة المحيطة"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="eager"
+                decoding="async"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent" />
+              {/* Caption overlay */}
+              <figcaption className="absolute bottom-0 right-0 left-0 p-6 md:p-10">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="inline-block w-12 h-0.5 bg-teal-400"></span>
+                  <span className="text-teal-400 text-sm md:text-base font-bold tracking-wide">من قلب حمص · سوريا</span>
+                </div>
+                <h2 className="text-2xl md:text-4xl font-black text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  بلدة عزّ الدين أبو حمرة
+                </h2>
+                <p className="text-gray-200 text-sm md:text-base mt-2 max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  موطن الجدّ الجامع لقبيلة النعيم أهل الصفرا ٥١٥، حيث تتلاقى أرواح الأجداد مع ذاكرة الأبناء
+                </p>
+              </figcaption>
+            </div>
+            {/* Image caption below */}
+            <figcaption className="text-center text-gray-500 text-xs md:text-sm mt-4 italic">
+              📸 منظر بانورامي لبلدة عزّ الدين — مسجدها ومقابرها وأراضيها الشاسعة تمتد تحت سماء بلاد الشام
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
       {/* Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
 
           {/* Introduction */}

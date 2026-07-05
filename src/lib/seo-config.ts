@@ -1,6 +1,6 @@
 import type { SEOProps } from '../components/SEO'
 
-const BASE_KEYWORDS = 'قبيلة النعيم أهل الصفرا ٥١٥, النعيم ٥١٥, السادة النعيم, أهل الصفرا, ٥١٥, تراث عربي, قبائل الشام, حمص, الصفرا, عز الدين أبو حمرة'
+const BASE_KEYWORDS = 'قبيلة النعيم أهل الصفرا ٥١٥, النعيم ٥١٥, السادة النعيم, أهل الصفرا, ٥١٥, تراث عربي, قبائل الشام, حمص, الصفرا, عز الدين أبو حمرة, بلدة عز الدين, بلدة النعيم'
 
 // Default OG image
 const DEFAULT_OG = 'https://qabilat-al-naim.vercel.app/images/logo.webp'
@@ -9,7 +9,7 @@ const DEFAULT_OG = 'https://qabilat-al-naim.vercel.app/images/logo.webp'
 const OG_IMAGES = {
   home: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
   history: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
-  town: 'https://qabilat-al-naim.vercel.app/images/wafat-wa-maqam.webp',
+  town: 'https://qabilat-al-naim.vercel.app/images/town-overview.webp',
   camels: 'https://qabilat-al-naim.vercel.app/images/abnaa-izz-din-abu-himara.webp',
   horses: 'https://qabilat-al-naim.vercel.app/images/nasb-kull-ibn.webp',
   sheep: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
@@ -113,9 +113,9 @@ export const seoConfig: Record<string, SEOProps> = {
     section: 'التراث',
   },
   town: {
-    title: 'بلدة عز الدين | موطن قبيلة السادة النعيم',
-    description: 'بلدة عز الدين - موطن قبيلة السادة النعيم التاريخي. قصة تسمية البلدة بالشيخ عز الدين أبو حمرة، معالمها، ودورها الاجتماعي والاقتصادي عبر التاريخ.',
-    keywords: `${BASE_KEYWORDS}, بلدة عز الدين, عز الدين أبو حمرة, موطن القبيلة, تاريخ البلدة, معالم البلدة, الجذور, الانتماء`,
+    title: 'بلدة عزّ الدين أبو حمرة | موطن قبيلة النعيم أهل الصفرا ٥١٥',
+    description: 'بلدة عزّ الدين أبو حمرة - موطن قبيلة النعيم أهل الصفرا ٥١٥ التاريخي. قصة تسمية البلدة بالشيخ عزّ الدين أبو حمرة، معالمها من المساجد والبيوتات والمقامات، ودورها الاجتماعي والاقتصادي عبر التاريخ. من قلب بلاد الشام، إرث عربي أصيل يمتد عبر الأجيال.',
+    keywords: `${BASE_KEYWORDS}, بلدة عز الدين, عز الدين أبو حمرة, موطن القبيلة, تاريخ البلدة, معالم البلدة, الجذور, الانتماء, بلدة النعيم, قرية النعيم, حمص, بلاد الشام, أحمد بن نعيم`,
     image: OG_IMAGES.town,
     url: '/town',
     type: 'article',
