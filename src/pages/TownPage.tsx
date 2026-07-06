@@ -16,7 +16,7 @@ export default function TownPage() {
     <>
       <SEO {...seoConfig.town} />
       <Breadcrumbs items={[{ label: 'بلدة عز الدين' }]} />
-      {/* Hero banner with town panorama - rebuilt for cache busting 2026-07-05 */}
+      {/* CacheBust20260706083500 */}
       <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
       {/* Header */}
       <div className="bg-gradient-to-b from-[#162544] to-[#0a1628] py-16">

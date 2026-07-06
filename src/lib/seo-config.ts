@@ -1,6 +1,6 @@
 import type { SEOProps } from '../components/SEO'
 
-const BASE_KEYWORDS = 'قبيلة النعيم أهل الصفرا ٥١٥, النعيم ٥١٥, السادة النعيم, أهل الصفرا, ٥١٥, تراث عربي, قبائل الشام, حمص, الصفرا, عز الدين أبو حمرة, بلدة عز الدين, بلدة النعيم'
+const BASE_KEYWORDS = 'قبيلة النعيم أهل الصفرا ٥١٥, النعيم ٥١٥, السادة النعيم, أهل الصفرا, ٥١٥, تراث عربي, قبائل الشام, حمص, الصفرا, عز الدين أبو حمرة, بلدة عز الدين, بلدة النعيم, أحمد بن نعيم'
 
 // Default OG image
 const DEFAULT_OG = 'https://qabilat-al-naim.vercel.app/images/logo.webp'
