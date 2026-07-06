@@ -38,7 +38,7 @@ export default function TownPage() {
           <figure className="relative group">
             <div className="relative h-[280px] md:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden border-2 border-teal-600/40 shadow-[0_0_60px_rgba(20,184,166,0.25)]">
               <OptimizedImage
-                src="/images/town-overview.webp"
+                src="/images/town-overview-v2.webp"
                 alt="منظر بانورامي لبلدة عز الدين - موطن قبيلة النعيم أهل الصفرا ٥١٥، يظهر فيها المسجد والمئذنة والقبور والطبيعة المحيطة"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="eager"
