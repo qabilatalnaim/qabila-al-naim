@@ -385,45 +385,40 @@ function App() {
 
           {/* Hero Section */}
           <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#162544] to-[#0a1628]">
-              <div className="absolute inset-0 opacity-10">
-                <OptimizedImage src="/images/banner.jpg" alt="" className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-10 blur-[150px]"></div>
-              <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-10 blur-[150px]"></div>
+            {/* Background Hero Banner */}
+            <div className="absolute inset-0">
+              <picture>
+                <source media="(max-width: 768px)" srcSet="/images/hero-banner-2026-mobile.webp" />
+                <source srcSet="/images/hero-banner-2026.webp" type="image/webp" />
+                <img
+                  src="/images/hero-banner-2026.webp"
+                  alt="بانوراما قبيلة النعيم أهل الصفرا ٥١٥ - مسجد ومئذنة وفارس ولواء القبيلة"
+                  className="w-full h-full object-cover object-center"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+              </picture>
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/70 via-[#0a1628]/40 to-[#0a1628]"></div>
+              {/* Decorative blurred lights */}
+              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-20 blur-[150px]"></div>
+              <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-20 blur-[150px]"></div>
             </div>
 
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-              {/* Logo */}
-              <div className="mb-10">
-                <OptimizedImage src="/images/logo.png"
-                  alt="شعار قبيلة النعيم"
-                  className="w-36 h-36 mx-auto rounded-full object-cover border-4 border-[#D4AF37] shadow-[0_0_60px_rgba(212,175,55,0.4)]"
-                />
-              </div>
-
-              {/* Banner */}
-              <div className="mb-10">
-                <OptimizedImage src="/images/banner.jpg"
-                  alt="بيرق قبيلة النعيم"
-                  className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-[#D4AF37]/30"
-                />
-              </div>
-
-              {/* Title */}
               {/* Badge 515 */}
-              <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-[#F5D76E]/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+              <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-[#F5D76E]/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-md">
                 <span className="text-[#D4AF37] font-black text-2xl tracking-wider">٥١٥</span>
                 <span className="w-px h-5 bg-[#D4AF37]/40"></span>
                 <span className="text-[#D4AF37] font-bold text-sm">حيث الجذور تلتقي بالمجد</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-4">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                 قبيلة النعيم <span className="text-[#D4AF37]">أهل الصفرا</span>
               </h1>
-              <p className="text-2xl text-[#D4AF37] font-bold mb-6">تراث عربي أصيل من الصفرا - حمص</p>
-              <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+              <p className="text-2xl text-[#D4AF37] font-bold mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">تراث عربي أصيل من الصفرا - حمص</p>
+              <p className="text-lg text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                 منصّة توثّق تاريخ قبيلة النعيم أهل الصفرا ٥١٥ العريقة - السادة الرفاعية الموسوية الحسينية - نسب هاشمي متصل بالإمام الحسين رضي الله عنه
               </p>
 
@@ -449,19 +444,19 @@ function App() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
                 {stats.map((stat, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                  <div key={index} className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
                     <div className="text-4xl font-black text-[#D4AF37] mb-2">
                       <AnimatedCounter end={stat.number} suffix={stat.suffix} />
                     </div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-200 text-sm font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-              <div className="w-8 h-12 border-2 border-[#D4AF37] rounded-full flex justify-center pt-2">
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+              <div className="w-8 h-12 border-2 border-[#D4AF37] rounded-full flex justify-center pt-2 backdrop-blur-sm bg-black/20">
                 <div className="w-1 h-3 bg-[#D4AF37] rounded-full"></div>
               </div>
             </div>

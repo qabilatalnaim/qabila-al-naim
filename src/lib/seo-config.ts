@@ -7,9 +7,9 @@ const DEFAULT_OG = 'https://qabilat-al-naim.vercel.app/images/logo.webp'
 
 // Page-specific OG images (using existing WebP images)
 const OG_IMAGES = {
-  home: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
+  home: 'https://qabilat-al-naim.vercel.app/images/hero-banner-2026.webp',
   history: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
-  town: 'https://qabilat-al-naim.vercel.app/images/town-overview.webp',
+  town: 'https://qabilat-al-naim.vercel.app/images/town-overview-v2.webp',
   camels: 'https://qabilat-al-naim.vercel.app/images/abnaa-izz-din-abu-himara.webp',
   horses: 'https://qabilat-al-naim.vercel.app/images/nasb-kull-ibn.webp',
   sheep: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
