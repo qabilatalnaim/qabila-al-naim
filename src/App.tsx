@@ -5,6 +5,7 @@ import { seoConfig } from './lib/seo-config'
 import OptimizedImage from './components/OptimizedImage'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
 import Footer from './components/Footer'
+import { useSocialStats, formatCompactNumber } from './lib/useSocialStats'
 
 // Lazy load all heritage pages (code splitting)
 const HistoryPage = lazy(() => import('./pages/HistoryPage'))
@@ -88,7 +89,7 @@ const TiktokIcon = () => (
 )
 
 // Animated Counter Component
-const AnimatedCounter = ({ end, duration = 2000, suffix = '' }: { end: number; duration?: number; suffix?: string }) => {
+const AnimatedCounter = ({ end, duration = 2000, suffix = '', compact = false }: { end: number; duration?: number; suffix?: string; compact?: boolean }) => {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -125,7 +126,8 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '' }: { end: number; d
     requestAnimationFrame(animate)
   }, [isVisible, end, duration])
 
-  return <div ref={ref}>{count}{suffix}</div>
+  const display = compact ? formatCompactNumber(count) : count.toString()
+  return <div ref={ref}>{display}{suffix}</div>
 }
 
 // Heritage Card Component
@@ -195,11 +197,45 @@ function App() {
     email: 'qabilaaalnaim@gmail.com',
   }
 
+  // Live social media stats (auto-refreshed every 6 hours)
+  const { stats: liveStats } = useSocialStats()
+
+  // Derived values for the Hero stats cards
+  const youtubeSubs = liveStats.youtube.subscribers
+  const youtubeViews = liveStats.youtube.views || liveStats.totals.views
+  const youtubeVideos = liveStats.youtube.videos || liveStats.totals.videos
+  const facebookFollowers = liveStats.facebook.followers
+
+  // Display: compact numbers (211K+ views, 103K facebook followers)
   const stats = [
-    { number: 614, label: 'مشترك على يوتيوب', suffix: '' },
-    { number: 103, label: 'متابع على فيسبوك', suffix: 'K' },
-    { number: 211, label: 'ألف مشاهدة', suffix: 'K+' },
-    { number: 184, label: 'فيديو توثيقي', suffix: '' },
+    {
+      number: youtubeSubs,
+      label: 'مشترك على يوتيوب',
+      suffix: '',
+      icon: '📺',
+      accent: 'red',
+    },
+    {
+      number: facebookFollowers,
+      label: 'متابع على فيسبوك',
+      suffix: '+',
+      icon: '👥',
+      accent: 'blue',
+    },
+    {
+      number: youtubeViews,
+      label: 'ألف مشاهدة',
+      suffix: '+',
+      icon: '👁️',
+      accent: 'amber',
+    },
+    {
+      number: youtubeVideos,
+      label: 'فيديو توثيقي',
+      suffix: '',
+      icon: '🎬',
+      accent: 'gold',
+    },
   ]
 
   const featuredVideo = {
@@ -444,14 +480,20 @@ function App() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
                 {stats.map((stat, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                    <div className="text-4xl font-black text-[#D4AF37] mb-2">
-                      <AnimatedCounter end={stat.number} suffix={stat.suffix} />
+                  <div key={index} className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:border-[#D4AF37]/60 hover:bg-white/15 transition-all">
+                    <div className="text-3xl mb-2 opacity-90">{stat.icon}</div>
+                    <div className="text-4xl font-black text-[#D4AF37] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                      <AnimatedCounter end={stat.number} suffix={stat.suffix} compact={stat.number >= 1000} />
                     </div>
                     <div className="text-gray-200 text-sm font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
+              {liveStats.source === 'live' && (
+                <p className="text-xs text-gray-400 mt-4 text-center" dir="ltr">
+                  Live data · Updated {new Date(liveStats.updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                </p>
+              )}
             </div>
 
             {/* Scroll Indicator */}
