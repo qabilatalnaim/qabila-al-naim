@@ -60,9 +60,14 @@ export default function TownPage() {
                 </p>
               </figcaption>
             </div>
-            {/* Image caption below */}
-            <figcaption className="text-center text-gray-500 text-xs md:text-sm mt-4 italic">
-              📸 منظر بانورامي لبلدة عزّ الدين — مسجدها ومقابرها وأراضيها الشاسعة تمتد تحت سماء بلاد الشام
+            {/* Image caption below — احترافي مع أيقونات + خط ذهبي */}
+            <figcaption className="text-center mt-6 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-[#D4AF37]/5 border border-[#D4AF37]/20">
+                <span className="text-xl">📸</span>
+                <span className="text-sm md:text-base font-medium text-gray-300 leading-relaxed">
+                  منظر بانورامي لبلدة <span className="text-[#D4AF37] font-bold">عزّ الدين</span> — مسجدها ومقابرها وأراضيها الشاسعة تمتد تحت سماء <span className="text-[#D4AF37] font-bold">بلاد الشام</span>
+                </span>
+              </div>
             </figcaption>
           </figure>
         </div>
