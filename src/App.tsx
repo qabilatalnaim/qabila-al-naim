@@ -489,11 +489,47 @@ function App() {
                   </div>
                 ))}
               </div>
-              {liveStats.source === 'live' && (
-                <p className="text-xs text-gray-400 mt-4 text-center" dir="ltr">
-                  Live data · Updated {new Date(liveStats.updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                </p>
-              )}
+              {(() => {
+                const updatedDate = new Date(liveStats.updatedAt)
+                const now = new Date()
+                const diffDays = Math.floor((now.getTime() - updatedDate.getTime()) / (1000 * 60 * 60 * 24))
+                const dateLabel = updatedDate.toLocaleDateString('ar-EG-u-nu-latn', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })
+                const isLive = liveStats.source === 'live'
+                const freshnessLabel = isLive
+                  ? diffDays === 0
+                    ? 'محدّث اليوم'
+                    : diffDays === 1
+                    ? 'محدّث أمس'
+                    : diffDays < 7
+                    ? `محدّث قبل ${diffDays} أيام`
+                    : diffDays < 30
+                    ? `محدّث قبل ${Math.floor(diffDays / 7)} أسابيع`
+                    : `محدّث قبل ${Math.floor(diffDays / 30)} شهر`
+                  : 'تحديث شهري'
+                const freshnessColor = diffDays <= 7
+                  ? 'text-emerald-400 border-emerald-400/30 bg-emerald-400/5'
+                  : diffDays <= 30
+                  ? 'text-amber-400 border-amber-400/30 bg-amber-400/5'
+                  : 'text-gray-400 border-white/10 bg-white/5'
+                return (
+                  <div className={`mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-sm ${freshnessColor}`}>
+                    <span className="relative flex h-2 w-2">
+                      <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
+                      <span className={`relative inline-flex rounded-full h-2 w-2 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
+                    </span>
+                    <span className="text-xs font-medium">{freshnessLabel}</span>
+                    <span className="text-xs opacity-60" dir="ltr">·</span>
+                    <span className="text-xs opacity-80" dir="ltr">{dateLabel}</span>
+                    {!isLive && (
+                      <span className="text-xs opacity-60">· يدوي</span>
+                    )}
+                  </div>
+                )
+              })()}
             </div>
 
             {/* Scroll Indicator */}
