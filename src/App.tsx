@@ -419,132 +419,125 @@ function App() {
             </div>
           </nav>
 
-          {/* Hero Section */}
-          <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10">
-            {/* Background Hero Banner */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <picture>
-                <source media="(max-width: 768px)" srcSet="/images/hero-banner-2026-mobile.webp" />
-                <source srcSet="/images/hero-banner-2026.webp" type="image/webp" />
-                <img
-                  src="/images/hero-banner-2026.webp"
-                  alt="بانوراما قبيلة النعيم أهل الصفرا ٥١٥ - مسجد ومئذنة وفارس ولواء القبيلة"
-                  className="
-                    w-full
-                    h-auto
-                    max-h-[70vh] md:max-h-[85vh]
-                    object-contain
-                    object-center
-                    drop-shadow-[0_0_40px_rgba(212,175,55,0.25)]
-                  "
-                  loading="eager"
-                  decoding="async"
-                  fetchPriority="high"
-                  style={{
-                    objectPosition: 'center center',
-                  }}
-                />
-              </picture>
-              {/* Dark gradient overlay - only on the image area */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/60 via-transparent to-[#0a1628] pointer-events-none"></div>
-              {/* Decorative blurred lights */}
-              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-20 blur-[150px]"></div>
-              <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-20 blur-[150px]"></div>
-            </div>
+          {/* Hero Section — الصورة أولاً ثم كل المحتوى تحتها */}
+          <section className="relative overflow-hidden pt-20 pb-10">
+            {/* Background gradient only (no overlay on image) */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#162544] to-[#0a1628] -z-10"></div>
+            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-10 blur-[150px] -z-10"></div>
+            <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-10 blur-[150px] -z-10"></div>
 
-            <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-              {/* Badge 515 */}
-              <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-[#F5D76E]/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-md">
-                <span className="text-[#D4AF37] font-black text-2xl tracking-wider">٥١٥</span>
-                <span className="w-px h-5 bg-[#D4AF37]/40"></span>
-                <span className="text-[#D4AF37] font-bold text-sm">حيث الجذور تلتقي بالمجد</span>
+            <div className="container mx-auto px-4">
+              {/* Image on top, contained and well-sized */}
+              <div className="max-w-6xl mx-auto mb-8">
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/images/hero-banner-2026-mobile.webp" />
+                  <source srcSet="/images/hero-banner-2026.webp" type="image/webp" />
+                  <img
+                    src="/images/hero-banner-2026.webp"
+                    alt="بانوراما قبيلة النعيم أهل الصفرا ٥١٥ - مسجد ومئذنة وفارس ولواء القبيلة"
+                    className="w-full h-auto max-h-[50vh] md:max-h-[60vh] object-contain mx-auto drop-shadow-[0_0_40px_rgba(212,175,55,0.3)] rounded-2xl"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                  />
+                </picture>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-                قبيلة النعيم <span className="text-[#D4AF37]">أهل الصفرا</span>
-              </h1>
-              <p className="text-2xl text-[#D4AF37] font-bold mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">تراث عربي أصيل من الصفرا - حمص</p>
-              <p className="text-lg text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                منصّة توثّق تاريخ قبيلة النعيم أهل الصفرا ٥١٥ العريقة - السادة الرفاعية الموسوية الحسينية - نسب هاشمي متصل بالإمام الحسين رضي الله عنه
-              </p>
+              {/* All content below the image (text, buttons, stats) */}
+              <div className="text-center max-w-5xl mx-auto">
+                {/* Badge 515 */}
+                <div className="mb-5 inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-[#F5D76E]/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                  <span className="text-[#D4AF37] font-black text-2xl tracking-wider">٥١٥</span>
+                  <span className="w-px h-5 bg-[#D4AF37]/40"></span>
+                  <span className="text-[#D4AF37] font-bold text-sm">حيث الجذور تلتقي بالمجد</span>
+                </div>
 
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => scrollToSection('about')}
-                  className="px-10 py-4 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#0a1628] font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all"
-                >
-                  اكتشف تاريخنا
-                </button>
-                <a
-                  href={socialLinks.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-10 py-4 bg-red-600 text-white font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all flex items-center justify-center gap-2"
-                >
-                  <YoutubeIcon />
-                  شاهد الفيديوهات
-                </a>
-              </div>
+                <h1 className="text-4xl md:text-6xl font-black text-white mb-3">
+                  قبيلة النعيم <span className="text-[#D4AF37]">أهل الصفرا</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-[#D4AF37] font-bold mb-4">تراث عربي أصيل من الصفرا - حمص</p>
+                <p className="text-base md:text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  منصّة توثّق تاريخ قبيلة النعيم أهل الصفرا ٥١٥ العريقة - السادة الرفاعية الموسوية الحسينية - نسب هاشمي متصل بالإمام الحسين رضي الله عنه
+                </p>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-                {stats.map((stat, index) => (
-                  <div key={index} className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:border-[#D4AF37]/60 hover:bg-white/15 transition-all">
-                    <div className="text-3xl mb-2 opacity-90">{stat.icon}</div>
-                    <div className="text-4xl font-black text-[#D4AF37] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                      <AnimatedCounter end={stat.number} suffix={stat.suffix} compact={stat.number >= 1000} />
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                  <button
+                    onClick={() => scrollToSection('about')}
+                    className="px-10 py-4 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#0a1628] font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all"
+                  >
+                    اكتشف تاريخنا
+                  </button>
+                  <a
+                    href={socialLinks.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-10 py-4 bg-red-600 text-white font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all flex items-center justify-center gap-2"
+                  >
+                    <YoutubeIcon />
+                    شاهد الفيديوهات
+                  </a>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="group bg-white/5 rounded-2xl p-5 border border-white/10 hover:border-[#D4AF37]/60 hover:bg-white/10 transition-all">
+                      <div className="text-2xl mb-1">{stat.icon}</div>
+                      <div className="text-3xl md:text-4xl font-black text-[#D4AF37] mb-1">
+                        <AnimatedCounter end={stat.number} suffix={stat.suffix} compact={stat.number >= 1000} />
+                      </div>
+                      <div className="text-gray-400 text-xs md:text-sm font-medium">{stat.label}</div>
                     </div>
-                    <div className="text-gray-200 text-sm font-medium">{stat.label}</div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                {(() => {
+                  const updatedDate = new Date(liveStats.updatedAt)
+                  const now = new Date()
+                  const diffDays = Math.floor((now.getTime() - updatedDate.getTime()) / (1000 * 60 * 60 * 24))
+                  const dateLabel = updatedDate.toLocaleDateString('ar-EG-u-nu-latn', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })
+                  const isLive = liveStats.source === 'live'
+                  const freshnessLabel = isLive
+                    ? diffDays === 0
+                      ? 'محدّث اليوم'
+                      : diffDays === 1
+                      ? 'محدّث أمس'
+                      : diffDays < 7
+                      ? `محدّث قبل ${diffDays} أيام`
+                      : diffDays < 30
+                      ? `محدّث قبل ${Math.floor(diffDays / 7)} أسابيع`
+                      : `محدّث قبل ${Math.floor(diffDays / 30)} شهر`
+                    : 'تحديث شهري'
+                  const freshnessColor = diffDays <= 7
+                    ? 'text-emerald-400 border-emerald-400/30 bg-emerald-400/5'
+                    : diffDays <= 30
+                    ? 'text-amber-400 border-amber-400/30 bg-amber-400/5'
+                    : 'text-gray-400 border-white/10 bg-white/5'
+                  return (
+                    <div className={`mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border ${freshnessColor}`}>
+                      <span className="relative flex h-2 w-2">
+                        <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
+                        <span className={`relative inline-flex rounded-full h-2 w-2 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
+                      </span>
+                      <span className="text-xs font-medium">{freshnessLabel}</span>
+                      <span className="text-xs opacity-60" dir="ltr">·</span>
+                      <span className="text-xs opacity-80" dir="ltr">{dateLabel}</span>
+                      {!isLive && (
+                        <span className="text-xs opacity-60">· يدوي</span>
+                      )}
+                    </div>
+                  )
+                })()}
               </div>
-              {(() => {
-                const updatedDate = new Date(liveStats.updatedAt)
-                const now = new Date()
-                const diffDays = Math.floor((now.getTime() - updatedDate.getTime()) / (1000 * 60 * 60 * 24))
-                const dateLabel = updatedDate.toLocaleDateString('ar-EG-u-nu-latn', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })
-                const isLive = liveStats.source === 'live'
-                const freshnessLabel = isLive
-                  ? diffDays === 0
-                    ? 'محدّث اليوم'
-                    : diffDays === 1
-                    ? 'محدّث أمس'
-                    : diffDays < 7
-                    ? `محدّث قبل ${diffDays} أيام`
-                    : diffDays < 30
-                    ? `محدّث قبل ${Math.floor(diffDays / 7)} أسابيع`
-                    : `محدّث قبل ${Math.floor(diffDays / 30)} شهر`
-                  : 'تحديث شهري'
-                const freshnessColor = diffDays <= 7
-                  ? 'text-emerald-400 border-emerald-400/30 bg-emerald-400/5'
-                  : diffDays <= 30
-                  ? 'text-amber-400 border-amber-400/30 bg-amber-400/5'
-                  : 'text-gray-400 border-white/10 bg-white/5'
-                return (
-                  <div className={`mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-sm ${freshnessColor}`}>
-                    <span className="relative flex h-2 w-2">
-                      <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
-                      <span className={`relative inline-flex rounded-full h-2 w-2 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
-                    </span>
-                    <span className="text-xs font-medium">{freshnessLabel}</span>
-                    <span className="text-xs opacity-60" dir="ltr">·</span>
-                    <span className="text-xs opacity-80" dir="ltr">{dateLabel}</span>
-                    {!isLive && (
-                      <span className="text-xs opacity-60">· يدوي</span>
-                    )}
-                  </div>
-                )
-              })()}
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-              <div className="w-8 h-12 border-2 border-[#D4AF37] rounded-full flex justify-center pt-2 backdrop-blur-sm bg-black/20">
+            <div className="mt-10 flex justify-center animate-bounce">
+              <div className="w-8 h-12 border-2 border-[#D4AF37] rounded-full flex justify-center pt-2">
                 <div className="w-1 h-3 bg-[#D4AF37] rounded-full"></div>
               </div>
             </div>
