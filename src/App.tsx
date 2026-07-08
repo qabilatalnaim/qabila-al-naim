@@ -420,23 +420,33 @@ function App() {
           </nav>
 
           {/* Hero Section */}
-          <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+          <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10">
             {/* Background Hero Banner */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 flex items-center justify-center">
               <picture>
                 <source media="(max-width: 768px)" srcSet="/images/hero-banner-2026-mobile.webp" />
                 <source srcSet="/images/hero-banner-2026.webp" type="image/webp" />
                 <img
                   src="/images/hero-banner-2026.webp"
                   alt="بانوراما قبيلة النعيم أهل الصفرا ٥١٥ - مسجد ومئذنة وفارس ولواء القبيلة"
-                  className="w-full h-full object-cover object-center"
+                  className="
+                    w-full
+                    h-auto
+                    max-h-[70vh] md:max-h-[85vh]
+                    object-contain
+                    object-center
+                    drop-shadow-[0_0_40px_rgba(212,175,55,0.25)]
+                  "
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
+                  style={{
+                    objectPosition: 'center center',
+                  }}
                 />
               </picture>
-              {/* Dark overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/70 via-[#0a1628]/40 to-[#0a1628]"></div>
+              {/* Dark gradient overlay - only on the image area */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/60 via-transparent to-[#0a1628] pointer-events-none"></div>
               {/* Decorative blurred lights */}
               <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-20 blur-[150px]"></div>
               <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D4AF37] rounded-full opacity-20 blur-[150px]"></div>
