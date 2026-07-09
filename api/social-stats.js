@@ -7,10 +7,10 @@ let cache = { data: null, expires: 0 };
 
 // Static fallback (used when APIs fail or during cold start)
 const FALLBACK = {
-  youtube: { subscribers: 614, videos: 184 },
+  youtube: { subscribers: 831, videos: 184 },
   facebook: { followers: 103000 },
   totals: { views: 211000, videos: 184 },
-  updatedAt: '2026-07-01T00:00:00.000Z',
+  updatedAt: '2026-07-09T00:00:00.000Z',
   source: 'fallback',
 };
 
