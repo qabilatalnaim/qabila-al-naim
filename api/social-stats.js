@@ -9,7 +9,7 @@ let cache = { data: null, expires: 0 };
 const FALLBACK = {
   youtube: { subscribers: 629, videos: 197 },
   facebook: { followers: 103000 },
-  totals: { views: 211000, videos: 197 },
+  totals: { views: 215642, videos: 197 },
   updatedAt: '2026-07-10T00:00:00.000Z',
   source: 'fallback',
 };

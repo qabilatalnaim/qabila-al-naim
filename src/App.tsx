@@ -5,7 +5,7 @@ import { seoConfig } from './lib/seo-config'
 import OptimizedImage from './components/OptimizedImage'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
 import Footer from './components/Footer'
-import { useSocialStats, formatCompactNumber } from './lib/useSocialStats'
+import { useSocialStats, formatCompactNumber, formatLocalizedNumber } from './lib/useSocialStats'
 
 // Lazy load all heritage pages (code splitting)
 const HistoryPage = lazy(() => import('./pages/HistoryPage'))
@@ -89,7 +89,7 @@ const TiktokIcon = () => (
 )
 
 // Animated Counter Component
-const AnimatedCounter = ({ end, duration = 2000, suffix = '', compact = false }: { end: number; duration?: number; suffix?: string; compact?: boolean }) => {
+const AnimatedCounter = ({ end, duration = 2000, suffix = '', compact = false, localized = false }: { end: number; duration?: number; suffix?: string; compact?: boolean; localized?: boolean }) => {
   const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -126,7 +126,11 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', compact = false }:
     requestAnimationFrame(animate)
   }, [isVisible, end, duration])
 
-  const display = compact ? formatCompactNumber(count) : count.toString()
+  const display = compact
+    ? formatCompactNumber(count)
+    : localized
+    ? formatLocalizedNumber(count)
+    : count.toString()
   return <div ref={ref}>{display}{suffix}</div>
 }
 
@@ -202,9 +206,9 @@ function App() {
 
   // Derived values for the Hero stats cards
   // Manual overrides — verified by channel owner (2026-07-10)
-  // YouTube: 629 subscribers | 197 videos | Facebook: 103K followers | Views: 211K+
+  // YouTube: 629 subscribers | 197 videos | 215,642 total views | Facebook: 103K followers
   const youtubeSubs = liveStats.youtube.subscribers || 629
-  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 211000
+  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 215642
   const youtubeVideos = liveStats.youtube.videos || liveStats.totals.videos || 197
   const facebookFollowers = liveStats.facebook.followers || 103000
 
@@ -487,7 +491,12 @@ function App() {
                     <div key={index} className="group bg-white/5 rounded-2xl p-5 border border-white/10 hover:border-[#D4AF37]/60 hover:bg-white/10 transition-all">
                       <div className="text-2xl mb-1">{stat.icon}</div>
                       <div className="text-3xl md:text-4xl font-black text-[#D4AF37] mb-1">
-                        <AnimatedCounter end={stat.number} suffix={stat.suffix} compact={stat.number >= 1000} />
+                        <AnimatedCounter
+                          end={stat.number}
+                          suffix={stat.suffix}
+                          compact={stat.number >= 100000}
+                          localized={stat.number >= 1000 && stat.number < 100000}
+                        />
                       </div>
                       <div className="text-gray-400 text-xs md:text-sm font-medium">{stat.label}</div>
                     </div>

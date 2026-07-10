@@ -18,9 +18,9 @@ export interface SocialStats {
 }
 
 const FALLBACK_STATS: SocialStats = {
-  youtube: { subscribers: 629, videos: 197, views: 211000 },
+  youtube: { subscribers: 629, videos: 197, views: 215642 },
   facebook: { followers: 103000 },
-  totals: { views: 211000, videos: 197 },
+  totals: { views: 215642, videos: 197 },
   updatedAt: '2026-07-10T00:00:00.000Z',
   source: 'fallback',
 }
@@ -77,4 +77,12 @@ export function formatCompactNumber(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
   if (n >= 1_000) return `${(n / 1_000).toFixed(0)}K`
   return n.toString()
+}
+
+// Localized number formatter using Arabic-Indic digits (٠١٢٣٤٥٦٧٨٩)
+const ARABIC_DIGITS = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩']
+export function formatLocalizedNumber(n: number): string {
+  return n
+    .toLocaleString('en-US')
+    .replace(/[0-9]/g, (d) => ARABIC_DIGITS[Number(d)])
 }
