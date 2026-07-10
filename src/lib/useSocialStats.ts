@@ -18,10 +18,10 @@ export interface SocialStats {
 }
 
 const FALLBACK_STATS: SocialStats = {
-  youtube: { subscribers: 831, videos: 184, views: 211000 },
+  youtube: { subscribers: 629, videos: 197, views: 211000 },
   facebook: { followers: 103000 },
-  totals: { views: 211000, videos: 184 },
-  updatedAt: '2026-07-09T00:00:00.000Z',
+  totals: { views: 211000, videos: 197 },
+  updatedAt: '2026-07-10T00:00:00.000Z',
   source: 'fallback',
 }
 
