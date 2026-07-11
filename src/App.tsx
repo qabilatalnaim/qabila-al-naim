@@ -906,9 +906,9 @@ function App() {
                   </Link>
                 </div>
 
-                {/* Grid of Heritage Topics — عرض كل القاعات (10 بطاقات) */}
+                {/* Grid of Heritage Topics — 9 بطاقات (تم حذف النسب والتاريخ لأنها ظاهرة كـ featured card فوق) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {heritageTopics.map((topic, index) => (
+                  {heritageTopics.filter(t => t.link !== '/history').map((topic, index) => (
                     <HeritageCard
                       key={index}
                       icon={topic.icon}
