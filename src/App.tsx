@@ -5,6 +5,7 @@ import { seoConfig } from './lib/seo-config'
 import OptimizedImage from './components/OptimizedImage'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
 import Footer from './components/Footer'
+import Newsletter from './components/Newsletter'
 import { useSocialStats, formatCompactNumber, formatLocalizedNumber } from './lib/useSocialStats'
 
 // Lazy load all heritage pages (code splitting)
@@ -1028,6 +1029,15 @@ function App() {
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Newsletter Section */}
+          <section className="py-20 bg-gradient-to-b from-[#0a1628] to-[#162544]">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <Newsletter />
               </div>
             </div>
           </section>
