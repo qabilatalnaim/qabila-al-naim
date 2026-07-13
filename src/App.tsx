@@ -6,6 +6,7 @@ import OptimizedImage from './components/OptimizedImage'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
 import Footer from './components/Footer'
 import Newsletter from './components/Newsletter'
+import FAQSchema, { FAQItem } from './components/FAQSchema'
 import { useSocialStats, formatCompactNumber, formatLocalizedNumber } from './lib/useSocialStats'
 
 // Lazy load all heritage pages (code splitting)
@@ -202,6 +203,30 @@ function App() {
     email: 'qabilaaalnaim@gmail.com',
   }
 
+  // FAQ data — for rich snippets in Google search
+  const homeFAQs: FAQItem[] = [
+    {
+      question: 'من هم قبيلة النعيم أهل الصفرا ٥١٥؟',
+      answer: 'قبيلة النعيم أهل الصفرا ٥١٥ من القبائل العربية العريقة في بلاد الشام، تنحدر من السادة الرفاعية الموسوية الحسينية، ونسبها هاشمي متصل بالإمام الحسين رضي الله عنه. تتخذ من بلدة عزّ الدين أبو حمرة في ريف حمص موطنًا تاريخيًا لها.'
+    },
+    {
+      question: 'ما معنى الوسم ٥١٥؟',
+      answer: 'الوسم ٥١٥ هو العلامة المميزة لقبيلة النعيم أهل الصفرا، يوسم به إبل القبيلة وأغنامها للتعريف بها، ويحمل دلالات الانتماء والأصالة والعراقة المتوارثة عبر الأجيال.'
+    },
+    {
+      question: 'أين تقع بلدة عزّ الدين أبو حمرة؟',
+      answer: 'بلدة عزّ الدين أبو حمرة تقع في ريف حمص في سوريا، وتُعدّ الموطن التاريخي لقبيلة النعيم أهل الصفرا ٥١٥، نُسبت إلى الجدّ الجامع للقبيلة الشيخ عزّ الدين أبو حمرة (أحمد بن نعيم).'
+    },
+    {
+      question: 'ما هو محتوى قناة قبيلة النعيم على يوتيوب؟',
+      answer: 'تحتوي القناة على فيديوهات توثيقية عن تراث قبيلة النعيم وتاريخها، حياة البدو ومراعي البادية، تربية الإبل والغنم والخيل، الشعر النبطي، كشتات القبيلة، وقصص القبائل العربية الأصيلة من قلب الحماد السوري.'
+    },
+    {
+      question: 'كيف أتابع آخر أخبار قبيلة النعيم؟',
+      answer: 'يمكنك متابعة قبيلة النعيم أهل الصفرا ٥١٥ عبر قناتها على يوتيوب وصفحاتها على فيسبوك وإنستغرام وتيك توك، والاشتراك في النشرة البريدية الشهرية للحصول على آخر الفيديوهات والمقالات التراثية مباشرة في بريدك.'
+    },
+  ]
+
   // Live social media stats (auto-refreshed every 6 hours)
   const { stats: liveStats } = useSocialStats()
 
@@ -329,6 +354,7 @@ function App() {
     <Routes>
       <Route path="/" element={
         <>
+          <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-al-naim.vercel.app/" />
           <SEO {...seoConfig.home} />
           <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}
