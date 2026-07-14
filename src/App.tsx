@@ -7,7 +7,7 @@ import PWAInstallPrompt from './components/PWAInstallPrompt'
 import Footer from './components/Footer'
 import Newsletter from './components/Newsletter'
 import FAQSchema, { FAQItem } from './components/FAQSchema'
-import { useSocialStats, formatCompactNumber, formatLocalizedNumber } from './lib/useSocialStats'
+import { useSocialStats, useLatestVideos, formatCompactNumber, formatLocalizedNumber } from './lib/useSocialStats'
 
 // Lazy load all heritage pages (code splitting)
 const HistoryPage = lazy(() => import('./pages/HistoryPage'))
@@ -229,6 +229,8 @@ function App() {
 
   // Live social media stats (auto-refreshed every 6 hours)
   const { stats: liveStats } = useSocialStats()
+  // Latest YouTube videos (auto-refreshed every 3 hours)
+  const { videos: latestVideos } = useLatestVideos(4)
 
   // Derived values for the Hero stats cards
   // Manual overrides — verified by channel owner (2026-07-10)
@@ -998,6 +1000,57 @@ function App() {
                   </div>
                 </a>
               </div>
+
+              {/* Latest Videos Grid */}
+              {latestVideos.length > 0 && (
+                <div className="mt-16">
+                  <h3 className="text-3xl font-black text-white mb-8 text-center">أحدث الفيديوهات</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {latestVideos.map((video) => (
+                      <a
+                        key={video.id}
+                        href={video.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-white/5 to-white/0 rounded-2xl overflow-hidden border border-white/10 hover:border-red-600/50 transition-all duration-300 hover:transform hover:scale-[1.02]"
+                      >
+                        <div className="relative aspect-video bg-[#0a1628]">
+                          <img
+                            src={video.thumbnail}
+                            alt={video.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.currentTarget.src = `https://i.ytimg.com/vi/${video.id}/sddefault.jpg`
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                              <PlayIcon />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <h4 className="text-white text-sm font-bold line-clamp-2 group-hover:text-red-400 transition-colors">
+                            {video.title}
+                          </h4>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="text-center mt-8">
+                    <a
+                      href={socialLinks.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-8 py-3 bg-red-600/20 border border-red-600/50 text-red-400 font-bold rounded-full hover:bg-red-600 hover:text-white transition-all"
+                    >
+                      <YoutubeIcon />
+                      <span>شاهد كل الفيديوهات على يوتيوب</span>
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </section>
 
