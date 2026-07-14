@@ -14,24 +14,41 @@ export interface SocialStats {
     videos: number
   }
   updatedAt: string
-  source: 'live' | 'fallback' | 'cache'
+  source: 'live' | 'fallback' | 'cache' | 'api'
+}
+
+export interface LatestVideo {
+  id: string
+  title: string
+  url: string
+  thumbnail: string
+}
+
+interface LatestVideosPayload {
+  videos: LatestVideo[]
+  count: number
+  source: 'live' | 'empty' | 'error'
+  updatedAt: string
 }
 
 const FALLBACK_STATS: SocialStats = {
   youtube: { subscribers: 629, videos: 197, views: 215642 },
   facebook: { followers: 103000 },
   totals: { views: 215642, videos: 197 },
-  updatedAt: '2026-07-10T00:00:00.000Z',
+  updatedAt: '2026-07-14T00:00:00.000Z',
   source: 'fallback',
+}
+
+const FALLBACK_VIDEOS: LatestVideosPayload = {
+  videos: [],
+  count: 0,
+  source: 'error',
+  updatedAt: new Date().toISOString(),
 }
 
 /**
  * useSocialStats — fetches live social media stats from /api/social-stats.
- *
- * Strategy:
- * 1. Try the API. If 200 OK, use live data.
- * 2. On network error or non-200, use hard-coded fallback (current shown values).
- * 3. Updates every 6 hours (matches server cache TTL).
+ * Fallback chain: live API → owner-verified hardcoded values.
  */
 export function useSocialStats(): { stats: SocialStats; loading: boolean } {
   const [stats, setStats] = useState<SocialStats>(FALLBACK_STATS)
@@ -58,8 +75,6 @@ export function useSocialStats(): { stats: SocialStats; loading: boolean } {
     }
 
     load()
-
-    // Re-fetch every 6 hours
     const interval = window.setInterval(load, 6 * 60 * 60 * 1000)
 
     return () => {
@@ -70,6 +85,46 @@ export function useSocialStats(): { stats: SocialStats; loading: boolean } {
   }, [])
 
   return { stats, loading }
+}
+
+/**
+ * useLatestVideos — fetches latest videos from /api/latest-videos.
+ */
+export function useLatestVideos(limit = 6): { videos: LatestVideo[]; loading: boolean } {
+  const [videos, setVideos] = useState<LatestVideo[]>(FALLBACK_VIDEOS.videos)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+    const controller = new AbortController()
+
+    const load = async () => {
+      try {
+        const res = await fetch('/api/latest-videos', {
+          signal: controller.signal,
+          headers: { Accept: 'application/json' },
+        })
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const data = (await res.json()) as LatestVideosPayload
+        if (!cancelled) setVideos(data.videos.slice(0, limit))
+      } catch {
+        if (!cancelled) setVideos([])
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    load()
+    const interval = window.setInterval(load, 3 * 60 * 60 * 1000)
+
+    return () => {
+      cancelled = true
+      controller.abort()
+      window.clearInterval(interval)
+    }
+  }, [limit])
+
+  return { videos, loading }
 }
 
 // Helpers for compact display
