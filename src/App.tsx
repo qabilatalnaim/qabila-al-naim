@@ -234,9 +234,9 @@ function App() {
 
   // Derived values for the Hero stats cards
   // Manual overrides — verified by channel owner (2026-07-15)
-  // YouTube: 636 subscribers | 199 videos | 219,806 total views | Facebook: 103K followers
+  // YouTube: 636 subscribers | 199 videos | 220,100 total views | Facebook: 103K followers
   const youtubeSubs = liveStats.youtube.subscribers || 636
-  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 219806
+  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 220100
   const youtubeVideos = liveStats.youtube.videos || liveStats.totals.videos || 199
   const facebookFollowers = liveStats.facebook.followers || 103000
 
