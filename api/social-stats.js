@@ -5,12 +5,12 @@
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000 // 6 hours
 let cache = { data: null, expires: 0 }
 
-// Manual fallback — verified by channel owner (2026-07-10)
+// Manual fallback — verified by channel owner (2026-07-15)
 const FALLBACK = {
-  youtube: { subscribers: 629, videos: 197 },
+  youtube: { subscribers: 636, videos: 199 },
   facebook: { followers: 103000 },
-  totals: { views: 215642, videos: 197 },
-  updatedAt: '2026-07-10T00:00:00.000Z',
+  totals: { views: 219806, videos: 199 },
+  updatedAt: '2026-07-15T00:00:00.000Z',
   source: 'fallback',
 }
 
