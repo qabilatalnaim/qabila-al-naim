@@ -334,10 +334,10 @@ function HistoryPage() {
             <figure className="mt-8 relative group">
               <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.2)]">
                 <picture>
-                  <source media="(max-width: 768px)" srcSet="/images/tasalsul-al-nasb-baad-rifaa-2026-mobile.webp" />
-                  <source srcSet="/images/tasalsul-al-nasb-baad-rifaa-2026.webp" type="image/webp" />
+                  <source media="(max-width: 768px)" srcSet="/images/tasalsul-baad-rifaa-2026-mobile.webp" />
+                  <source srcSet="/images/tasalsul-baad-rifaa-2026.webp" type="image/webp" />
                   <img
-                    src="/images/tasalsul-al-nasb-baad-rifaa-2026.webp"
+                    src="/images/tasalsul-baad-rifaa-2026.webp"
                     alt="شجرة تسلسل النسب بعد رفاعة - من الحسن المكي (رفاعة) إلى عبد الله المدني ومحمد عسلة وثابت الرفاعي"
                     className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                     loading="lazy"
