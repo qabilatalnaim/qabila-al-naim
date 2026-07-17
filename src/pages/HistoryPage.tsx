@@ -329,6 +329,44 @@ function HistoryPage() {
                 </ol>
               </div>
             </div>
+
+            {/* شجرة تسلسل النسب بعد رفاعة — بجودة عالية */}
+            <figure className="mt-8 relative group">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.2)]">
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/images/tasalsul-al-nasb-baad-rifaa-2026-mobile.webp" />
+                  <source srcSet="/images/tasalsul-al-nasb-baad-rifaa-2026.webp" type="image/webp" />
+                  <img
+                    src="/images/tasalsul-al-nasb-baad-rifaa-2026.webp"
+                    alt="شجرة تسلسل النسب بعد رفاعة - من الحسن المكي (رفاعة) إلى عبد الله المدني ومحمد عسلة وثابت الرفاعي"
+                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                <div className="absolute bottom-0 right-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                  <div className="bg-[#0a1628]/80 backdrop-blur-md rounded-xl p-3 border border-[#D4AF37]/30">
+                    <p className="text-[#D4AF37] text-sm font-bold text-center">تسلسل النسب بعد رفاعة</p>
+                    <p className="text-gray-300 text-xs text-center">من الحسن المكي إلى عبد الله المدني وعسلة وثابت</p>
+                  </div>
+                </div>
+              </div>
+              <figcaption className="text-center mt-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/5 border border-[#D4AF37]/20">
+                  <span className="text-sm">👑</span>
+                  <span className="text-sm font-medium text-gray-300">
+                    شجرة <span className="text-[#D4AF37] font-bold">تسلسل النسب بعد رفاعة</span> — من الحسن المكي إلى الأبناء الثلاثة
+                  </span>
+                </div>
+                <div className="mt-2 text-xs text-gray-500">
+                  <span className="inline-flex items-center gap-1">
+                    <span>🎨</span>
+                    <span>جودة عالية: 2203×3111 px · WebP Q92</span>
+                  </span>
+                </div>
+              </figcaption>
+            </figure>
           </div>
 
           {/* Section 4: From Thabet */}
