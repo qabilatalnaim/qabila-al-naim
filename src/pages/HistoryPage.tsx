@@ -775,10 +775,10 @@ function HistoryPage() {
                 <figure className="relative group">
                   <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.2)]">
                     <picture>
-                      <source media="(max-width: 768px)" srcSet="/images/abnaa-izz-din-afkhadh-2026-mobile.webp" />
-                      <source srcSet="/images/abnaa-izz-din-afkhadh-2026.webp" type="image/webp" />
+                      <source media="(max-width: 768px)" srcSet="/images/abnaa-izz-din-2026-mobile.webp" />
+                      <source srcSet="/images/abnaa-izz-din-2026.webp" type="image/webp" />
                       <img
-                        src="/images/abnaa-izz-din-afkhadh-2026.webp"
+                        src="/images/abnaa-izz-din-2026.webp"
                         alt="أبناء عز الدين أبو حمرة وأفخاذ قبيلة النعيم - 8 أبناء: موسى، محمد، عثمان، منصور، عبد الرحيم، سليمان، يوسف، عبد الوهاب"
                         className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                         loading="lazy"
