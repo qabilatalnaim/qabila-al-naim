@@ -32,10 +32,10 @@ interface LatestVideosPayload {
 }
 
 const FALLBACK_STATS: SocialStats = {
-  youtube: { subscribers: 636, videos: 200, views: 220600 },
+  youtube: { subscribers: 831, videos: 37, views: 221000 },
   facebook: { followers: 103000 },
-  totals: { views: 220600, videos: 200 },
-  updatedAt: '2026-07-18T00:00:00.000Z',
+  totals: { views: 221000, videos: 37 },
+  updatedAt: '2026-07-19T00:00:00.000Z',
   source: 'fallback',
 }
 

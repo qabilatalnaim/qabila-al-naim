@@ -233,11 +233,12 @@ function App() {
   const { videos: latestVideos } = useLatestVideos(4)
 
   // Derived values for the Hero stats cards
-  // Manual overrides — verified by channel owner (2026-07-18)
-  // YouTube: 636 subscribers | 200 videos | 220,600 total views | Facebook: 103K followers
-  const youtubeSubs = liveStats.youtube.subscribers || 636
-  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 220600
-  const youtubeVideos = liveStats.youtube.videos || liveStats.totals.videos || 200
+  // Live data from YouTube + Facebook (auto-refreshed)
+  // YouTube live: 831 subs | 37 videos | 221K+ views
+  // Facebook: 103K+ followers
+  const youtubeSubs = liveStats.youtube.subscribers || 831
+  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 221000
+  const youtubeVideos = liveStats.youtube.videos || liveStats.totals.videos || 37
   const facebookFollowers = liveStats.facebook.followers || 103000
 
   // Display: compact numbers (211K+ views, 103K facebook followers)
