@@ -233,13 +233,14 @@ function App() {
   const { videos: latestVideos } = useLatestVideos(4)
 
   // Derived values for the Hero stats cards
-  // Owner-verified values (2026-07-20) - these are the AUTHORITATIVE numbers
+  // Owner-verified values (2026-07-20) - MANUAL, these are the AUTHORITATIVE numbers
   // YouTube: 638 subscribers | 202 videos | 221,100 total views
   // Facebook: 103K+ followers
-  const youtubeSubs = liveStats.youtube.subscribers || 638
-  const youtubeViews = liveStats.youtube.views || liveStats.totals.views || 221100
-  const youtubeVideos = liveStats.youtube.videos || liveStats.totals.videos || 202
-  const facebookFollowers = liveStats.facebook.followers || 103000
+  // NOTE: We always use the manual fallback values (not live API) because owner values are authoritative
+  const youtubeSubs = 638
+  const youtubeViews = 221100
+  const youtubeVideos = 202
+  const facebookFollowers = 103000
 
   // Display: compact numbers (211K+ views, 103K facebook followers)
   const stats = [
