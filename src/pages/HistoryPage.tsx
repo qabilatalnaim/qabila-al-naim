@@ -628,10 +628,10 @@ function HistoryPage() {
             <figure className="mt-8 relative group">
               <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.2)]">
                 <picture>
-                  <source media="(max-width: 768px)" srcSet="/images/hayatuhu-al-usariyya-2026-mobile.webp" />
-                  <source srcSet="/images/hayatuhu-al-usariyya-2026.webp" type="image/webp" />
+                  <source media="(max-width: 768px)" srcSet="/images/hayatuhu-2026-mobile.webp" />
+                  <source srcSet="/images/hayatuhu-2026.webp" type="image/webp" />
                   <img
-                    src="/images/hayatuhu-al-usariyya-2026.webp"
+                    src="/images/hayatuhu-2026.webp"
                     alt="شجرة حياة عز الدين أبو حمرة الأسرية - زوجاته الأربع: فاطمة الشتراء، باجة الشيخانية، آمنة الجنيدية، فاطمة بنت جمال الدين الرفاعي - وأبنائه الثمانية: موسى، محمد، عثمان، منصور، عبد الرحيم، سليمان، يوسف، عبد الوهاب"
                     className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                     loading="lazy"
