@@ -623,6 +623,44 @@ function HistoryPage() {
                 </p>
               </div>
             </div>
+
+            {/* شجرة حياته الأسرية — بجودة عالية */}
+            <figure className="mt-8 relative group">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.2)]">
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/images/hayatuhu-al-usariyya-2026-mobile.webp" />
+                  <source srcSet="/images/hayatuhu-al-usariyya-2026.webp" type="image/webp" />
+                  <img
+                    src="/images/hayatuhu-al-usariyya-2026.webp"
+                    alt="شجرة حياة عز الدين أبو حمرة الأسرية - زوجاته الأربع: فاطمة الشتراء، باجة الشيخانية، آمنة الجنيدية، فاطمة بنت جمال الدين الرفاعي - وأبنائه الثمانية: موسى، محمد، عثمان، منصور، عبد الرحيم، سليمان، يوسف، عبد الوهاب"
+                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                <div className="absolute bottom-0 right-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                  <div className="bg-[#0a1628]/80 backdrop-blur-md rounded-xl p-3 border border-[#D4AF37]/30">
+                    <p className="text-[#D4AF37] text-sm font-bold text-center">حياة عز الدين أبو حمرة الأسرية</p>
+                    <p className="text-gray-300 text-xs text-center">4 زوجات · 8 أبناء · كليلة وحمرة</p>
+                  </div>
+                </div>
+              </div>
+              <figcaption className="text-center mt-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/5 border border-[#D4AF37]/20">
+                  <span className="text-sm">👨‍👩‍👧‍👦</span>
+                  <span className="text-sm font-medium text-gray-300">
+                    شجرة <span className="text-[#D4AF37] font-bold">حياته الأسرية</span> — الزوجات والأبناء
+                  </span>
+                </div>
+                <div className="mt-2 text-xs text-gray-500">
+                  <span className="inline-flex items-center gap-1">
+                    <span>🎨</span>
+                    <span>جودة عالية: 2138×3205 px · WebP Q92</span>
+                  </span>
+                </div>
+              </figcaption>
+            </figure>
           </div>
 
           {/* Section 12: Return and Teaching */}
