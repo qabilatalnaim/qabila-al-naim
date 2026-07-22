@@ -73,11 +73,19 @@ export default function Newsletter({ variant = 'card' }: NewsletterProps) {
       </p>
 
       {status === 'success' ? (
-        <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 text-emerald-400">
+        <div
+          role="status"
+          aria-live="polite"
+          className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 text-emerald-400"
+        >
           ✅ {message}
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-md mx-auto"
+          aria-label="نموذج الاشتراك في النشرة البريدية"
+        >
           <div className="flex flex-col sm:flex-row gap-2">
             <input
               type="email"
@@ -88,7 +96,10 @@ export default function Newsletter({ variant = 'card' }: NewsletterProps) {
               }}
               placeholder="بريدك الإلكتروني"
               aria-label="البريد الإلكتروني للاشتراك في النشرة"
-              className={`flex-1 px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none transition-colors ${
+              aria-required="true"
+              aria-invalid={status === 'error'}
+              autoComplete="email"
+              className={`flex-1 px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] transition-colors ${
                 status === 'error' ? 'border-red-500' : 'border-white/20 focus:border-[#D4AF37]'
               }`}
               required
@@ -96,7 +107,8 @@ export default function Newsletter({ variant = 'card' }: NewsletterProps) {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#0a1628] font-bold rounded-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all disabled:opacity-50"
+              aria-label="اشترك في النشرة البريدية"
+              className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#0a1628] font-bold rounded-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
             >
               {status === 'loading' ? 'جاري...' : 'اشترك الآن'}
             </button>

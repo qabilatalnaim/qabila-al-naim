@@ -362,7 +362,11 @@ function App() {
           <SEO {...seoConfig.home} />
           <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}
-          <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${scrolled ? 'bg-[#0a1628]/95 backdrop-blur-lg shadow-xl py-2' : 'bg-transparent py-4'}`}>
+          <nav
+            role="navigation"
+            aria-label="التنقل الرئيسي"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${scrolled ? 'bg-[#0a1628]/95 backdrop-blur-lg shadow-xl py-2' : 'bg-transparent py-4'}`}
+          >
             <div className="container mx-auto px-4">
               <div className="flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-3">
@@ -374,12 +378,13 @@ function App() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-8">
+                <div className="hidden lg:flex items-center gap-8" role="navigation" aria-label="القائمة الرئيسية">
                   {navItems.map((item) => (
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
                       className="text-white hover:text-[#D4AF37] transition-colors font-medium"
+                      aria-label={`انتقل إلى ${item.label}`}
                     >
                       {item.label}
                     </button>
@@ -417,6 +422,9 @@ function App() {
                 <button
                   className="lg:hidden p-2 text-white"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  aria-label={isMenuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
+                  aria-expanded={isMenuOpen}
+                  aria-controls="mobile-menu"
                 >
                   {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
                 </button>
@@ -424,7 +432,12 @@ function App() {
 
               {/* Mobile Menu */}
               {isMenuOpen && (
-                <div className="lg:hidden mt-4 pb-4 bg-[#0a1628]/95 backdrop-blur-lg rounded-xl p-4 border border-white/10">
+                <div
+                  id="mobile-menu"
+                  role="menu"
+                  aria-label="القائمة الجانبية"
+                  className="lg:hidden mt-4 pb-4 bg-[#0a1628]/95 backdrop-blur-lg rounded-xl p-4 border border-white/10"
+                >
                   {navItems.map((item) => (
                     <button
                       key={item.id}
@@ -938,7 +951,11 @@ function App() {
                 </div>
 
                 {/* Grid of Heritage Topics — 9 بطاقات (تم حذف النسب والتاريخ لأنها ظاهرة كـ featured card فوق) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  role="list"
+                  aria-label="قاعات التراث"
+                >
                   {heritageTopics.filter(t => t.link !== '/history').map((topic, index) => (
                     <HeritageCard
                       key={index}
@@ -1069,30 +1086,58 @@ function App() {
                   <p className="text-gray-400 text-lg">انضموا إلينا في رحلة توثيق التاريخ والتراث العربي</p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-red-600/20 to-red-600/5 rounded-2xl p-6 text-center border border-red-600/30 hover:border-red-600 transition-all hover:transform hover:scale-105 block">
-                    <div className="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-white">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6" role="list" aria-label="حساباتنا على وسائل التواصل الاجتماعي">
+                  <a
+                    href={socialLinks.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="listitem"
+                    aria-label="تابعنا على يوتيوب (يفتح في نافذة جديدة)"
+                    className="bg-gradient-to-br from-red-600/20 to-red-600/5 rounded-2xl p-6 text-center border border-red-600/30 hover:border-red-600 transition-all hover:transform hover:scale-105 block focus:outline-none focus:ring-2 focus:ring-red-500"
+                  >
+                    <div className="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-white" aria-hidden="true">
                       <YoutubeIcon />
                     </div>
                     <span className="text-white font-bold">يوتيوب</span>
                   </a>
 
-                  <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-blue-600/20 to-blue-600/5 rounded-2xl p-6 text-center border border-blue-600/30 hover:border-blue-600 transition-all hover:transform hover:scale-105 block">
-                    <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-white">
+                  <a
+                    href={socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="listitem"
+                    aria-label="تابعنا على فيسبوك (يفتح في نافذة جديدة)"
+                    className="bg-gradient-to-br from-blue-600/20 to-blue-600/5 rounded-2xl p-6 text-center border border-blue-600/30 hover:border-blue-600 transition-all hover:transform hover:scale-105 block focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-white" aria-hidden="true">
                       <FacebookIcon />
                     </div>
                     <span className="text-white font-bold">فيسبوك</span>
                   </a>
 
-                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-pink-600/20 to-pink-600/5 rounded-2xl p-6 text-center border border-pink-600/30 hover:border-pink-600 transition-all hover:transform hover:scale-105 block">
-                    <div className="w-14 h-14 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4 text-white">
+                  <a
+                    href={socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="listitem"
+                    aria-label="تابعنا على انستغرام (يفتح في نافذة جديدة)"
+                    className="bg-gradient-to-br from-pink-600/20 to-pink-600/5 rounded-2xl p-6 text-center border border-pink-600/30 hover:border-pink-600 transition-all hover:transform hover:scale-105 block focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  >
+                    <div className="w-14 h-14 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4 text-white" aria-hidden="true">
                       <InstagramIcon />
                     </div>
                     <span className="text-white font-bold">انستغرام</span>
                   </a>
 
-                  <a href={socialLinks.tiktok} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-gray-600/20 to-gray-600/5 rounded-2xl p-6 text-center border border-gray-600/30 hover:border-gray-600 transition-all hover:transform hover:scale-105 block">
-                    <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center mx-auto mb-4 text-white">
+                  <a
+                    href={socialLinks.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    role="listitem"
+                    aria-label="تابعنا على تيك توك (يفتح في نافذة جديدة)"
+                    className="bg-gradient-to-br from-gray-600/20 to-gray-600/5 rounded-2xl p-6 text-center border border-gray-600/30 hover:border-gray-600 transition-all hover:transform hover:scale-105 block focus:outline-none focus:ring-2 focus:ring-gray-500"
+                  >
+                    <div className="w-14 h-14 bg-black rounded-xl flex items-center justify-center mx-auto mb-4 text-white" aria-hidden="true">
                       <TiktokIcon />
                     </div>
                     <span className="text-white font-bold">تيك توك</span>
