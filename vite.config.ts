@@ -19,6 +19,10 @@ export default defineConfig({
     },
   },
   build: {
+    target: 'es2020',
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    cssMinify: true,
     rollupOptions: {
       output: {
         // Manual chunks لتقسيم bundle بشكل أفضل
