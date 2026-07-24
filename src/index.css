@@ -353,3 +353,25 @@ body {
 .animate-slide-up {
   animation: slide-up 0.5s ease-out;
 }
+
+/* Theme: light mode override */
+html.light {
+  color-scheme: light;
+}
+html.light body {
+  background: #fdf8ed;
+  color: #1a1a1a;
+}
+html.light .text-white { color: #1a1a1a !important; }
+html.light .text-gray-300 { color: #3a3a3a !important; }
+html.light .text-gray-400 { color: #555 !important; }
+html.light .text-gray-500 { color: #6a6a6a !important; }
+html.light .bg-\[\#0a1628\] { background: #fdf8ed !important; }
+html.light .bg-\[\#162544\] { background: #f3e9c8 !important; }
+html.light .bg-white\/5 { background: rgba(0, 0, 0, 0.04) !important; }
+html.light .bg-white\/10 { background: rgba(0, 0, 0, 0.06) !important; }
+html.light .border-white\/10 { border-color: rgba(0, 0, 0, 0.1) !important; }
+html.light .border-white\/20 { border-color: rgba(0, 0, 0, 0.15) !important; }
+html.light .placeholder-gray-400::placeholder { color: #888 !important; }
+html.light .glass,
+html.light .glass-nav { background: rgba(255, 255, 255, 0.85) !important; }

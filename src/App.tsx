@@ -4,6 +4,7 @@ import SEO from './components/SEO'
 import { seoConfig } from './lib/seo-config'
 import OptimizedImage from './components/OptimizedImage'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
+import ThemeToggle from './components/ThemeToggle'
 import Footer from './components/Footer'
 import Newsletter from './components/Newsletter'
 import FAQSchema, { FAQItem } from './components/FAQSchema'
@@ -1191,6 +1192,7 @@ function App() {
       <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFoundPage /></Suspense>} />
     </Routes>
     <PWAInstallPrompt />
+    <ThemeToggle />
     </>
   )
 }
