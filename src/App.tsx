@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Newsletter from './components/Newsletter'
 import FAQSchema, { FAQItem } from './components/FAQSchema'
 import { useSocialStats, useLatestVideos, formatCompactNumber, formatLocalizedNumber } from './lib/useSocialStats'
+import { useWebVitals } from './lib/useWebVitals'
 
 // Lazy load all heritage pages (code splitting)
 const HistoryPage = lazy(() => import('./pages/HistoryPage'))
@@ -232,6 +233,8 @@ function App() {
   const { stats: liveStats } = useSocialStats()
   // Latest YouTube videos (auto-refreshed every 3 hours)
   const { videos: latestVideos } = useLatestVideos(4)
+  // Web Vitals monitoring (LCP, FCP, CLS, TTFB)
+  useWebVitals()
 
   // Derived values for the Hero stats cards
   // Owner-verified values (2026-07-20) - MANUAL, these are the AUTHORITATIVE numbers
@@ -361,6 +364,13 @@ function App() {
         <>
           <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-al-naim.vercel.app/" />
           <SEO {...seoConfig.home} />
+          {/* Skip-to-content link for keyboard users */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-[#D4AF37] focus:text-[#0a1628] focus:font-bold focus:rounded-full focus:shadow-[0_0_30px_rgba(212,175,55,0.6)] focus:outline-none focus:ring-2 focus:ring-white"
+          >
+            تخطّي إلى المحتوى الرئيسي
+          </a>
           <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}
           <nav
@@ -600,7 +610,7 @@ function App() {
           </section>
 
           {/* نبذة عن القبيلة Section */}
-          <section id="about" className="py-24 bg-gradient-to-b from-[#162544] to-[#0a1628]">
+          <section id="main-content" className="py-24 bg-gradient-to-b from-[#162544] to-[#0a1628]" tabIndex={-1}>
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">

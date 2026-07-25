@@ -1,6 +1,6 @@
-// Service Worker for قبيلة السادة النعيم PWA
+// Service Worker for قبيلة النعيم أهل الصفرا ٥١٥ PWA
 // Version bumped on each deployment to force cache invalidation
-const VERSION = '2026-06-29'
+const VERSION = '2026-07-24'
 const CACHE_NAME = `qabila-al-naim-${VERSION}`
 const RUNTIME_CACHE = `qabila-runtime-${VERSION}`
 
@@ -22,6 +22,7 @@ const PRECACHE_URLS = [
   '/images/banner.webp',
   '/images/tribe-logo-calligraphy.webp',
   '/images/tribe-flag.webp',
+  '/offline.html',
 ]
 
 // Install: تخزين الملفات الأساسية
@@ -63,7 +64,7 @@ self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (request.method !== 'GET') return
 
-  // Skip cross-origin requests
+  // Skip cross-origin requests (Google Fonts, YouTube, etc.)
   if (url.origin !== location.origin) return
 
   event.respondWith(
@@ -78,7 +79,14 @@ self.addEventListener('fetch', (event) => {
           }
           return networkResponse
         })
-        .catch(() => cachedResponse)
+        .catch(() => {
+          // Fallback chain: cached → offline page
+          if (cachedResponse) return cachedResponse
+          if (request.mode === 'navigate') {
+            return caches.match('/offline.html').then((offline) => offline || cachedResponse)
+          }
+          return cachedResponse
+        })
 
       return cachedResponse || fetchPromise
     })
