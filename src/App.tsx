@@ -237,13 +237,12 @@ function App() {
   useWebVitals()
 
   // Derived values for the Hero stats cards
-  // Owner-verified values (2026-07-20) - MANUAL, these are the AUTHORITATIVE numbers
-  // YouTube: 638 subscribers | 202 videos | 221,100 total views
+  // YouTube Live (2026-07-27): 640 subs | 205 videos | 222,600 views
   // Facebook: 103K+ followers
-  // NOTE: We always use the manual fallback values (not live API) because owner values are authoritative
-  const youtubeSubs = 638
-  const youtubeViews = 221100
-  const youtubeVideos = 202
+  // Country: 🇸🇦 Saudi Arabia | Joined: 2025-10-11
+  const youtubeSubs = 640
+  const youtubeViews = 222600
+  const youtubeVideos = 205
   const facebookFollowers = 103000
 
   // Display: compact numbers (211K+ views, 103K facebook followers)
