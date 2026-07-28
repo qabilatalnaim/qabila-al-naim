@@ -178,30 +178,49 @@ export default function CamelsPage() {
       ]} />
       <Breadcrumbs items={[{ label: 'الإبل' }]} />
       <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
-      {/* Hero Section */}
+      {/* Hero Section — مع صورة البانوراما */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#162544] via-[#0a1628] to-[#162544]">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[150px]"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-600/20 rounded-full blur-[150px]"></div>
+        {/* الصورة البانورامية كخلفية */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/images/camels-panorama-2026-mobile.webp" />
+            <source srcSet="/images/camels-panorama-2026.webp" type="image/webp" />
+            <img
+              src="/images/camels-panorama-2026.webp"
+              alt="بانوراما إبل قبيلة النعيم أهل الصفرا ٥١٥ في البادية السورية - إبل الصفرا الأصيلة"
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </picture>
+          {/* Overlay متدرج للقراءة الواضحة */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/70 via-[#0a1628]/40 to-[#0a1628]"></div>
+          {/* Glows زخرفية */}
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-600/15 rounded-full blur-[150px]"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-[150px]"></div>
         </div>
 
         <div className="relative container mx-auto px-4 py-20">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-blue-600/20 to-amber-600/20 px-8 py-3 rounded-full mb-8 border border-white/10">
+            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-blue-600/30 to-amber-600/30 px-8 py-3 rounded-full mb-8 border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-md">
               <span className="text-5xl">🐪</span>
-              <span className="text-2xl font-bold text-white">قاعة الإبل</span>
+              <span className="text-2xl font-bold text-[#D4AF37]">قاعة الإبل</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
-              إبل قبيلة <span className="text-[#D4AF37]">النعيم</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              إبل قبيلة السادة النعيم
             </h1>
+            <p className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              أهل الصفرا.. موروث الأصالة وهيبة البادية
+            </p>
 
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              تُعدّ الإبل رمزاً أساسياً من رموز البادية العربية، وكانت على مر العصور عنواناً للكرم والفخر والعزّة، حيث عُرفت بأصالة سلالاتها وجمال منظرها
+            <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+              في ذاكرة البادية، كانت الإبل رفيقة الترحال وعنوان الصبر والأصالة، وفي الموروث الشعبي لقبيلة السادة النعيم ارتبطت «الصفرا» بمعاني النخوة والفخر والاعتزاز بالموروث.
             </p>
 
             <div className="mt-10 inline-block">
-              <div className="bg-amber-600/20 rounded-2xl px-8 py-4 border border-amber-600/40">
+              <div className="bg-amber-600/20 backdrop-blur-md rounded-2xl px-8 py-4 border border-amber-600/40">
                 <p className="text-amber-400 font-bold text-2xl">"روسٍ تعرف المجد"</p>
                 <p className="text-gray-400 text-sm mt-2">من أمثال البادية العربية</p>
               </div>
@@ -238,7 +257,7 @@ export default function CamelsPage() {
               <div className="text-center mb-10">
                 <span className="text-7xl">🐪</span>
               </div>
-              <h2 className="text-3xl font-bold text-[#D4AF37] mb-8 text-center">إبل قبيلة النعيم</h2>
+              <h2 className="text-3xl font-bold text-[#D4AF37] mb-8 text-center">إبل قبيلة السادة النعيم — أهل الصفرا</h2>
               <div className="text-gray-200 text-lg leading-loose space-y-6">
                 <p>
                   تُشكّل الإبل لدى قبيلة النعيم رمزًا أصيلًا من رموز الفخر والتراث البدوي العريق، فقد ارتبطت حياة أبناء القبيلة بالإبل منذ القدم باعتبارها رفيق الصحراء ووسيلة التنقّل وعنوان الصبر والقوة والكرم العربي الأصيل. وعُرف أبناء النعيم باهتمامهم الكبير بتربية الإبل والمحافظة على سلالاتها الأصيلة، مستفيدين من خبرتهم المتوارثة في معرفة البادية وطرق الرعي ومواسم التنقّل.
