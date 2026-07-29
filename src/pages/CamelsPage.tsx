@@ -183,9 +183,12 @@ export default function CamelsPage() {
         <div className="container mx-auto px-3 sm:px-4 pt-4 md:pt-6 pb-8 md:pb-12">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-4 md:mb-6">
-              <div className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 bg-gradient-to-r from-blue-600/30 to-amber-600/30 px-4 sm:px-6 md:px-8 py-2 md:py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-md">
-                <span className="text-2xl md:text-3xl">🐪</span>
-                <span className="text-sm sm:text-base md:text-xl font-bold text-[#D4AF37]">قاعة الإبل — قبيلة السادة النعيم</span>
+              <div className="inline-flex flex-col items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-blue-600/30 to-amber-600/30 px-5 sm:px-7 md:px-10 py-3 md:py-4 rounded-2xl border border-[#D4AF37]/40 shadow-[0_0_24px_rgba(212,175,55,0.35)] backdrop-blur-md">
+                <span className="flex items-center gap-2 text-base sm:text-lg md:text-2xl font-black text-white">
+                  <span className="text-2xl md:text-3xl">🐪</span>
+                  <span>إبل قبيلة السادة النعيم</span>
+                </span>
+                <span className="text-xs sm:text-sm md:text-base font-bold text-[#D4AF37]">أهل الصفرا.. موروث الأصالة وهيبة البادية</span>
               </div>
             </div>
             <figure className="relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.25)]">
@@ -198,9 +201,7 @@ export default function CamelsPage() {
                 <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ — في مسارات البادية والحماد</p>
               </figcaption>
             </figure>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white text-center mt-6 md:mt-10 mb-3 md:mb-4 leading-tight">إبل قبيلة السادة النعيم</h1>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#D4AF37] text-center mb-4 md:mb-6 px-2">أهل الصفرا.. موروث الأصالة وهيبة البادية</p>
-            <div className="flex items-center justify-center gap-3 mb-5 md:mb-7">
+            <div className="flex items-center justify-center gap-3 mt-6 md:mt-8 mb-5 md:mb-7">
               <span className="h-px w-10 md:w-20 bg-gradient-to-r from-transparent to-[#D4AF37]"></span>
               <span className="text-xl md:text-2xl text-[#D4AF37]">✦</span>
               <span className="h-px w-10 md:w-20 bg-gradient-to-l from-transparent to-[#D4AF37]"></span>
