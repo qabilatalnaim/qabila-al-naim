@@ -218,9 +218,9 @@ export default function CamelsPage() {
                 <span>اكتشف الموروث</span>
                 <span>↓</span>
               </a>
-              <a href="/poetry" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-4 sm:px-5 md:px-7 py-2.5 md:py-3 rounded-full text-sm md:text-base border border-white/20 transition-all">
-                <span>الشعر النبطي</span>
-                <span>📜</span>
+              <a href="#camel-content" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-4 sm:px-5 md:px-7 py-2.5 md:py-3 rounded-full text-sm md:text-base border border-white/20 transition-all">
+                <span>موروثٌ لا يُنسى في ذاكرة الحماد</span>
+                <span>🏜️</span>
               </a>
             </div>
           </div>
