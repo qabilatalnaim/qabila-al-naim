@@ -177,123 +177,51 @@ export default function CamelsPage() {
         { question: 'كم عدد بطون قبيلة النعيم؟', answer: 'قبيلة النعيم تتألف من أربعة بطون رئيسية: الفخر، المحمدية (المحاميد)، الحزومين، والبو طارق.' },
       ]} />
       <Breadcrumbs items={[{ label: 'الإبل' }]} />
-      <div className="min-h-screen bg-[#0a1628] pt-24 pb-16">
-      {/* Hero Section — مع صورة البانوراما + responsive عالية الجودة */}
+      <div className="min-h-screen bg-[#0a1628] pt-20 md:pt-24 pb-16">
+      {/* Hero Section — الصورة في الأعلى، النص تحتها (متناسب مع كل الأجهزة) */}
       <section className="relative overflow-hidden">
-        {/* الصورة البانورامية كخلفية مع كل التنسيقات */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <picture>
-            {/* AVIF: أحدث صيغة (Chrome 85+, Safari 16+, Firefox 93+) */}
-            <source
-              type="image/avif"
-              srcSet="/images/camels-panorama-2026-400w.avif 400w,
-                      /images/camels-panorama-2026-800w.avif 800w,
-                      /images/camels-panorama-2026-1200w.avif 1200w,
-                      /images/camels-panorama-2026-1600w.avif 1600w,
-                      /images/camels-panorama-2026.avif 2000w"
-              sizes="100vw"
-            />
-            {/* WebP: دعم واسع */}
-            <source
-              type="image/webp"
-              srcSet="/images/camels-panorama-2026-400w.webp 400w,
-                      /images/camels-panorama-2026-800w.webp 800w,
-                      /images/camels-panorama-2026-1200w.webp 1200w,
-                      /images/camels-panorama-2026-1600w.webp 1600w,
-                      /images/camels-panorama-2026-2000w.webp 2000w"
-              sizes="100vw"
-            />
-            {/* Fallback PNG */}
-            <img
-              src="/images/camels-panorama-2026-1600w.webp"
-              srcSet="/images/camels-panorama-2026-400w.webp 400w,
-                      /images/camels-panorama-2026-800w.webp 800w,
-                      /images/camels-panorama-2026-1200w.webp 1200w,
-                      /images/camels-panorama-2026-1600w.webp 1600w,
-                      /images/camels-panorama-2026-2000w.webp 2000w"
-              sizes="100vw"
-              alt="بانوراما إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ في البادية السورية - إبل الصفرا الأصيلة تتقدم في مسارات البادية"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-              width="1672"
-              height="941"
-            />
-          </picture>
-          {/* Overlay متدرج متعدد الطبقات للقراءة الواضحة */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/80 via-[#0a1628]/30 to-[#0a1628]"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/40 via-transparent to-[#0a1628]/40"></div>
-          {/* Glows زخرفية */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-600/15 rounded-full blur-[150px]"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-[150px]"></div>
-        </div>
-
-        <div className="relative container mx-auto px-4 py-20 md:py-28">
-          <div className="max-w-5xl mx-auto text-center">
-            {/* شارة القاعة */}
-            <div className="inline-flex items-center gap-3 md:gap-4 bg-gradient-to-r from-blue-600/30 to-amber-600/30 px-6 md:px-8 py-2.5 md:py-3 rounded-full mb-6 md:mb-8 border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-md">
-              <span className="text-3xl md:text-5xl">🐪</span>
-              <span className="text-lg md:text-2xl font-bold text-[#D4AF37]">قاعة الإبل</span>
+        <div className="container mx-auto px-3 sm:px-4 pt-4 md:pt-6 pb-8 md:pb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-4 md:mb-6">
+              <div className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 bg-gradient-to-r from-blue-600/30 to-amber-600/30 px-4 sm:px-6 md:px-8 py-2 md:py-2.5 rounded-full border border-[#D4AF37]/40 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-md">
+                <span className="text-2xl md:text-3xl">🐪</span>
+                <span className="text-sm sm:text-base md:text-xl font-bold text-[#D4AF37]">قاعة الإبل — قبيلة السادة النعيم</span>
+              </div>
             </div>
-
-            {/* العنوان الرئيسي */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 md:mb-6 leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              إبل قبيلة السادة النعيم
-            </h1>
-
-            {/* العنوان الفرعي */}
-            <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[#D4AF37] mb-6 md:mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              أهل الصفرا.. موروث الأصالة وهيبة البادية
-            </p>
-
-            {/* خط زخرفي */}
-            <div className="flex items-center justify-center gap-3 mb-6 md:mb-8">
-              <span className="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-[#D4AF37]"></span>
-              <span className="text-2xl text-[#D4AF37]">✦</span>
-              <span className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-[#D4AF37]"></span>
+            <figure className="relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.25)]">
+              <picture>
+                <source type="image/avif" srcSet="/images/camels-panorama-2026-400w.avif 400w, /images/camels-panorama-2026-800w.avif 800w, /images/camels-panorama-2026-1200w.avif 1200w, /images/camels-panorama-2026-1600w.avif 1600w, /images/camels-panorama-2026.avif 2000w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" />
+                <source type="image/webp" srcSet="/images/camels-panorama-2026-400w.webp 400w, /images/camels-panorama-2026-800w.webp 800w, /images/camels-panorama-2026-1200w.webp 1200w, /images/camels-panorama-2026-1600w.webp 1600w, /images/camels-panorama-2026-2000w.webp 2000w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" />
+                <img src="/images/camels-panorama-2026-1600w.webp" srcSet="/images/camels-panorama-2026-400w.webp 400w, /images/camels-panorama-2026-800w.webp 800w, /images/camels-panorama-2026-1200w.webp 1200w, /images/camels-panorama-2026-1600w.webp 1600w, /images/camels-panorama-2026-2000w.webp 2000w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="بانوراما إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ في البادية السورية - إبل الصفرا الأصيلة تتقدم في مسارات البادية" className="w-full h-auto object-cover" loading="eager" decoding="async" fetchPriority="high" width="1672" height="941" />
+              </picture>
+              <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-2.5 md:py-4">
+                <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ — في مسارات البادية والحماد</p>
+              </figcaption>
+            </figure>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white text-center mt-6 md:mt-10 mb-3 md:mb-4 leading-tight">إبل قبيلة السادة النعيم</h1>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#D4AF37] text-center mb-4 md:mb-6 px-2">أهل الصفرا.. موروث الأصالة وهيبة البادية</p>
+            <div className="flex items-center justify-center gap-3 mb-5 md:mb-7">
+              <span className="h-px w-10 md:w-20 bg-gradient-to-r from-transparent to-[#D4AF37]"></span>
+              <span className="text-xl md:text-2xl text-[#D4AF37]">✦</span>
+              <span className="h-px w-10 md:w-20 bg-gradient-to-l from-transparent to-[#D4AF37]"></span>
             </div>
-
-            {/* المقدمة */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] px-2">
-              في ذاكرة البادية، كانت الإبل رفيقة الترحال وعنوان الصبر والأصالة، وفي الموروث الشعبي لقبيلة السادة النعيم ارتبطت «الصفرا» بمعاني النخوة والفخر والاعتزاز بالموروث.
-            </p>
-
-            {/* اقتباس */}
-            <div className="mt-8 md:mt-10 inline-block">
-              <div className="bg-amber-600/20 backdrop-blur-md rounded-2xl px-6 md:px-8 py-3 md:py-4 border border-amber-600/40">
-                <p className="text-amber-400 font-bold text-xl md:text-2xl">"روسٍ تعرف المجد"</p>
+            <p className="text-sm sm:text-base md:text-xl text-gray-100 max-w-3xl mx-auto text-center leading-relaxed px-2 mb-6 md:mb-8">في ذاكرة البادية، كانت الإبل رفيقة الترحال وعنوان الصبر والأصالة، وفي الموروث الشعبي لقبيلة السادة النعيم ارتبطت «الصفرا» بمعاني النخوة والفخر والاعتزاز بالموروث.</p>
+            <div className="text-center mb-6 md:mb-8">
+              <div className="inline-block bg-amber-600/20 backdrop-blur-md rounded-2xl px-5 sm:px-6 md:px-8 py-2.5 md:py-4 border border-amber-600/40">
+                <p className="text-amber-400 font-bold text-lg md:text-2xl">"روسٍ تعرف المجد"</p>
                 <p className="text-gray-400 text-xs md:text-sm mt-1 md:mt-2">من أمثال البادية العربية</p>
               </div>
             </div>
-
-            {/* أزرار التصفح السريع */}
-            <div className="mt-8 md:mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-4">
-              <a
-                href="#camel-content"
-                className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#c5a032] text-[#0a1628] font-bold px-5 md:px-7 py-2.5 md:py-3 rounded-full text-sm md:text-base transition-all hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
-              >
+            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-4">
+              <a href="#camel-content" className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#c5a032] text-[#0a1628] font-bold px-4 sm:px-5 md:px-7 py-2.5 md:py-3 rounded-full text-sm md:text-base transition-all hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                 <span>اكتشف الموروث</span>
                 <span>↓</span>
               </a>
-              <a
-                href="/poetry"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-5 md:px-7 py-2.5 md:py-3 rounded-full text-sm md:text-base border border-white/20 transition-all"
-              >
+              <a href="/poetry" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-4 sm:px-5 md:px-7 py-2.5 md:py-3 rounded-full text-sm md:text-base border border-white/20 transition-all">
                 <span>الشعر النبطي</span>
                 <span>📜</span>
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* مؤشر التمرير */}
-        <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10">
-          <div className="flex flex-col items-center gap-1 text-[#D4AF37] animate-bounce">
-            <span className="text-xs">مرّر للأسفل</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M7 13l5 5 5-5M7 7l5 5 5-5" />
-            </svg>
           </div>
         </div>
       </section>
