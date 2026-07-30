@@ -381,6 +381,38 @@ export default function CamelsPage() {
                   الوسم في البادية ليس مجرد علامة، بل هو <span className="text-[#D4AF37] font-bold">هوية ونسب وتاريخ</span> يُحفظ عبر الأجيال. ووَسم <span className="text-[#D4AF37] font-black text-xl">٥١٥</span> هو وسم بني هاشم الجامع الذي يرمز إلى الانتماء للنسب الهاشمي الشريف.
                 </p>
               </div>
+
+              {/* صورة البانوراما المحسّنة للوسم */}
+              <figure className="mb-10 md:mb-12 relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.25)]">
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet="/images/camels-panorama-2026-400w.avif 400w, /images/camels-panorama-2026-800w.avif 800w, /images/camels-panorama-2026-1200w.avif 1200w, /images/camels-panorama-2026-1600w.avif 1600w, /images/camels-panorama-2026-2000w.avif 2000w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet="/images/camels-panorama-2026-400w.webp 400w, /images/camels-panorama-2026-800w.webp 800w, /images/camels-panorama-2026-1200w.webp 1200w, /images/camels-panorama-2026-1600w.webp 1600w, /images/camels-panorama-2026-2000w.webp 2000w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                  />
+                  <img
+                    src="/images/camels-panorama-2026-1600w.webp"
+                    srcSet="/images/camels-panorama-2026-400w.webp 400w, /images/camels-panorama-2026-800w.webp 800w, /images/camels-panorama-2026-1200w.webp 1200w, /images/camels-panorama-2026-1600w.webp 1600w, /images/camels-panorama-2026-2000w.webp 2000w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                    alt="بانوراما إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ في ربيع الحماد السوري - وسم ٥١٥ على الإبل الأصيلة"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width="1672"
+                    height="941"
+                  />
+                </picture>
+                <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-2.5 md:py-4">
+                  <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                    إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ — في ربيع الحماد السوري
+                  </p>
+                </figcaption>
+              </figure>
               <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
                 <div className="group relative bg-gradient-to-br from-[#162544] via-[#1a2845] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-[#D4AF37]/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37]/70 transition-all hover:transform hover:scale-[1.02]">
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
