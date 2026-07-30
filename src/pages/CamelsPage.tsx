@@ -370,6 +370,74 @@ export default function CamelsPage() {
               </div>
             </div>
 
+            {/* قسم الوسم ٥١٥ - الهوية والنسب */}
+            <div className="mb-20">
+              <div className="text-center mb-10 md:mb-12">
+                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-emerald-600/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 mb-4">
+                  <span className="text-2xl">📋</span>
+                  <span className="text-lg md:text-xl font-bold text-[#D4AF37]">الوسم ٥١٥ — هوية النسب الهاشمي</span>
+                </div>
+                <p className="text-base md:text-lg text-gray-200 max-w-4xl mx-auto leading-loose text-justify px-2">
+                  الوسم في البادية ليس مجرد علامة، بل هو <span className="text-[#D4AF37] font-bold">هوية ونسب وتاريخ</span> يُحفظ عبر الأجيال. ووَسم <span className="text-[#D4AF37] font-black text-xl">٥١٥</span> هو وسم بني هاشم الجامع الذي يرمز إلى الانتماء للنسب الهاشمي الشريف.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
+                <div className="group relative bg-gradient-to-br from-[#162544] via-[#1a2845] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-[#D4AF37]/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37]/70 transition-all hover:transform hover:scale-[1.02]">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+                  <div className="text-center mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-[#D4AF37]/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform"><span className="text-4xl">📋</span></div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#D4AF37] mb-2">وسم بني هاشم</h3>
+                    <div className="text-5xl md:text-6xl font-black text-white drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]">٥١٥</div>
+                  </div>
+                  <div className="space-y-5">
+                    <div>
+                      <h4 className="text-lg font-bold text-[#D4AF37] mb-2 flex items-center gap-2"><span className="text-xl">📌</span><span>أصل الوسم</span></h4>
+                      <p className="text-gray-200 leading-loose text-justify">وسم <span className="font-black text-[#D4AF37]">٥١٥</span> هو الوسم الجامع لقبائل بني هاشم، الذي أجمع عليه المشايخ والعوارف، ليكون رمزاً موحداً يجمع أبناء النسب الهاشمي تحت راية واحدة.</p>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-[#D4AF37] mb-2 flex items-center gap-2"><span className="text-xl">📌</span><span>دلالته</span></h4>
+                      <p className="text-gray-200 leading-loose text-justify">يُمثّل الوسم العزّ ووحدة الصف وقوة الرابط بين أبناء القبائل، ويُجسّد تاريخاً ممتداً من المجد والأصالة.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="group relative bg-gradient-to-br from-[#162544] via-[#1a2845] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-emerald-500/40 shadow-[0_0_40px_rgba(16,185,129,0.2)] hover:border-emerald-500/70 transition-all hover:transform hover:scale-[1.02]">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
+                  <div className="text-center mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-500/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform"><span className="text-4xl">✒️</span></div>
+                    <h3 className="text-2xl md:text-3xl font-black text-emerald-400 mb-2">وسم قبيلة النعيم</h3>
+                    <div className="text-5xl md:text-6xl font-black text-white drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]">٥١</div>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-gray-200 leading-loose text-justify text-base">ارتبط وسم <span className="font-black text-emerald-400 text-xl">٥١</span> بأبناء قبيلة النعيم، ويعبّر عن خصوصية داخلية تعكس عمق الانتماء وتراث القبيلة. وهو رمز يُستخدم للتمييز بين أبناء القبيلة.</p>
+                    <div className="bg-emerald-500/10 rounded-2xl p-4 border border-emerald-500/30 text-center">
+                      <p className="text-emerald-300 font-bold text-base">رمز الانتماء الخاص بأبناء القبيلة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative bg-gradient-to-br from-[#162544] via-[#0a1628] to-[#162544] rounded-3xl p-8 md:p-12 border-2 border-[#D4AF37]/50 shadow-[0_0_50px_rgba(212,175,55,0.25)] text-center overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-[80px]"></div>
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-[80px]"></div>
+                <div className="relative">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-[#D4AF37]/20 rounded-2xl mb-5"><span className="text-5xl">📢</span></div>
+                  <h3 className="text-2xl md:text-4xl font-black text-[#D4AF37] mb-4">إعلان القبيلة — تأكيد الهوية</h3>
+                  <p className="text-lg md:text-xl text-gray-100 leading-loose max-w-4xl mx-auto mb-6 text-justify">تعلن قبيلة النعيم التزامها بـ <span className="font-black text-[#D4AF37] text-2xl mx-1">الوسم (٥١٥)</span> كرمز موحّد، تأكيداً على وحدة الصف واعتزازاً بالانتماء للنسب الهاشمي الشريف.</p>
+                  <div className="max-w-3xl mx-auto my-8">
+                    <div className="bg-[#0a1628]/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-[#D4AF37]/30">
+                      <p className="text-2xl md:text-3xl text-[#D4AF37] font-black leading-relaxed" style={{ fontFamily: 'Cairo, serif' }}>﴿ وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعاً وَلَا تَفَرَّقُوا ﴾</p>
+                      <p className="text-gray-400 text-sm mt-3">سورة آل عمران — الآية ١٠٣</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+                    <div className="bg-[#D4AF37]/15 rounded-full px-5 py-2 border border-[#D4AF37]/40"><span className="text-[#D4AF37] font-bold text-sm md:text-base">هوية موحدة</span></div>
+                    <div className="bg-emerald-500/15 rounded-full px-5 py-2 border border-emerald-500/40"><span className="text-emerald-300 font-bold text-sm md:text-base">نسب هاشمي</span></div>
+                    <div className="bg-blue-500/15 rounded-full px-5 py-2 border border-blue-500/40"><span className="text-blue-300 font-bold text-sm md:text-base">وحدة الصف</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Camel Types Grid */}
             <div className="mb-20">
               <div className="text-center mb-12">
@@ -495,116 +563,6 @@ export default function CamelsPage() {
                   <p className="text-gray-300 leading-relaxed">
                     من أعراف العرب تقديم الضيافة من لحم الإبل وحليبها للزوار، وهذه العادة لا تزال حية في قبيلة النعيم وفي البوادي.
                   </p>
-                </div>
-              </div>
-            </div>
-
-            {/* قسم الوسم ٥١٥ - الهوية والنسب */}
-            <div className="mb-20">
-              {/* العنوان الرئيسي للقسم */}
-              <div className="text-center mb-10 md:mb-12">
-                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#D4AF37]/20 to-emerald-600/20 px-6 py-2.5 rounded-full border border-[#D4AF37]/40 mb-4">
-                  <span className="text-2xl">📋</span>
-                  <span className="text-lg md:text-xl font-bold text-[#D4AF37]">الوسم ٥١٥ — هوية النسب الهاشمي</span>
-                </div>
-                <p className="text-base md:text-lg text-gray-200 max-w-4xl mx-auto leading-loose text-justify px-2">
-                  الوسم في البادية ليس مجرد علامة، بل هو <span className="text-[#D4AF37] font-bold">هوية ونسب وتاريخ</span> يُحفظ عبر الأجيال. ووَسم <span className="text-[#D4AF37] font-black text-xl">٥١٥</span> هو وسم بني هاشم الجامع الذي يرمز إلى الانتماء للنسب الهاشمي الشريف.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8">
-                {/* وسم بني هاشم (٥١٥) */}
-                <div className="group relative bg-gradient-to-br from-[#162544] via-[#1a2845] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-[#D4AF37]/40 shadow-[0_0_40px_rgba(212,175,55,0.2)] hover:border-[#D4AF37]/70 transition-all hover:transform hover:scale-[1.02]">
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-[#D4AF37]/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
-                      <span className="text-4xl">📋</span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-[#D4AF37] mb-2">وسم بني هاشم</h3>
-                    <div className="text-5xl md:text-6xl font-black text-white drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]">٥١٥</div>
-                  </div>
-                  <div className="space-y-5">
-                    <div>
-                      <h4 className="text-lg font-bold text-[#D4AF37] mb-2 flex items-center gap-2">
-                        <span className="text-xl">📌</span>
-                        <span>أصل الوسم</span>
-                      </h4>
-                      <p className="text-gray-200 leading-loose text-justify">
-                        وسم <span className="font-black text-[#D4AF37]">٥١٥</span> هو الوسم الجامع لقبائل بني هاشم، الذي أجمع عليه المشايخ والعوارف، ليكون رمزاً موحداً يجمع أبناء النسب الهاشمي تحت راية واحدة.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-[#D4AF37] mb-2 flex items-center gap-2">
-                        <span className="text-xl">📌</span>
-                        <span>دلالته</span>
-                      </h4>
-                      <p className="text-gray-200 leading-loose text-justify">
-                        يُمثّل الوسم العزّ ووحدة الصف وقوة الرابط بين أبناء القبائل، ويُجسّد تاريخاً ممتداً من المجد والأصالة.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* وسم قبيلة النعيم (٥١) */}
-                <div className="group relative bg-gradient-to-br from-[#162544] via-[#1a2845] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-emerald-500/40 shadow-[0_0_40px_rgba(16,185,129,0.2)] hover:border-emerald-500/70 transition-all hover:transform hover:scale-[1.02]">
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-500/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
-                      <span className="text-4xl">✒️</span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-emerald-400 mb-2">وسم قبيلة النعيم</h3>
-                    <div className="text-5xl md:text-6xl font-black text-white drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]">٥١</div>
-                  </div>
-                  <div className="space-y-4">
-                    <p className="text-gray-200 leading-loose text-justify text-base">
-                      ارتبط وسم <span className="font-black text-emerald-400 text-xl">٥١</span> بأبناء قبيلة النعيم، ويعبّر عن خصوصية داخلية تعكس عمق الانتماء وتراث القبيلة. وهو رمز يُستخدم للتمييز بين أبناء القبيلة.
-                    </p>
-                    <div className="bg-emerald-500/10 rounded-2xl p-4 border border-emerald-500/30 text-center">
-                      <p className="text-emerald-300 font-bold text-base">
-                        رمز الانتماء الخاص بأبناء القبيلة
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* إعلان القبيلة — تأكيد الهوية */}
-              <div className="relative bg-gradient-to-br from-[#162544] via-[#0a1628] to-[#162544] rounded-3xl p-8 md:p-12 border-2 border-[#D4AF37]/50 shadow-[0_0_50px_rgba(212,175,55,0.25)] text-center overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-[80px]"></div>
-                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-[80px]"></div>
-
-                <div className="relative">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-[#D4AF37]/20 rounded-2xl mb-5">
-                    <span className="text-5xl">📢</span>
-                  </div>
-                  <h3 className="text-2xl md:text-4xl font-black text-[#D4AF37] mb-4">
-                    إعلان القبيلة — تأكيد الهوية
-                  </h3>
-                  <p className="text-lg md:text-xl text-gray-100 leading-loose max-w-4xl mx-auto mb-6 text-justify">
-                    تعلن قبيلة النعيم التزامها بـ <span className="font-black text-[#D4AF37] text-2xl mx-1">الوسم (٥١٥)</span> كرمز موحّد، تأكيداً على وحدة الصف واعتزازاً بالانتماء للنسب الهاشمي الشريف.
-                  </p>
-
-                  <div className="max-w-3xl mx-auto my-8">
-                    <div className="bg-[#0a1628]/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-[#D4AF37]/30">
-                      <p className="text-2xl md:text-3xl text-[#D4AF37] font-black leading-relaxed" style={{ fontFamily: 'Cairo, serif' }}>
-                        ﴿ وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعاً وَلَا تَفَرَّقُوا ﴾
-                      </p>
-                      <p className="text-gray-400 text-sm mt-3">سورة آل عمران — الآية ١٠٣</p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-                    <div className="bg-[#D4AF37]/15 rounded-full px-5 py-2 border border-[#D4AF37]/40">
-                      <span className="text-[#D4AF37] font-bold text-sm md:text-base">هوية موحدة</span>
-                    </div>
-                    <div className="bg-emerald-500/15 rounded-full px-5 py-2 border border-emerald-500/40">
-                      <span className="text-emerald-300 font-bold text-sm md:text-base">نسب هاشمي</span>
-                    </div>
-                    <div className="bg-blue-500/15 rounded-full px-5 py-2 border border-blue-500/40">
-                      <span className="text-blue-300 font-bold text-sm md:text-base">وحدة الصف</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
