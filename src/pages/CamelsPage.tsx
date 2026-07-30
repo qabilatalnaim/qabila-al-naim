@@ -382,29 +382,29 @@ export default function CamelsPage() {
                 </p>
               </div>
 
-              {/* صورة البانوراما المحسّنة للوسم */}
-              <figure className="mb-10 md:mb-12 relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_40px_rgba(212,175,55,0.25)]">
+              {/* صورة البانوراما المحسّنة لقسم الوسم ٥١٥ */}
+              <figure className="mb-10 md:mb-12 relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#D4AF37]/40 shadow-[0_0_50px_rgba(212,175,55,0.3)]">
                 <picture>
                   <source
                     type="image/avif"
-                    srcSet="/images/camels-panorama-2026-400w.avif 400w, /images/camels-panorama-2026-800w.avif 800w, /images/camels-panorama-2026-1200w.avif 1200w, /images/camels-panorama-2026-1600w.avif 1600w, /images/camels-panorama-2026-2000w.avif 2000w"
+                    srcSet="/images/wasm-panorama-2026-400w.avif 400w, /images/wasm-panorama-2026-800w.avif 800w, /images/wasm-panorama-2026-1200w.avif 1200w, /images/wasm-panorama-2026-1600w.avif 1600w, /images/wasm-panorama-2026-2000w.avif 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   />
                   <source
                     type="image/webp"
-                    srcSet="/images/camels-panorama-2026-400w.webp 400w, /images/camels-panorama-2026-800w.webp 800w, /images/camels-panorama-2026-1200w.webp 1200w, /images/camels-panorama-2026-1600w.webp 1600w, /images/camels-panorama-2026-2000w.webp 2000w"
+                    srcSet="/images/wasm-panorama-2026-400w.webp 400w, /images/wasm-panorama-2026-800w.webp 800w, /images/wasm-panorama-2026-1200w.webp 1200w, /images/wasm-panorama-2026-1600w.webp 1600w, /images/wasm-panorama-2026-2000w.webp 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   />
                   <img
-                    src="/images/camels-panorama-2026-1600w.webp"
-                    srcSet="/images/camels-panorama-2026-400w.webp 400w, /images/camels-panorama-2026-800w.webp 800w, /images/camels-panorama-2026-1200w.webp 1200w, /images/camels-panorama-2026-1600w.webp 1600w, /images/camels-panorama-2026-2000w.webp 2000w"
+                    src="/images/wasm-panorama-2026-1600w.webp"
+                    srcSet="/images/wasm-panorama-2026-400w.webp 400w, /images/wasm-panorama-2026-800w.webp 800w, /images/wasm-panorama-2026-1200w.webp 1200w, /images/wasm-panorama-2026-1600w.webp 1600w, /images/wasm-panorama-2026-2000w.webp 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="بانوراما إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ في ربيع الحماد السوري - وسم ٥١٥ على الإبل الأصيلة"
+                    alt="بانوراما إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ في الحماد السوري - وسم ٥١٥ على الإبل الصفراء الأصيلة في ربيع البادية"
                     className="w-full h-auto object-cover"
                     loading="lazy"
                     decoding="async"
-                    width="1672"
-                    height="941"
+                    width="1983"
+                    height="793"
                   />
                 </picture>
                 <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-2.5 md:py-4">
