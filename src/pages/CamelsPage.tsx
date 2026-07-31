@@ -399,7 +399,7 @@ export default function CamelsPage() {
                     src="/images/wasm-panorama-2026-1600w.webp"
                     srcSet="/images/wasm-panorama-2026-400w.webp 400w, /images/wasm-panorama-2026-800w.webp 800w, /images/wasm-panorama-2026-1200w.webp 1200w, /images/wasm-panorama-2026-1600w.webp 1600w, /images/wasm-panorama-2026-2000w.webp 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="بانوراما إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ في الحماد السوري - وسم ٥١٥ على الإبل الصفراء الأصيلة في ربيع البادية"
+                    alt="إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ منحوتة بخشب الصفرا - وسم ٥١٥ على الإبل الصفراء الأصيلة في ربيع الحماد السوري مع بيت الشعر البدوي والخيمة"
                     className="w-full h-auto object-cover"
                     loading="lazy"
                     decoding="async"
@@ -409,7 +409,7 @@ export default function CamelsPage() {
                 </picture>
                 <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-2.5 md:py-4">
                   <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-                    إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ — في ربيع الحماد السوري
+                    إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ — منحوتة بخشب الصفرا الأصيل
                   </p>
                 </figcaption>
               </figure>
