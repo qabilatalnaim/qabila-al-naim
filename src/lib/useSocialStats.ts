@@ -140,15 +140,18 @@ export interface CamelsPlaylistPayload {
 /**
  * useCamelsPlaylist — fetches the dedicated "إبل النعيم الصفرا" playlist
  * (PLkJUzCOLsXAP224xba8-lMtGyw3ErpeDF) from /api/camels-playlist.
+ * Auto-refreshes every 15 min + on window focus for live updates.
  */
 export function useCamelsPlaylist(): {
   data: CamelsPlaylistPayload | null
   videos: LatestVideo[]
   loading: boolean
+  refresh: () => Promise<void>
 } {
   const [data, setData] = useState<CamelsPlaylistPayload | null>(null)
   const [videos, setVideos] = useState<LatestVideo[]>([])
   const [loading, setLoading] = useState(true)
+  const [bust, setBust] = useState(0)
 
   useEffect(() => {
     let cancelled = false
@@ -156,9 +159,9 @@ export function useCamelsPlaylist(): {
 
     const load = async () => {
       try {
-        const res = await fetch('/api/camels-playlist', {
+        const res = await fetch(`/api/camels-playlist?_=${Date.now()}`, {
           signal: controller.signal,
-          headers: { Accept: 'application/json' },
+          headers: { Accept: 'application/json', 'Cache-Control': 'no-cache' },
         })
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const payload = (await res.json()) as CamelsPlaylistPayload
@@ -174,16 +177,29 @@ export function useCamelsPlaylist(): {
     }
 
     load()
-    const interval = window.setInterval(load, 3 * 60 * 60 * 1000)
+    // Auto-refresh every 15 min (the API has 30 min cache; this picks up new uploads)
+    const interval = window.setInterval(load, 15 * 60 * 1000)
+    // Refresh when window regains focus (e.g. user returns from YouTube)
+    const onFocus = () => load()
+    window.addEventListener('focus', onFocus)
+    // Refresh on online reconnection
+    const onOnline = () => load()
+    window.addEventListener('online', onOnline)
 
     return () => {
       cancelled = true
       controller.abort()
       window.clearInterval(interval)
+      window.removeEventListener('focus', onFocus)
+      window.removeEventListener('online', onOnline)
     }
-  }, [])
+  }, [bust])
 
-  return { data, videos, loading }
+  const refresh = async () => {
+    setBust((b) => b + 1)
+  }
+
+  return { data, videos, loading, refresh }
 }
 
 // Helpers for compact display

@@ -118,9 +118,15 @@ export default function CamelsPage() {
     { number: 400, label: 'مربي ومالك', suffix: '+' },
   ]
 
-  // قائمة تشغيل "إبل النعيم الصفرا" - المختارة من YouTube
-  const { videos: playlistVideos, data: playlistData, loading: videosLoading } = useCamelsPlaylist()
+  // قائمة تشغيل "إبل النعيم الصفرا" - المختارة من YouTube (تتحدث ديناميكياً)
+  const { videos: playlistVideos, data: playlistData, loading: videosLoading, refresh: refreshPlaylist } = useCamelsPlaylist()
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null)
+  const [isRefreshing, setIsRefreshing] = useState(false)
+
+  const handleRefresh = async () => {
+    setIsRefreshing(true)
+    try { await refreshPlaylist() } finally { setTimeout(() => setIsRefreshing(false), 600) }
+  }
 
   const camelTypes = [
     {
@@ -504,6 +510,32 @@ export default function CamelsPage() {
                 <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
                   مجموعة منتقاة من فيديوهات القناة تتناول سلالات الإبل، تربيتها، رعايتها، ودورها في حياة قبيلة السادة النعيم
                 </p>
+                {playlistData && (
+                  <div className="mt-5 flex flex-wrap items-center justify-center gap-2 md:gap-3 text-xs md:text-sm">
+                    <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-gray-300 px-3 py-1.5 rounded-full">
+                      <span>🎬</span>
+                      <span className="font-bold text-white">{playlistData.count}</span>
+                      <span>فيديو</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-gray-300 px-3 py-1.5 rounded-full">
+                      <span className={`w-2 h-2 rounded-full ${playlistData.source === 'live' ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`}></span>
+                      <span>{playlistData.source === 'live' ? 'مباشر من يوتيوب' : 'نسخة احتياطية'}</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-gray-300 px-3 py-1.5 rounded-full">
+                      <span>⏰</span>
+                      <span>آخر تحديث: {new Date(playlistData.updatedAt).toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' })}</span>
+                    </span>
+                    <button
+                      onClick={handleRefresh}
+                      disabled={isRefreshing}
+                      className="inline-flex items-center gap-1.5 bg-[#D4AF37]/15 hover:bg-[#D4AF37]/25 border border-[#D4AF37]/40 text-[#D4AF37] hover:text-white px-3 py-1.5 rounded-full font-bold transition-all disabled:opacity-50"
+                      aria-label="تحديث قائمة التشغيل"
+                    >
+                      <span className={isRefreshing ? 'animate-spin' : ''}>↻</span>
+                      <span>{isRefreshing ? 'جاري التحديث...' : 'تحديث'}</span>
+                    </button>
+                  </div>
+                )}
               </div>
 
               {videosLoading && (
