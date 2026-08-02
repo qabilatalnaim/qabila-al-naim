@@ -127,6 +127,65 @@ export function useLatestVideos(limit = 6): { videos: LatestVideo[]; loading: bo
   return { videos, loading }
 }
 
+export interface CamelsPlaylistPayload {
+  videos: LatestVideo[]
+  count: number
+  playlistId: string
+  playlistTitle: string
+  playlistUrl: string
+  source: 'live' | 'fallback'
+  updatedAt: string
+}
+
+/**
+ * useCamelsPlaylist — fetches the dedicated "إبل النعيم الصفرا" playlist
+ * (PLkJUzCOLsXAP224xba8-lMtGyw3ErpeDF) from /api/camels-playlist.
+ */
+export function useCamelsPlaylist(): {
+  data: CamelsPlaylistPayload | null
+  videos: LatestVideo[]
+  loading: boolean
+} {
+  const [data, setData] = useState<CamelsPlaylistPayload | null>(null)
+  const [videos, setVideos] = useState<LatestVideo[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+    const controller = new AbortController()
+
+    const load = async () => {
+      try {
+        const res = await fetch('/api/camels-playlist', {
+          signal: controller.signal,
+          headers: { Accept: 'application/json' },
+        })
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const payload = (await res.json()) as CamelsPlaylistPayload
+        if (!cancelled) {
+          setData(payload)
+          setVideos(payload.videos || [])
+        }
+      } catch {
+        // Keep empty
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    load()
+    const interval = window.setInterval(load, 3 * 60 * 60 * 1000)
+
+    return () => {
+      cancelled = true
+      controller.abort()
+      window.clearInterval(interval)
+    }
+  }, [])
+
+  return { data, videos, loading }
+}
+
 // Helpers for compact display
 export function formatCompactNumber(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`

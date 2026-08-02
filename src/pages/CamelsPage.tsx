@@ -5,7 +5,7 @@ import OptimizedImage from '../components/OptimizedImage'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { seoConfig } from '../lib/seo-config'
 import { useState, useRef, useEffect } from 'react'
-import { useLatestVideos, LatestVideo } from '../lib/useSocialStats'
+import { useLatestVideos, useCamelsPlaylist, LatestVideo } from '../lib/useSocialStats'
 
 // Icons
 const ArrowRightIcon = () => (
@@ -118,8 +118,8 @@ export default function CamelsPage() {
     { number: 400, label: 'مربي ومالك', suffix: '+' },
   ]
 
-  // قائمة تشغيل الإبل - آخر 12 فيديو من القناة
-  const { videos: playlistVideos, loading: videosLoading } = useLatestVideos(12)
+  // قائمة تشغيل "إبل النعيم الصفرا" - المختارة من YouTube
+  const { videos: playlistVideos, data: playlistData, loading: videosLoading } = useCamelsPlaylist()
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null)
 
   const camelTypes = [
@@ -561,7 +561,7 @@ export default function CamelsPage() {
                             <span>قناة قبيلة النعيم أهل الصفرا ٥١٥</span>
                           </div>
                           <a
-                            href="https://www.youtube.com/@qabilatalnaim/videos"
+                            href={playlistData?.playlistUrl || 'https://www.youtube.com/playlist?list=PLkJUzCOLsXAP224xba8-lMtGyw3ErpeDF'}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-1.5 rounded-full text-sm transition-all"
@@ -641,13 +641,13 @@ export default function CamelsPage() {
               {/* CTA لمشاهدة كل الفيديوهات */}
               <div className="mt-8 text-center">
                 <a
-                  href="https://www.youtube.com/@qabilatalnaim/playlists"
+                  href="https://www.youtube.com/playlist?list=PLkJUzCOLsXAP224xba8-lMtGyw3ErpeDF"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg transition-all hover:scale-105 shadow-[0_0_30px_rgba(220,38,38,0.4)]"
                 >
                   <span className="text-2xl">📺</span>
-                  <span>شاهد كل قوائم التشغيل على يوتيوب</span>
+                  <span>شاهد قائمة "إبل النعيم الصفرا" كاملة على يوتيوب</span>
                   <span>↗</span>
                 </a>
               </div>
