@@ -34,11 +34,11 @@ const FALLBACK_VIDEOS = [
   { id: '-_t_G04H1t4', title: '🐎 خيل النعيم.. عزّ الفروسية وهيبة الميدان' },
   { id: 'e61EXcBpwYg', title: '🐎 أرسان الخيل العربية الأصيلة | الأصول الخمسة ونسب الخيل عبر التاريخ' },
   { id: 'Hod6M1TAY_8', title: 'الخيل والعبية… فخر الأصالة عند قبيلة النعيم' },
-  { id: 'UmjGy1fmxv0', title: 'بث مباشر - خيل النعيم' },
-  { id: 'gyShr1AK8mo', title: 'بث مباشر - قبيلة النعيم' },
-  { id: 'jd3bZEbAFc8', title: 'بث مباشر - الفروسية البدوية' },
-  { id: 'k2IpqcJqyDM', title: 'بث مباشر - تراث الخيل' },
-  { id: 'fcgWVGM3Rq4', title: 'بث مباشر - موروث الآباء' },
+  { id: 'UmjGy1fmxv0', title: 'مُجدول - بث مباشر عن الخيل' },
+  { id: 'gyShr1AK8mo', title: 'مُجدول - بث مباشر عن قبيلة النعيم' },
+  { id: 'jd3bZEbAFc8', title: 'مُجدول - بث مباشر عن الفروسية البدوية' },
+  { id: 'k2IpqcJqyDM', title: 'مُجدول - بث مباشر عن تراث الخيل' },
+  { id: 'fcgWVGM3Rq4', title: 'مُجدول - بث مباشر عن موروث الآباء' },
 ]
 
 function buildUrl(id) {

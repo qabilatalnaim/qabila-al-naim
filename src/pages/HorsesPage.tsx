@@ -291,6 +291,12 @@ export default function HorsesPage() {
                               <div className="absolute top-1 right-1 bg-black/80 text-white text-[10px] px-1.5 py-0.5 rounded">
                                 {idx + 1}
                               </div>
+                              {idx >= 12 && (
+                                <div className="absolute bottom-1 left-1 bg-amber-500/95 text-white text-[9px] font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5">
+                                  <span>📅</span>
+                                  <span>مُجدول</span>
+                                </div>
+                              )}
                             </div>
                             <div className="flex-1 min-w-0">
                               <h4 className={`text-xs md:text-sm font-bold leading-snug line-clamp-2 mb-1 ${
@@ -299,7 +305,7 @@ export default function HorsesPage() {
                                 {video.title}
                               </h4>
                               <p className="text-[10px] md:text-xs text-gray-400 truncate">
-                                قبيلة النعيم ٥١٥
+                                {idx >= 12 ? 'بث مُجدول' : 'قبيلة النعيم ٥١٥'}
                               </p>
                             </div>
                           </button>
