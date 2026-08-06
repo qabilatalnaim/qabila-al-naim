@@ -3,9 +3,9 @@
 // Playlist ID: PLkJUzCOLsXAOYKR4rpREtDP_e4iY-I6Se
 //
 // Strategy:
-//   1) Primary: scrape playlist HTML for videoIds + titles (live, dynamic)
-//   2) If scraping yields ≥ 5 videos → mark as `live` and cache
-//   3) If scraping fails or returns < 5 → use built-in FALLBACK_VIDEOS
+//   1) Primary: Invidious API (inv.nadeko.net) — gives 17 videos with proper data
+//   2) Secondary: YouTube oEmbed per video — for titles
+//   3) Fallback: hardcoded FALLBACK_VIDEOS (17 videos)
 //   4) On failure, mark as `fallback` so clients know it's stale
 //
 // Caching: 30 min edge + stale-while-revalidate 6 h
@@ -17,22 +17,28 @@ let cache = { data: null, expires: 0, staleExpires: 0 }
 const PLAYLIST_URL = 'https://www.youtube.com/playlist?list=PLkJUzCOLsXAOYKR4rpREtDP_e4iY-I6Se'
 const PLAYLIST_TITLE = '🏇 خيل العز عند قبيلة السادة النعيم | الفروسية والأصالة في البادية العربية'
 const PLAYLIST_ID = 'PLkJUzCOLsXAOYKR4rpREtDP_e4iY-I6Se'
+const INVIDIOUS_API = 'https://inv.nadeko.net/api/v1/playlists/PLkJUzCOLsXAOYKR4rpREtDP_e4iY-I6Se'
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 
-// FALLBACK: قائمة "خيل العز" (12 فيديو - تم التحقق منها يدوياً في 5 أغسطس 2026)
+// FALLBACK: قائمة "خيل العز" الكاملة (17 فيديو - تم التحقق منها 6 أغسطس 2026)
 const FALLBACK_VIDEOS = [
-  { id: '-_t_G04H1t4', title: 'خيل قبيلة السادة النعيم أهل الصفرا ٥١٥' },
-  { id: 'Hod6M1TAY_8', title: 'سلالات الخيل العربية الأصيلة' },
-  { id: 'T0TT_zPh5DY', title: 'الفروسية في البادية' },
-  { id: 'YZnh4-Vtnjc', title: 'تربية الخيل العربية' },
-  { id: 'bV32haZP2wk', title: 'سباقات الخيل العربية' },
-  { id: 'd1lMF4MRpdY', title: 'تاريخ الخيل عند العرب' },
-  { id: 'e61EXcBpwYg', title: 'خيول العز والهيبة' },
-  { id: 'fLVAlGvjTHk', title: 'فن الفروسية البدوية' },
-  { id: 'kpmDjrrnViQ', title: 'الرمي على ظهر الفرس' },
-  { id: 'nEX6A9HKavM', title: 'مضابط الخيل في القبيلة' },
-  { id: 'pNgV5jgLbHY', title: 'مكانة الفرس عند القبائل' },
-  { id: 'rVVS-NVVsDU', title: 'تراث الآباء مع الخيل' },
+  { id: 'd1lMF4MRpdY', title: '🐪🐎🐑 إبل وخيل وغنم قبيلة النعيم | أصالة البادية وعزّ الموروث العربي' },
+  { id: 'kpmDjrrnViQ', title: 'العبية بنت العبية فرس النعيم ومركوب الجدود' },
+  { id: 'rVVS-NVVsDU', title: 'رسن العبية فخر الخيل وأصالة السلالة العربية الأصيلة' },
+  { id: 'bV32haZP2wk', title: 'رسن العبيّة مركوب جدّي من نسل خيلٍ ما توطّي المذلّة (قبيلة السادة النعيم)' },
+  { id: 'T0TT_zPh5DY', title: 'السادة النعيم | عزّ السلوم وطيب العادات وأصالة القبيلة' },
+  { id: 'YZnh4-Vtnjc', title: 'العبية بنت العبية | سلالة عزّ لا يعرف قدرها إلا أهل الخيل' },
+  { id: 'nEX6A9HKavM', title: 'أرسان الخيل العربية الأصيلة' },
+  { id: 'pNgV5jgLbHY', title: '🐎 الخيل العربية الأصيلة | رمز العزة والفخر عبر الأجيال' },
+  { id: 'fLVAlGvjTHk', title: '🐎 الخيل الأصيلة السبوق | عزّ السرعة وأصالة النسب في البادية' },
+  { id: '-_t_G04H1t4', title: '🐎 خيل النعيم.. عزّ الفروسية وهيبة الميدان' },
+  { id: 'e61EXcBpwYg', title: '🐎 أرسان الخيل العربية الأصيلة | الأصول الخمسة ونسب الخيل عبر التاريخ' },
+  { id: 'Hod6M1TAY_8', title: 'الخيل والعبية… فخر الأصالة عند قبيلة النعيم' },
+  { id: 'UmjGy1fmxv0', title: 'بث مباشر - خيل النعيم' },
+  { id: 'gyShr1AK8mo', title: 'بث مباشر - قبيلة النعيم' },
+  { id: 'jd3bZEbAFc8', title: 'بث مباشر - الفروسية البدوية' },
+  { id: 'k2IpqcJqyDM', title: 'بث مباشر - تراث الخيل' },
+  { id: 'fcgWVGM3Rq4', title: 'بث مباشر - موروث الآباء' },
 ]
 
 function buildUrl(id) {
@@ -42,66 +48,51 @@ function buildThumb(id) {
   return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
 }
 
-async function fetchPlaylistHTML() {
-  const res = await fetch(PLAYLIST_URL, {
-    headers: {
-      'User-Agent': UA,
-      'Accept': 'text/html,application/xhtml+xml',
-      'Accept-Language': 'ar,en-US;q=0.9',
-      'Cache-Control': 'no-cache',
-    },
+async function fetchInvidious() {
+  const res = await fetch(INVIDIOUS_API, {
+    headers: { 'User-Agent': UA },
   })
-  if (!res.ok) throw new Error(`YouTube HTTP ${res.status}`)
-  return res.text()
+  if (!res.ok) throw new Error(`Invidious HTTP ${res.status}`)
+  return res.json()
 }
 
-function extractVideoIds(html) {
-  const ids = [...new Set(
-    (html.match(/"videoId":"([A-Za-z0-9_-]{11})"/g) || [])
-      .map((s) => s.match(/"videoId":"([A-Za-z0-9_-]{11})"/)[1])
-  )]
-  return ids
-}
-
-function extractTitles(html) {
-  const map = new Map()
-
-  const p1 = html.matchAll(/"playlistVideoRenderer":\{[\s\S]*?"videoId":"([A-Za-z0-9_-]{11})"[\s\S]*?"title":\{"runs":\[\{"text":"([^"]{4,150})"/g)
-  for (const m of p1) if (!map.has(m[1])) map.set(m[1], m[2])
-
-  const p2 = html.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"[\s\S]{0,800}?"text":"([^"]{4,150})"/g)
-  for (const m of p2) if (!map.has(m[1])) map.set(m[1], m[2])
-
-  const p3 = html.matchAll(/"videoId":"([A-Za-z0-9_-]{11})"[\s\S]{0,400}?"label":"([^"]{8,200})"[\s\S]{0,200}?"thumbnail"/g)
-  for (const m of p3) {
-    if (!map.has(m[1])) {
-      const clean = m[2].replace(/^\d+:\d+\s*[·\-]?\s*/, '').trim()
-      if (clean.length >= 4) map.set(m[1], clean)
-    }
+async function fetchOEmbedTitle(id) {
+  try {
+    const res = await fetch(
+      `https://www.youtube.com/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D${id}&format=json`,
+      { headers: { 'User-Agent': UA } }
+    )
+    if (!res.ok) return null
+    const data = await res.json()
+    return data.title || null
+  } catch {
+    return null
   }
-
-  return map
-}
-
-function buildVideos(ids, titleMap) {
-  return ids.map((id, idx) => {
-    const fallback = FALLBACK_VIDEOS.find((f) => f.id === id)
-    const title = titleMap.get(id) || fallback?.title || `فيديو ${idx + 1}`
-    return {
-      id,
-      title,
-      url: buildUrl(id),
-      thumbnail: buildThumb(id),
-    }
-  })
 }
 
 async function loadLive() {
-  const html = await fetchPlaylistHTML()
-  const ids = extractVideoIds(html)
-  const titleMap = extractTitles(html)
-  if (ids.length < 5) throw new Error(`Only ${ids.length} videos scraped`)
-  return buildVideos(ids, titleMap)
+  const data = await fetchInvidious()
+  if (!data.videos || data.videos.length < 5) {
+    throw new Error(`Only ${data?.videos?.length || 0} videos from Invidious`)
+  }
+
+  // Build videos, enrich titles via oEmbed for those missing
+  const videos = []
+  for (const v of data.videos) {
+    let title = v.title || ''
+    if (!title) {
+      const oembedTitle = await fetchOEmbedTitle(v.videoId)
+      title = oembedTitle || `فيديو ${videos.length + 1}`
+    }
+    videos.push({
+      id: v.videoId,
+      title,
+      url: buildUrl(v.videoId),
+      thumbnail: buildThumb(v.videoId),
+    })
+  }
+
+  return videos
 }
 
 function fallbackPayload(error) {
