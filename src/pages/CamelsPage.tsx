@@ -393,48 +393,34 @@ export default function CamelsPage() {
                 </p>
               </div>
 
-              {/* صورة البانوراما الواقعية لقسم الوسم ٥١٥ */}
+              {/* صورة وسم بني هاشم ٥١٥ - البانوراما الواقعية بالنص العربي المدمج */}
               <figure className="mb-10 md:mb-12 relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-[#D4AF37]/40 shadow-[0_0_50px_rgba(212,175,55,0.3)]">
-                {/* Overlay النص العربي في الزاوية اليسرى السفلية */}
-                <div className="absolute bottom-0 left-0 right-0 md:right-auto md:max-w-md z-10 pointer-events-none">
-                  <div className="bg-gradient-to-tl from-[#0a1628]/95 via-[#0a1628]/75 to-transparent p-4 md:p-6">
-                    <p className="text-[#D4AF37] text-base sm:text-lg md:text-2xl font-black leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mb-1">
-                      إبل قبيلة النعيم أهل الصفرا
-                    </p>
-                    <p className="text-white text-sm md:text-base font-bold leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] mb-2">
-                      موروث الأصالة وهيبة البادية
-                    </p>
-                    <p className="text-gray-200 text-xs md:text-sm leading-loose drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
-                      في ربيع الحماد السوري، تخضر الأرض وتسمو الأصالة، وتبقى الإبل عنوان الصبر والعز، موروث الآباء والأجداد.
-                    </p>
-                  </div>
-                </div>
                 <picture>
                   <source
                     type="image/avif"
-                    srcSet="/images/wasm-panorama-2026-400w.avif 400w, /images/wasm-panorama-2026-800w.avif 800w, /images/wasm-panorama-2026-1200w.avif 1200w, /images/wasm-panorama-2026-1600w.avif 1600w, /images/wasm-panorama-2026-2000w.avif 2000w"
+                    srcSet="/images/hashim-wasm-2026-400w.avif 400w, /images/hashim-wasm-2026-800w.avif 800w, /images/hashim-wasm-2026-1200w.avif 1200w, /images/hashim-wasm-2026-1600w.avif 1600w, /images/hashim-wasm-2026-2000w.avif 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   />
                   <source
                     type="image/webp"
-                    srcSet="/images/wasm-panorama-2026-400w.webp 400w, /images/wasm-panorama-2026-800w.webp 800w, /images/wasm-panorama-2026-1200w.webp 1200w, /images/wasm-panorama-2026-1600w.webp 1600w, /images/wasm-panorama-2026-2000w.webp 2000w"
+                    srcSet="/images/hashim-wasm-2026-400w.webp 400w, /images/hashim-wasm-2026-800w.webp 800w, /images/hashim-wasm-2026-1200w.webp 1200w, /images/hashim-wasm-2026-1600w.webp 1600w, /images/hashim-wasm-2026-2000w.webp 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   />
                   <img
-                    src="/images/wasm-panorama-2026-1600w.webp"
-                    srcSet="/images/wasm-panorama-2026-400w.webp 400w, /images/wasm-panorama-2026-800w.webp 800w, /images/wasm-panorama-2026-1200w.webp 1200w, /images/wasm-panorama-2026-1600w.webp 1600w, /images/wasm-panorama-2026-2000w.webp 2000w"
+                    src="/images/hashim-wasm-2026-1600w.webp"
+                    srcSet="/images/hashim-wasm-2026-400w.webp 400w, /images/hashim-wasm-2026-800w.webp 800w, /images/hashim-wasm-2026-1200w.webp 1200w, /images/hashim-wasm-2026-1600w.webp 1600w, /images/hashim-wasm-2026-2000w.webp 2000w"
                     sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="قطيع إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ الأصيلة تتقدم في ربيع الحماد السوري - وسم ٥١٥ على الإبل الصفراء، الأرض تخضر وتسمو الأصالة"
+                    alt="إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ - وسم بني هاشم ٥١٥ الجامع، أهل الصفرا في ربيع الحماد السوري، تخضر الأرض وتسمو الأصالة"
                     className="w-full h-auto object-cover"
                     loading="lazy"
                     decoding="async"
-                    width="1983"
-                    height="793"
+                    width="1672"
+                    height="941"
                   />
                 </picture>
                 <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-2.5 md:py-4">
                   <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-                    إبل قبيلة النعيم أهل الصفرا — موروث الأصالة وهيبة البادية
+                    وسم بني هاشم (٥١٥) — هوية النسب الأصيل في الحماد السوري
                   </p>
                 </figcaption>
               </figure>
