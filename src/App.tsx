@@ -237,13 +237,15 @@ function App() {
   useWebVitals()
 
   // Derived values for the Hero stats cards
-  // YouTube Live (2026-07-27): 640 subs | 205 videos | 222,600 views
+  // YouTube Live (2026-08-09): 649 subs | 212 videos | 227,695 views
   // Facebook: 103K+ followers
   // Country: 🇸🇦 Saudi Arabia | Joined: 2025-10-11
-  const youtubeSubs = 640
-  const youtubeViews = 222600
-  const youtubeVideos = 205
+  // Last updated: 9 أغسطس 2026
+  const youtubeSubs = 649
+  const youtubeViews = 227695
+  const youtubeVideos = 212
   const facebookFollowers = 103000
+  const statsUpdatedAt = '9 أغسطس 2026'
 
   // Display: compact numbers (211K+ views, 103K facebook followers)
   const stats = [
@@ -583,17 +585,23 @@ function App() {
                     ? 'text-amber-400 border-amber-400/30 bg-amber-400/5'
                     : 'text-gray-400 border-white/10 bg-white/5'
                   return (
-                    <div className={`mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border ${freshnessColor}`}>
-                      <span className="relative flex h-2 w-2">
-                        <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
-                        <span className={`relative inline-flex rounded-full h-2 w-2 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
-                      </span>
-                      <span className="text-xs font-medium">{freshnessLabel}</span>
-                      <span className="text-xs opacity-60" dir="ltr">·</span>
-                      <span className="text-xs opacity-80" dir="ltr">{dateLabel}</span>
-                      {!isLive && (
-                        <span className="text-xs opacity-60">· يدوي</span>
-                      )}
+                    <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border ${freshnessColor}`}>
+                        <span className="relative flex h-2 w-2">
+                          <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
+                          <span className={`relative inline-flex rounded-full h-2 w-2 ${diffDays <= 7 ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
+                        </span>
+                        <span className="text-xs font-medium">{freshnessLabel}</span>
+                        <span className="text-xs opacity-60" dir="ltr">·</span>
+                        <span className="text-xs opacity-80" dir="ltr">{dateLabel}</span>
+                        {!isLive && (
+                          <span className="text-xs opacity-60">· يدوي</span>
+                        )}
+                      </div>
+                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/5 text-[#D4AF37]">
+                        <span className="text-sm">📅</span>
+                        <span className="text-xs font-bold">تاريخ التعديل: {statsUpdatedAt}</span>
+                      </div>
                     </div>
                   )
                 })()}
