@@ -47,6 +47,39 @@ export default function WasmPage() {
             </p>
           </div>
 
+          {/* صورة وسم بني هاشم (٥١٥) - البانوراما المدمج بالنص العربي */}
+          <figure className="mb-12 relative rounded-3xl overflow-hidden border-2 border-purple-500/40 shadow-[0_0_50px_rgba(168,85,247,0.3)]">
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/images/hashim-wasm-2026-400w.avif 400w, /images/hashim-wasm-2026-800w.avif 800w, /images/hashim-wasm-2026-1200w.avif 1200w, /images/hashim-wasm-2026-1600w.avif 1600w, /images/hashim-wasm-2026-2000w.avif 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/images/hashim-wasm-2026-400w.webp 400w, /images/hashim-wasm-2026-800w.webp 800w, /images/hashim-wasm-2026-1200w.webp 1200w, /images/hashim-wasm-2026-1600w.webp 1600w, /images/hashim-wasm-2026-2000w.webp 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+              />
+              <img
+                src="/images/hashim-wasm-2026-1600w.webp"
+                srcSet="/images/hashim-wasm-2026-400w.webp 400w, /images/hashim-wasm-2026-800w.webp 800w, /images/hashim-wasm-2026-1200w.webp 1200w, /images/hashim-wasm-2026-1600w.webp 1600w, /images/hashim-wasm-2026-2000w.webp 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                alt="إبل قبيلة السادة النعيم أهل الصفرا ٥١٥ - وسم بني هاشم ٥١٥ الجامع، أهل الصفرا في ربيع الحماد السوري، تخضر الأرض وتسمو الأصالة"
+                className="w-full h-auto object-cover"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                width="1672"
+                height="941"
+              />
+            </picture>
+            <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-3 md:py-4">
+              <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                وسم بني هاشم (٥١٥) — هوية النسب الأصيل في الحماد السوري
+              </p>
+            </figcaption>
+          </figure>
+
           {/* Section 1: The 515 Wasm */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-purple-400 mb-6 flex items-center gap-3">
