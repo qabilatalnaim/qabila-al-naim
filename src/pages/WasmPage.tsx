@@ -105,6 +105,38 @@ export default function WasmPage() {
             </div>
           </div>
 
+          {/* صورة وسم قبيلة النعيم (٥١) - البانوراما بالنص العربي */}
+          <figure className="mb-12 relative rounded-3xl overflow-hidden border-2 border-emerald-500/40 shadow-[0_0_50px_rgba(16,185,129,0.3)]">
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/images/naeem-wasm-2026-400w.avif 400w, /images/naeem-wasm-2026-800w.avif 800w, /images/naeem-wasm-2026-1200w.avif 1200w, /images/naeem-wasm-2026-1600w.avif 1600w, /images/naeem-wasm-2026-2000w.avif 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/images/naeem-wasm-2026-400w.webp 400w, /images/naeem-wasm-2026-800w.webp 800w, /images/naeem-wasm-2026-1200w.webp 1200w, /images/naeem-wasm-2026-1600w.webp 1600w, /images/naeem-wasm-2026-2000w.webp 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+              />
+              <img
+                src="/images/naeem-wasm-2026-1600w.webp"
+                srcSet="/images/naeem-wasm-2026-400w.webp 400w, /images/naeem-wasm-2026-800w.webp 800w, /images/naeem-wasm-2026-1200w.webp 1200w, /images/naeem-wasm-2026-1600w.webp 1600w, /images/naeem-wasm-2026-2000w.webp 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                alt="إبل قبيلة السادة النعيم أهل الصفرا ٥١ - وسم قبيلة النعيم ٥١، أهل الصفرا في ربيع البادية السورية، موروث الأصالة من تراث البادية"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+                width="1672"
+                height="941"
+              />
+            </picture>
+            <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-3 md:py-4">
+              <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                وسم قبيلة النعيم (٥١) — رمز الانتماء الخاص بأبناء القبيلة
+              </p>
+            </figcaption>
+          </figure>
+
           {/* Section 2: Wasm 51 */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-purple-400 mb-6 flex items-center gap-3">
