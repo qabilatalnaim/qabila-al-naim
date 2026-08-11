@@ -47,40 +47,6 @@ export default function TentPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
 
-          {/* بيت الشعر المسوبع - الصورة الرئيسية الواقعية */}
-          <figure className="mb-12 relative rounded-3xl overflow-hidden border-2 border-yellow-500/40 shadow-[0_0_50px_rgba(234,179,8,0.3)]">
-            <picture>
-              <source
-                type="image/avif"
-                srcSet="/images/masweb-tent-2026-400w.avif 400w, /images/masweb-tent-2026-800w.avif 800w, /images/masweb-tent-2026-1200w.avif 1200w, /images/masweb-tent-2026-1600w.avif 1600w, /images/masweb-tent-2026-2000w.avif 2000w"
-                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              />
-              <source
-                type="image/webp"
-                srcSet="/images/masweb-tent-2026-400w.webp 400w, /images/masweb-tent-2026-800w.webp 800w, /images/masweb-tent-2026-1200w.webp 1200w, /images/masweb-tent-2026-1600w.webp 1600w, /images/masweb-tent-2026-2000w.webp 2000w"
-                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              />
-              <img
-                src="/images/masweb-tent-2026-2000w.webp"
-                srcSet="/images/masweb-tent-2026-400w.webp 400w, /images/masweb-tent-2026-800w.webp 800w, /images/masweb-tent-2026-1200w.webp 1200w, /images/masweb-tent-2026-1600w.webp 1600w, /images/masweb-tent-2026-2000w.webp 2000w"
-                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="بيت الشعر البدوي المسوبع (المسوبع) في البادية السورية - خيمة بدوية أصيلة من شعر الماعز، مع رجال البادية في ثوبهم التقليدي، جمال الطبيعة الصحراوية في حمص"
-                className="w-full h-auto object-cover"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-                width="2752"
-                height="1536"
-              />
-            </picture>
-            <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-3 md:py-4">
-              <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-                بيت الشعر المسوبع — دار الكرم وأصالة البادية السورية
-              </p>
-            </figcaption>
-          </figure>
-
-
           {/* Introduction */}
           <div className="bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-3xl p-10 border border-yellow-600/30 mb-12">
             <div className="text-center mb-8">
@@ -89,68 +55,6 @@ export default function TentPage() {
             <p className="text-gray-200 text-lg leading-loose text-center mb-6">
               هذا النص التوثيقي التراثي يُجسّد دقة التنظيم في بيت الشعر البدوي، ويعكس قيم التعاون، والكرم، والهوية العربية الأصيلة.
             </p>
-          </div>
-
-          {/* قسم جديد: قطبة البيت المسوبع */}
-          <div className="mb-12">
-            <div className="bg-gradient-to-br from-yellow-950/40 via-[#162544] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-yellow-500/40 shadow-[0_0_40px_rgba(234,179,8,0.2)]">
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-3 bg-yellow-600/30 px-5 py-2 rounded-full mb-4">
-                  <span className="text-2xl">🪵</span>
-                  <span className="text-yellow-300 font-bold text-sm">معلومة تراثية</span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-black text-yellow-400 mb-4">
-                  قطبة البيت المسوبع
-                </h2>
-                <div className="inline-flex items-center gap-2 bg-yellow-500/20 px-4 py-1.5 rounded-full">
-                  <span className="text-yellow-300 font-bold text-sm">🏛️ يتكون من ست أعمدة من الداخل</span>
-                </div>
-              </div>
-
-              <div className="max-w-3xl mx-auto">
-                <p className="text-gray-200 text-lg leading-loose text-center mb-6">
-                  البيت الذي يظهر في الصورة يُعرف باسم <span className="text-yellow-300 font-bold">"القطبة"</span>، وهو أحد أنواع بيوت الشعر البدوية،
-                  ويتميز عن غيره من البيوت بأنه <span className="text-yellow-300 font-bold">يتكون من ست أعمدة (أساطين) من الداخل</span>،
-                  تُعرف هذه الأعمدة عند البادية باسم <span className="text-yellow-300 font-bold">"السوق"</span>.
-                </p>
-                <p className="text-gray-300 text-base leading-loose text-center mb-6">
-                  تقوم هذه الأعمدة بحمل السقف وتوزيع الثقل عليه، وتُعد القطبة من أكثر البيوت اتساعاً وفخامةً،
-                  إذ تستوعب أعداداً كبيرة من الضيوف في المجالس والولائم، وتُستخدم للمناسبات الكبيرة والمضافات العامة.
-                </p>
-
-                {/* ست أعمدة - تمثيل بصري */}
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 my-8 max-w-2xl mx-auto" dir="ltr">
-                  {Array.from({ length: 6 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="aspect-[1/3] bg-gradient-to-b from-yellow-600 to-yellow-800 rounded-lg border-2 border-yellow-500/50 shadow-lg flex flex-col items-center justify-end pb-2"
-                    >
-                      <span className="text-yellow-200 text-xs md:text-sm font-black">{i + 1}</span>
-                      <span className="text-yellow-300/70 text-[9px] md:text-[10px]">عمود</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* خصائص القطبة */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                  <div className="bg-[#0a1628]/60 rounded-xl p-4 border border-yellow-600/20 text-center">
-                    <div className="text-3xl mb-2">🏛️</div>
-                    <h3 className="text-yellow-400 font-bold mb-1">السوق</h3>
-                    <p className="text-gray-300 text-sm">ستة أعمدة خشبية تحمل السقف</p>
-                  </div>
-                  <div className="bg-[#0a1628]/60 rounded-xl p-4 border border-yellow-600/20 text-center">
-                    <div className="text-3xl mb-2">👥</div>
-                    <h3 className="text-yellow-400 font-bold mb-1">السعة</h3>
-                    <p className="text-gray-300 text-sm">الأكبر بين بيوت الشعر</p>
-                  </div>
-                  <div className="bg-[#0a1628]/60 rounded-xl p-4 border border-yellow-600/20 text-center">
-                    <div className="text-3xl mb-2">🎉</div>
-                    <h3 className="text-yellow-400 font-bold mb-1">الاستخدام</h3>
-                    <p className="text-gray-300 text-sm">للمناسبات والمضافات</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Section 1: أقسام بيت الشعر */}
