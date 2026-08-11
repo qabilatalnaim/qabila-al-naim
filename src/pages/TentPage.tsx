@@ -47,6 +47,40 @@ export default function TentPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
 
+          {/* بيت الشعر المسوبع - الصورة الرئيسية الواقعية */}
+          <figure className="mb-12 relative rounded-3xl overflow-hidden border-2 border-yellow-500/40 shadow-[0_0_50px_rgba(234,179,8,0.3)]">
+            <picture>
+              <source
+                type="image/avif"
+                srcSet="/images/masweb-tent-2026-400w.avif 400w, /images/masweb-tent-2026-800w.avif 800w, /images/masweb-tent-2026-1200w.avif 1200w, /images/masweb-tent-2026-1600w.avif 1600w, /images/masweb-tent-2026-2000w.avif 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+              />
+              <source
+                type="image/webp"
+                srcSet="/images/masweb-tent-2026-400w.webp 400w, /images/masweb-tent-2026-800w.webp 800w, /images/masweb-tent-2026-1200w.webp 1200w, /images/masweb-tent-2026-1600w.webp 1600w, /images/masweb-tent-2026-2000w.webp 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+              />
+              <img
+                src="/images/masweb-tent-2026-2000w.webp"
+                srcSet="/images/masweb-tent-2026-400w.webp 400w, /images/masweb-tent-2026-800w.webp 800w, /images/masweb-tent-2026-1200w.webp 1200w, /images/masweb-tent-2026-1600w.webp 1600w, /images/masweb-tent-2026-2000w.webp 2000w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                alt="بيت الشعر البدوي المسوبع (المسوبع) في البادية السورية - خيمة بدوية أصيلة من شعر الماعز، مع رجال البادية في ثوبهم التقليدي، جمال الطبيعة الصحراوية في حمص"
+                className="w-full h-auto object-cover"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                width="2752"
+                height="1536"
+              />
+            </picture>
+            <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-3 md:py-4">
+              <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                بيت الشعر المسوبع — دار الكرم وأصالة البادية السورية
+              </p>
+            </figcaption>
+          </figure>
+
+
           {/* Introduction */}
           <div className="bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-3xl p-10 border border-yellow-600/30 mb-12">
             <div className="text-center mb-8">
