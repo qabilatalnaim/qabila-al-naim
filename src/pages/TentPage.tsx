@@ -91,6 +91,68 @@ export default function TentPage() {
             </p>
           </div>
 
+          {/* قسم جديد: قطبة البيت المسوبع */}
+          <div className="mb-12">
+            <div className="bg-gradient-to-br from-yellow-950/40 via-[#162544] to-[#0a1628] rounded-3xl p-8 md:p-10 border-2 border-yellow-500/40 shadow-[0_0_40px_rgba(234,179,8,0.2)]">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center gap-3 bg-yellow-600/30 px-5 py-2 rounded-full mb-4">
+                  <span className="text-2xl">🪵</span>
+                  <span className="text-yellow-300 font-bold text-sm">معلومة تراثية</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-black text-yellow-400 mb-4">
+                  قطبة البيت المسوبع
+                </h2>
+                <div className="inline-flex items-center gap-2 bg-yellow-500/20 px-4 py-1.5 rounded-full">
+                  <span className="text-yellow-300 font-bold text-sm">🏛️ يتكون من ست أعمدة من الداخل</span>
+                </div>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <p className="text-gray-200 text-lg leading-loose text-center mb-6">
+                  البيت الذي يظهر في الصورة يُعرف باسم <span className="text-yellow-300 font-bold">"القطبة"</span>، وهو أحد أنواع بيوت الشعر البدوية،
+                  ويتميز عن غيره من البيوت بأنه <span className="text-yellow-300 font-bold">يتكون من ست أعمدة (أساطين) من الداخل</span>،
+                  تُعرف هذه الأعمدة عند البادية باسم <span className="text-yellow-300 font-bold">"السوق"</span>.
+                </p>
+                <p className="text-gray-300 text-base leading-loose text-center mb-6">
+                  تقوم هذه الأعمدة بحمل السقف وتوزيع الثقل عليه، وتُعد القطبة من أكثر البيوت اتساعاً وفخامةً،
+                  إذ تستوعب أعداداً كبيرة من الضيوف في المجالس والولائم، وتُستخدم للمناسبات الكبيرة والمضافات العامة.
+                </p>
+
+                {/* ست أعمدة - تمثيل بصري */}
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 my-8 max-w-2xl mx-auto" dir="ltr">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="aspect-[1/3] bg-gradient-to-b from-yellow-600 to-yellow-800 rounded-lg border-2 border-yellow-500/50 shadow-lg flex flex-col items-center justify-end pb-2"
+                    >
+                      <span className="text-yellow-200 text-xs md:text-sm font-black">{i + 1}</span>
+                      <span className="text-yellow-300/70 text-[9px] md:text-[10px]">عمود</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* خصائص القطبة */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                  <div className="bg-[#0a1628]/60 rounded-xl p-4 border border-yellow-600/20 text-center">
+                    <div className="text-3xl mb-2">🏛️</div>
+                    <h3 className="text-yellow-400 font-bold mb-1">السوق</h3>
+                    <p className="text-gray-300 text-sm">ستة أعمدة خشبية تحمل السقف</p>
+                  </div>
+                  <div className="bg-[#0a1628]/60 rounded-xl p-4 border border-yellow-600/20 text-center">
+                    <div className="text-3xl mb-2">👥</div>
+                    <h3 className="text-yellow-400 font-bold mb-1">السعة</h3>
+                    <p className="text-gray-300 text-sm">الأكبر بين بيوت الشعر</p>
+                  </div>
+                  <div className="bg-[#0a1628]/60 rounded-xl p-4 border border-yellow-600/20 text-center">
+                    <div className="text-3xl mb-2">🎉</div>
+                    <h3 className="text-yellow-400 font-bold mb-1">الاستخدام</h3>
+                    <p className="text-gray-300 text-sm">للمناسبات والمضافات</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Section 1: أقسام بيت الشعر */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
