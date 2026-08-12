@@ -179,6 +179,40 @@ export default function TentPage() {
                         </figcaption>
                       </figure>
                     )}
+
+                    {/* صورة توضيحية للمثوّلث - بيت بثلاثة أعمدة */}
+                    {item.name === 'المثوّلث' && (
+                      <figure className="mt-4 relative rounded-2xl overflow-hidden border-2 border-yellow-500/40">
+                        <picture>
+                          <source
+                            type="image/avif"
+                            srcSet="/images/motholath-tent-2026-400w.avif 400w, /images/motholath-tent-2026-800w.avif 800w, /images/motholath-tent-2026-1200w.avif 1200w, /images/motholath-tent-2026-1600w.avif 1600w, /images/motholath-tent-2026-2000w.avif 2000w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
+                          />
+                          <source
+                            type="image/webp"
+                            srcSet="/images/motholath-tent-2026-400w.webp 400w, /images/motholath-tent-2026-800w.webp 800w, /images/motholath-tent-2026-1200w.webp 1200w, /images/motholath-tent-2026-1600w.webp 1600w, /images/motholath-tent-2026-2000w.webp 2000w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
+                          />
+                          <img
+                            src="/images/motholath-tent-2026-2000w.webp"
+                            srcSet="/images/motholath-tent-2026-400w.webp 400w, /images/motholath-tent-2026-800w.webp 800w, /images/motholath-tent-2026-1200w.webp 1200w, /images/motholath-tent-2026-1600w.webp 1600w, /images/motholath-tent-2026-2000w.webp 2000w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
+                            alt="المثوّلث - بيت الشعر البدوي بثلاثة أعمدة مقسم إلى أربعة أقسام في البادية السورية - بيت ضيافة كبير مع 3 أعمدة خشبية ومجلس قهوة ونار وجمال في الخلفية عند الغروب"
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async"
+                            width="1672"
+                            height="941"
+                          />
+                        </picture>
+                        <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 py-2">
+                          <p className="text-center text-white text-xs sm:text-sm font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                            🏕️ المثوّلث — ثلاثة أعمدة تقسّم البيت إلى أربعة أقسام
+                          </p>
+                        </figcaption>
+                      </figure>
+                    )}
                   </div>
                 ))}
               </div>
