@@ -111,6 +111,40 @@ export default function TentPage() {
                   <div key={index} className="bg-yellow-600/10 rounded-xl p-6 border border-yellow-600/30">
                     <h3 className="text-xl font-bold text-yellow-400 mb-2">{item.name}</h3>
                     <p className="text-gray-300">{item.desc}</p>
+
+                    {/* صورة توضيحية للقطبة - بيت بعمود واحد */}
+                    {item.name === 'القطبة' && (
+                      <figure className="mt-4 relative rounded-2xl overflow-hidden border-2 border-yellow-500/40">
+                        <picture>
+                          <source
+                            type="image/avif"
+                            srcSet="/images/qatba-tent-2026-400w.avif 400w, /images/qatba-tent-2026-800w.avif 800w, /images/qatba-tent-2026-1200w.avif 1200w, /images/qatba-tent-2026-1600w.avif 1600w, /images/qatba-tent-2026-2000w.avif 2000w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
+                          />
+                          <source
+                            type="image/webp"
+                            srcSet="/images/qatba-tent-2026-400w.webp 400w, /images/qatba-tent-2026-800w.webp 800w, /images/qatba-tent-2026-1200w.webp 1200w, /images/qatba-tent-2026-1600w.webp 1600w, /images/qatba-tent-2026-2000w.webp 2000w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
+                          />
+                          <img
+                            src="/images/qatba-tent-2026-2000w.webp"
+                            srcSet="/images/qatba-tent-2026-400w.webp 400w, /images/qatba-tent-2026-800w.webp 800w, /images/qatba-tent-2026-1200w.webp 1200w, /images/qatba-tent-2026-1600w.webp 1600w, /images/qatba-tent-2026-2000w.webp 2000w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
+                            alt="القطبة - بيت الشعر البدوي بعمود واحد مقسم إلى قسمين في البادية السورية - مجلس قهوة بدوي تقليدي عند الغروب مع جمال في الخلفية"
+                            className="w-full h-auto object-cover"
+                            loading="lazy"
+                            decoding="async"
+                            width="2752"
+                            height="1536"
+                          />
+                        </picture>
+                        <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 py-2">
+                          <p className="text-center text-white text-xs sm:text-sm font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                            🏕️ القطبة — عمود واحد (الواسط) يقسم البيت إلى قسمين
+                          </p>
+                        </figcaption>
+                      </figure>
+                    )}
                   </div>
                 ))}
               </div>
