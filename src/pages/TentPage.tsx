@@ -327,6 +327,38 @@ export default function TentPage() {
               <span>📋</span> أجزاء بيت الشعر
             </h2>
             <div className="bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-3xl p-10 border border-yellow-600/20">
+              {/* بيت الشعر مفكك - صورة توضيحية للأجزاء */}
+              <figure className="mb-8 relative rounded-2xl overflow-hidden border-2 border-yellow-500/40 shadow-[0_0_40px_rgba(234,179,8,0.2)]">
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet="/images/parts-tent-2026-400w.avif 400w, /images/parts-tent-2026-800w.avif 800w, /images/parts-tent-2026-1200w.avif 1200w, /images/parts-tent-2026-1600w.avif 1600w, /images/parts-tent-2026-2000w.avif 2000w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet="/images/parts-tent-2026-400w.webp 400w, /images/parts-tent-2026-800w.webp 800w, /images/parts-tent-2026-1200w.webp 1200w, /images/parts-tent-2026-1600w.webp 1600w, /images/parts-tent-2026-2000w.webp 2000w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                  />
+                  <img
+                    src="/images/parts-tent-2026-2000w.webp"
+                    srcSet="/images/parts-tent-2026-400w.webp 400w, /images/parts-tent-2026-800w.webp 800w, /images/parts-tent-2026-1200w.webp 1200w, /images/parts-tent-2026-1600w.webp 1600w, /images/parts-tent-2026-2000w.webp 2000w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
+                    alt="أجزاء بيت الشعر البدوي مفككة في البادية السورية - الشُّقّة من شعر الماعز، الحبال، العجلات الخشبية، الأعمدة، الأطباق، مع قطيع جمال ومبنى حجري في الخلفية"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width="5504"
+                    height="3072"
+                  />
+                </picture>
+                <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent px-3 md:px-6 py-3 md:py-4">
+                  <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+                    🏕️ أجزاء بيت الشعر — الشُّقّة، الرِّفّة، الأعمدة، الحبال
+                  </p>
+                </figcaption>
+              </figure>
+
               <p className="text-gray-300 leading-loose mb-6">
                 يتكوّن بيت الشعر من مجموعة أجزاء متكاملة، لكلٍّ منها وظيفة ودلالة:
               </p>
