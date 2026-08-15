@@ -22,6 +22,7 @@ const CoffeePage = lazy(() => import('./pages/CoffeePage'))
 const TraditionsPage = lazy(() => import('./pages/TraditionsPage'))
 const TentPage = lazy(() => import('./pages/TentPage'))
 const TownPage = lazy(() => import('./pages/TownPage'))
+const BadiaPage = lazy(() => import('./pages/BadiaPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'))
@@ -355,6 +356,13 @@ function App() {
       description: 'موطن القبيلة النعيم التاريخي، معالم البلدة، قصة التسمية',
       link: '/town',
       color: 'bg-teal-600/20 text-teal-400'
+    },
+    {
+      icon: <span className="text-4xl">🏜️</span>,
+      title: 'البادية السورية (الحماد)',
+      description: 'الحماد السوري - هضبة البازلت، مهد القبيلة، رمال وصحراء',
+      link: '/badia',
+      color: 'bg-stone-600/20 text-stone-300'
     },
   ]
 
@@ -968,6 +976,31 @@ function App() {
                   </Link>
                 </div>
 
+                {/* Featured Card - البادية السورية (الحماد) */}
+                <div className="mb-12">
+                  <Link
+                    to="/badia"
+                    className="group relative bg-gradient-to-br from-[#0a1628] via-stone-900/40 to-[#0a1628] rounded-3xl p-12 border-2 border-stone-500/30 hover:border-amber-500 transition-all duration-500 block overflow-hidden"
+                  >
+                    <div className="absolute top-0 right-0 w-80 h-80 bg-amber-700 rounded-full opacity-10 blur-[120px]"></div>
+                    <div className="relative flex flex-col md:flex-row items-center gap-8">
+                      <div className="w-32 h-32 bg-gradient-to-br from-amber-700 to-stone-800 rounded-2xl flex items-center justify-center text-6xl shadow-2xl">
+                        🏜️
+                      </div>
+                      <div className="flex-1 text-center md:text-right">
+                        <h3 className="text-3xl font-bold text-white mb-4">قاعة البادية السورية (الحماد)</h3>
+                        <p className="text-gray-300 text-lg mb-4">
+                          هضبة الحماد السوري - مهد قبيلة النعيم - الأرض والتاريخ والجغرافيا
+                        </p>
+                        <div className="flex items-center gap-2 text-amber-400 font-semibold">
+                          <span>ادخل القاعة</span>
+                          <ArrowRightIcon />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+
                 {/* Grid of Heritage Topics — 9 بطاقات (تم حذف النسب والتاريخ لأنها ظاهرة كـ featured card فوق) */}
                 <div
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -1203,6 +1236,7 @@ function App() {
       <Route path="/traditions" element={<Suspense fallback={<PageLoader />}><TraditionsPage /></Suspense>} />
       <Route path="/tent" element={<Suspense fallback={<PageLoader />}><TentPage /></Suspense>} />
       <Route path="/town" element={<Suspense fallback={<PageLoader />}><TownPage /></Suspense>} />
+      <Route path="/badia" element={<Suspense fallback={<PageLoader />}><BadiaPage /></Suspense>} />
       <Route path="/search" element={<Suspense fallback={<PageLoader />}><SearchPage /></Suspense>} />
       <Route path="/blog" element={<Suspense fallback={<PageLoader />}><BlogPage /></Suspense>} />
       <Route path="/blog/:id" element={<Suspense fallback={<PageLoader />}><BlogPostPage /></Suspense>} />

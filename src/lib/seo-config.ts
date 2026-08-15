@@ -18,6 +18,7 @@ const OG_IMAGES = {
   coffee: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
   traditions: 'https://qabilat-al-naim.vercel.app/images/tribe-flag.webp',
   tent: 'https://qabilat-al-naim.vercel.app/images/mawlid-wa-nashaa.webp',
+  badia: 'https://qabilat-al-naim.vercel.app/images/syrian-badia-2026.webp',
   blog: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
   search: 'https://qabilat-al-naim.vercel.app/images/logo.webp',
 } as const
@@ -120,6 +121,15 @@ export const seoConfig: Record<string, SEOProps> = {
     url: '/town',
     type: 'article',
     section: 'التاريخ',
+  },
+  badia: {
+    title: 'البادية السورية (الحماد) | مهد قبيلة النعيم أهل الصفرا ٥١٥',
+    description: 'البادية السورية (الحماد) - هضبة بازلتية شاسعة في جنوب شرق سوريا، مهد قبيلة النعيم أهل الصفرا ٥١٥. الحماد السوري هضبة من الحجر البازلتي الأسود، موطن الإبل والخيل البدوية، تمتد على حمص ودير الزور والرقة وحماة. اكتشف أرض الأجداد وجغرافيا القبيلة وتاريخها العريق.',
+    keywords: `${BASE_KEYWORDS}, البادية السورية, الحماد, الحماد السوري, هضبة البازلت, البادية, صحراء سوريا, مهد القبيلة, أرض الأجداد, حمص, دير الزور, الرقة, حماة, بلاد الشام, الإبل البدوية, المراعي الطبيعية, التراث البدوي`,
+    image: OG_IMAGES.badia,
+    url: '/badia',
+    type: 'article',
+    section: 'التراث',
   },
   blog: {
     title: 'المدونة | قبيلة السادة النعيم',
