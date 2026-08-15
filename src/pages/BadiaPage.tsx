@@ -11,10 +11,6 @@ export default function BadiaPage() {
   return (
     <div className="min-h-screen bg-[#0a1628] text-white" dir="rtl">
       <SEO {...seoConfig.badia} />
-
-  return (
-    <div className="min-h-screen bg-[#0a1628] text-white" dir="rtl">
-      <SEO {...seoConfig.badia} />
       <h1 className="sr-only">البادية السورية (الحماد) - مهد قبيلة النعيم أهل الصفرا ٥١٥</h1>
 
       {/* Header */}
