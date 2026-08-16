@@ -357,13 +357,6 @@ function App() {
       link: '/town',
       color: 'bg-teal-600/20 text-teal-400'
     },
-    {
-      icon: <span className="text-4xl">🏜️</span>,
-      title: 'البادية السورية (الحماد)',
-      description: 'الحماد السوري - هضبة البازلت، مهد القبيلة، رمال وصحراء',
-      link: '/badia',
-      color: 'bg-stone-600/20 text-stone-300'
-    },
   ]
 
   return (
