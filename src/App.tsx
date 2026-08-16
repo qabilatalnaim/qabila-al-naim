@@ -969,8 +969,26 @@ function App() {
                   </Link>
                 </div>
 
-                {/* Featured Card - البادية السورية (الحماد) */}
-                <div className="mb-12">
+                {/* Grid of Heritage Topics — 9 بطاقات (تم حذف النسب والتاريخ لأنها ظاهرة كـ featured card فوق) */}
+                <div
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  role="list"
+                  aria-label="قاعات التراث"
+                >
+                  {heritageTopics.filter(t => t.link !== '/history').map((topic, index) => (
+                    <HeritageCard
+                      key={index}
+                      icon={topic.icon}
+                      title={topic.title}
+                      description={topic.description}
+                      link={topic.link}
+                      color={topic.color}
+                    />
+                  ))}
+                </div>
+
+                {/* Featured Card - البادية السورية (الحماد) - في الأسفل */}
+                <div className="mt-12">
                   <Link
                     to="/badia"
                     className="group relative bg-gradient-to-br from-[#0a1628] via-stone-900/40 to-[#0a1628] rounded-3xl p-12 border-2 border-stone-500/30 hover:border-amber-500 transition-all duration-500 block overflow-hidden"
@@ -992,24 +1010,6 @@ function App() {
                       </div>
                     </div>
                   </Link>
-                </div>
-
-                {/* Grid of Heritage Topics — 9 بطاقات (تم حذف النسب والتاريخ لأنها ظاهرة كـ featured card فوق) */}
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                  role="list"
-                  aria-label="قاعات التراث"
-                >
-                  {heritageTopics.filter(t => t.link !== '/history').map((topic, index) => (
-                    <HeritageCard
-                      key={index}
-                      icon={topic.icon}
-                      title={topic.title}
-                      description={topic.description}
-                      link={topic.link}
-                      color={topic.color}
-                    />
-                  ))}
                 </div>
               </div>
             </div>
