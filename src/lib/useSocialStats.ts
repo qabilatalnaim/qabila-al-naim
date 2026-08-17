@@ -507,6 +507,67 @@ export function useTownPlaylist(): {
   return { data, videos, loading, refresh }
 }
 
+/**
+ * useBadiaPlaylist — fetches the "البادية السورية (الحماد)" playlist
+ * (PLkJUzCOLsXAMSBCKDbSe9xlYj1U2tJlmW) from /api/badia-playlist.
+ */
+export function useBadiaPlaylist(): {
+  data: CamelsPlaylistPayload | null
+  videos: LatestVideo[]
+  loading: boolean
+  refresh: () => Promise<void>
+} {
+  const [data, setData] = useState<CamelsPlaylistPayload | null>(null)
+  const [videos, setVideos] = useState<LatestVideo[]>([])
+  const [loading, setLoading] = useState(true)
+  const [bust, setBust] = useState(0)
+
+  useEffect(() => {
+    let cancelled = false
+    const controller = new AbortController()
+
+    const load = async () => {
+      try {
+        const res = await fetch(`/api/badia-playlist?_=${Date.now()}`, {
+          signal: controller.signal,
+          headers: { Accept: 'application/json', 'Cache-Control': 'no-cache' },
+        })
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const payload = (await res.json()) as CamelsPlaylistPayload
+        if (!cancelled) {
+          setData(payload)
+          setVideos(payload.videos || [])
+        }
+      } catch {
+        // Keep empty
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    load()
+    const interval = window.setInterval(load, 15 * 60 * 1000)
+    const onFocus = () => load()
+    window.addEventListener('focus', onFocus)
+    const onOnline = () => load()
+    window.addEventListener('online', onOnline)
+
+    return () => {
+      cancelled = true
+      controller.abort()
+      window.clearInterval(interval)
+      window.removeEventListener('focus', onFocus)
+      window.removeEventListener('online', onOnline)
+    }
+  }, [bust])
+
+  const refresh = async () => {
+    setBust((b) => b + 1)
+  }
+
+  return { data, videos, loading, refresh }
+}
+
 // Helpers for compact display
 export function formatCompactNumber(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
