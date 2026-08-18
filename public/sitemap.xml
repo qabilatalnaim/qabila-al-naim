@@ -6,7 +6,7 @@
   <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/"/>
@@ -26,7 +26,7 @@
   <!-- النسب والتاريخ (الأهم - أولوية 0.9) -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/history</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/history"/>
@@ -55,7 +55,7 @@
   <!-- بلدة عز الدين -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/town</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/town"/>
@@ -68,7 +68,7 @@
   <!-- الإبل -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/camels</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/camels"/>
@@ -77,7 +77,7 @@
   <!-- الخيل -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/horses</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/horses"/>
@@ -86,7 +86,7 @@
   <!-- الغنم -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/sheep</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/sheep"/>
@@ -95,7 +95,7 @@
   <!-- الوسم -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/wasm</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/wasm"/>
@@ -104,7 +104,7 @@
   <!-- الشعر النبطي -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/poetry</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/poetry"/>
@@ -113,7 +113,7 @@
   <!-- القهوة العربية -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/coffee</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/coffee"/>
@@ -122,16 +122,29 @@
   <!-- بيت الشعر -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/tent</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/tent"/>
   </url>
 
+  <!-- البادية السورية (الحماد) -->
+  <url>
+    <loc>https://qabilat-al-naim.vercel.app/badia</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/badia"/>
+    <image:image>
+      <image:loc>https://qabilat-al-naim.vercel.app/images/syrian-badia-2026.webp</image:loc>
+      <image:title>البادية السورية (الحماد) - مهد قبيلة النعيم</image:title>
+    </image:image>
+  </url>
+
   <!-- العادات والتقاليد -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/traditions</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/traditions"/>
@@ -140,7 +153,7 @@
   <!-- مدونة -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/blog"/>
@@ -149,37 +162,37 @@
   <!-- مقالات المدونة -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog/tribe-history-overview</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog/camels-heritage</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog/horses-knightly</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog/town-izz-din</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog/wasm-515</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://qabilat-al-naim.vercel.app/blog/poetry-fakhr</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -187,7 +200,7 @@
   <!-- بحث -->
   <url>
     <loc>https://qabilat-al-naim.vercel.app/search</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-al-naim.vercel.app/search"/>

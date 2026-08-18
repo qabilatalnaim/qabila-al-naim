@@ -15,16 +15,23 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" />
 
-  <!-- Preload critical mobile hero image -->
-  <link rel="preload" as="image" href="/images/hero-banner-2026-mobile.webp" type="image/webp" media="(max-width: 768px)" />
+  <!-- Preload critical mobile hero image (LCP optimization) -->
+  <link rel="preload" as="image" href="/images/hero-banner-2026-mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
 
   <!-- Preload critical images -->
-  <link rel="preload" as="image" href="/images/logo.webp" type="image/webp" />
-  <link rel="preload" as="image" href="/images/hero-banner-2026.webp" type="image/webp" />
+  <link rel="preload" as="image" href="/images/logo.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/hero-banner-2026.webp" type="image/webp" fetchpriority="high" />
 
-  <!-- Preload camels panorama (responsive) -->
-  <link rel="preload" as="image" href="/images/camels-panorama-2026-1200w.webp" type="image/webp" media="(max-width: 768px)" />
-  <link rel="preload" as="image" href="/images/camels-panorama-2026-2000w.webp" type="image/webp" media="(min-width: 769px)" />
+  <!-- Preload camels panorama (responsive, LCP candidate) -->
+  <link rel="preload" as="image" href="/images/camels-panorama-2026-1200w.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/camels-panorama-2026-2000w.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high" />
+
+  <!-- Preconnect to YouTube (for playlist embeds) -->
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+
+  <!-- DNS prefetch for performance -->
+  <link rel="dns-prefetch" href="https://inv.nadeko.net" />
 
   <!-- SEO Meta Tags -->
   <title>قبيلة النعيم أهل الصفرا ٥١٥ | تراث عربي أصيل من حمص</title>

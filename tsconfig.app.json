@@ -24,17 +24,23 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    /* Linting */
-    "strict": false,
-    "noImplicitAny": false,
+    /* Linting - Enhanced for better code quality (target 10/10) */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedSideEffectImports": false
+    "noUncheckedSideEffectImports": true
   },
   "include": [
     "src"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import FAQSchema from '../components/FAQSchema';
 import { seoConfig } from '../lib/seo-config';
 import { useBadiaPlaylist } from '../lib/useSocialStats';
 
@@ -8,6 +9,26 @@ export default function BadiaPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // FAQ Schema for rich snippets
+  const badiaFaqs = [
+    {
+      question: 'أين تقع البادية السورية (الحماد)؟',
+      answer: 'الحماد السوري هو هضبة صحراوية شاسعة تقع في جنوب شرق سوريا، تمتد عبر محافظات حمص ودير الزور والرقة وحماة، وتُعدّ الموطن التاريخي لقبيلة النعيم أهل الصفرا ٥١٥.',
+    },
+    {
+      question: 'ما هو الفرق بين الحماد والصحراء؟',
+      answer: 'الحماد هو هضبة بازلتية من الحجر الأسود، بينما الصحراء رملية. الحماد السوري يختلف عن النفود والربع الخالي بإنه صخري أكثر منه رملي.',
+    },
+    {
+      question: 'هل البادية السورية مهد قبيلة النعيم؟',
+      answer: 'نعم، البادية السورية (الحماد) هي الموطن التاريخي لقبيلة النعيم أهل الصفرا ٥١٥، حيث استقرّت على هذه الأرض منذ قرون طويلة، وعاشت على تربية الإبل والخيل.',
+    },
+    {
+      question: 'ما هي أبرز معالم البادية السورية؟',
+      answer: 'تشمل: قصر الحير الغربي، آثار تدمر، الهضاب البازلتية السوداء، وآبار المياه الجوفية. كما تضم تنوعاً بيئياً من نباتات الرِّمث والقيصوم.',
+    },
+  ];
 
   // قائمة تشغيل "البادية السورية" - ديناميكية من YouTube
   const { videos: playlistVideos, data: playlistData, loading: videosLoading, refresh: refreshPlaylist } = useBadiaPlaylist();
@@ -22,6 +43,7 @@ export default function BadiaPage() {
   return (
     <div className="min-h-screen bg-[#0a1628] text-white" dir="rtl">
       <SEO {...seoConfig.badia} />
+      <FAQSchema faqs={badiaFaqs} pageUrl="https://qabilat-al-naim.vercel.app/badia" />
       <h1 className="sr-only">البادية السورية (الحماد) - مهد قبيلة النعيم أهل الصفرا ٥١٥</h1>
 
       {/* Header */}

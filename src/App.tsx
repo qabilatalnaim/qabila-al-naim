@@ -361,18 +361,12 @@ function App() {
 
   return (
     <>
+    <main id="main-content" tabIndex={-1}>
     <Routes>
       <Route path="/" element={
         <>
           <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-al-naim.vercel.app/" />
           <SEO {...seoConfig.home} />
-          {/* Skip-to-content link for keyboard users */}
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-[#D4AF37] focus:text-[#0a1628] focus:font-bold focus:rounded-full focus:shadow-[0_0_30px_rgba(212,175,55,0.6)] focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            تخطّي إلى المحتوى الرئيسي
-          </a>
           <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}
           <nav
@@ -618,7 +612,7 @@ function App() {
           </section>
 
           {/* نبذة عن القبيلة Section */}
-          <section id="main-content" className="py-24 bg-gradient-to-b from-[#162544] to-[#0a1628]" tabIndex={-1}>
+          <section className="py-24 bg-gradient-to-b from-[#162544] to-[#0a1628]">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
@@ -1235,6 +1229,7 @@ function App() {
       <Route path="/blog/:id" element={<Suspense fallback={<PageLoader />}><BlogPostPage /></Suspense>} />
       <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFoundPage /></Suspense>} />
     </Routes>
+    </main>
     <PWAInstallPrompt />
     <ThemeToggle />
     </>
