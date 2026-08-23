@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import { ErrorBoundary } from './components/ErrorBoundary.tsx'
@@ -8,10 +8,14 @@ import { reportWebVitals } from './lib/webVitals'
 import './index.css'
 import App from './App.tsx'
 
+// HashRouter for static hosting (GitHub Pages, etc.) - works without server config
+// URLs: /#/badia instead of /badia
+console.log('🌐 Using HashRouter for SPA routing (GitHub Pages compatible)')
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ErrorBoundary>
-      <BrowserRouter>
+      <HashRouter>
         {/* Skip-to-content link for keyboard users (A11y WCAG 2.4.1) */}
         <a
           href="#main-content"
@@ -22,7 +26,7 @@ createRoot(document.getElementById('root')!).render(
         <App />
         <Analytics />
         <SpeedInsights />
-      </BrowserRouter>
+      </HashRouter>
     </ErrorBoundary>
   </StrictMode>,
 )
