@@ -1,5 +1,4 @@
-
-# Updated: 2026-06-19 - Force Vercel rebuild
-User-agent: *
+﻿User-agent: *
 Allow: /
-Sitemap: https://qabilat-al-naim.vercel.app/sitemap.xml
+
+Sitemap: https://qabilat-alnaim.qabilat-alnaim.workers.dev/sitemap.xml
