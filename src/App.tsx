@@ -238,15 +238,15 @@ function App() {
   useWebVitals()
 
   // Derived values for the Hero stats cards
-  // YouTube Live (2026-08-09): 649 subs | 212 videos | 227,695 views
+  // YouTube Live (2026-08-24): 666 subs | 218 videos | 234,560 views
   // Facebook: 103K+ followers
   // Country: 🇸🇦 Saudi Arabia | Joined: 2025-10-11
-  // Last updated: 9 أغسطس 2026
-  const youtubeSubs = 649
-  const youtubeViews = 227695
-  const youtubeVideos = 212
+  // Last updated: 24 أغسطس 2026
+  const youtubeSubs = 666
+  const youtubeViews = 234560
+  const youtubeVideos = 218
   const facebookFollowers = 103000
-  const statsUpdatedAt = '9 أغسطس 2026'
+  const statsUpdatedAt = '24 أغسطس 2026'
 
   // Display: compact numbers (211K+ views, 103K facebook followers)
   const stats = [
