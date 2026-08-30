@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>قبيلة السادة النعيم - مدونة التراث</title>
-    <link>https://qabilat-al-naim.vercel.app</link>
+    <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev</link>
     <description>مقالات وأخبار عن تاريخ وتراث قبيلة السادة النعيم. السادة الرفاعية الموسوية الحسينية - أهل الصفرا.</description>
     <language>ar</language>
     <copyright>© 2026 قبيلة السادة النعيم</copyright>
@@ -11,19 +11,19 @@
     <lastBuildDate>Mon, 16 Jun 2026 09:00:00 GMT</lastBuildDate>
     <pubDate>Mon, 16 Jun 2026 09:00:00 GMT</pubDate>
     <ttl>60</ttl>
-    <atom:link href="https://qabilat-al-naim.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/rss.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>https://qabilat-al-naim.vercel.app/images/logo.webp</url>
+      <url>https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/logo.webp</url>
       <title>قبيلة السادة النعيم</title>
-      <link>https://qabilat-al-naim.vercel.app</link>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev</link>
       <width>200</width>
       <height>200</height>
     </image>
 
     <item>
       <title>قبيلة السادة النعيم: إرث عريق في بلاد الشام</title>
-      <link>https://qabilat-al-naim.vercel.app/blog/tribe-history-overview</link>
-      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/tribe-history-overview</guid>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/tribe-history-overview</link>
+      <guid isPermaLink="true">https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/tribe-history-overview</guid>
       <pubDate>Mon, 15 Jun 2026 10:00:00 GMT</pubDate>
       <dc:creator>قبيلة السادة النعيم</dc:creator>
       <category>تاريخ</category>
@@ -32,8 +32,8 @@
 
     <item>
       <title>الإبل في حياة قبيلة النعيم: تراث يتجدد</title>
-      <link>https://qabilat-al-naim.vercel.app/blog/camels-heritage</link>
-      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/camels-heritage</guid>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/camels-heritage</link>
+      <guid isPermaLink="true">https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/camels-heritage</guid>
       <pubDate>Wed, 10 Jun 2026 10:00:00 GMT</pubDate>
       <dc:creator>قبيلة السادة النعيم</dc:creator>
       <category>تراث</category>
@@ -42,8 +42,8 @@
 
     <item>
       <title>الفروسية العربية عند النعيم: إرث يحيا</title>
-      <link>https://qabilat-al-naim.vercel.app/blog/horses-knightly</link>
-      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/horses-knightly</guid>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/horses-knightly</link>
+      <guid isPermaLink="true">https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/horses-knightly</guid>
       <pubDate>Fri, 05 Jun 2026 10:00:00 GMT</pubDate>
       <dc:creator>قبيلة السادة النعيم</dc:creator>
       <category>تراث</category>
@@ -52,8 +52,8 @@
 
     <item>
       <title>بلدة عز الدين: موطن الكرم والجذور</title>
-      <link>https://qabilat-al-naim.vercel.app/blog/town-izz-din</link>
-      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/town-izz-din</guid>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/town-izz-din</link>
+      <guid isPermaLink="true">https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/town-izz-din</guid>
       <pubDate>Thu, 28 May 2026 10:00:00 GMT</pubDate>
       <dc:creator>قبيلة السادة النعيم</dc:creator>
       <category>تاريخ</category>
@@ -62,8 +62,8 @@
 
     <item>
       <title>الوسم (رمز ٥١٥): هوية لا تُنسى</title>
-      <link>https://qabilat-al-naim.vercel.app/blog/wasm-515</link>
-      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/wasm-515</guid>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/wasm-515</link>
+      <guid isPermaLink="true">https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/wasm-515</guid>
       <pubDate>Wed, 20 May 2026 10:00:00 GMT</pubDate>
       <dc:creator>قبيلة السادة النعيم</dc:creator>
       <category>تراث</category>
@@ -72,8 +72,8 @@
 
     <item>
       <title>الشعر النبطي: لسان القبيلة وذاكرة المجد</title>
-      <link>https://qabilat-al-naim.vercel.app/blog/poetry-fakhr</link>
-      <guid isPermaLink="true">https://qabilat-al-naim.vercel.app/blog/poetry-fakhr</guid>
+      <link>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/poetry-fakhr</link>
+      <guid isPermaLink="true">https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/poetry-fakhr</guid>
       <pubDate>Fri, 15 May 2026 10:00:00 GMT</pubDate>
       <dc:creator>قبيلة السادة النعيم</dc:creator>
       <category>أدب</category>

@@ -3,24 +3,24 @@ import type { SEOProps } from '../components/SEO'
 const BASE_KEYWORDS = 'قبيلة النعيم أهل الصفرا ٥١٥, النعيم ٥١٥, السادة النعيم, أهل الصفرا, ٥١٥, تراث عربي, قبائل الشام, حمص, الصفرا, عز الدين أبو حمرة, بلدة عز الدين, بلدة النعيم, أحمد بن نعيم'
 
 // Default OG image
-const DEFAULT_OG = 'https://qabilat-al-naim.vercel.app/images/logo.webp'
+const DEFAULT_OG = 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/logo.webp'
 
 // Page-specific OG images (using existing WebP images)
 const OG_IMAGES = {
-  home: 'https://qabilat-al-naim.vercel.app/images/hero-banner-2026.webp',
-  history: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
-  town: 'https://qabilat-al-naim.vercel.app/images/town-overview-v2.webp',
-  camels: 'https://qabilat-al-naim.vercel.app/images/abnaa-izz-din-abu-himara.webp',
-  horses: 'https://qabilat-al-naim.vercel.app/images/nasb-kull-ibn.webp',
-  sheep: 'https://qabilat-al-naim.vercel.app/images/silsilat-al-nasb.webp',
-  wasm: 'https://qabilat-al-naim.vercel.app/images/tribe-flag.webp',
-  poetry: 'https://qabilat-al-naim.vercel.app/images/tribe-logo-calligraphy.webp',
-  coffee: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
-  traditions: 'https://qabilat-al-naim.vercel.app/images/tribe-flag.webp',
-  tent: 'https://qabilat-al-naim.vercel.app/images/mawlid-wa-nashaa.webp',
-  badia: 'https://qabilat-al-naim.vercel.app/images/syrian-badia-2026.webp',
-  blog: 'https://qabilat-al-naim.vercel.app/images/banner.webp',
-  search: 'https://qabilat-al-naim.vercel.app/images/logo.webp',
+  home: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/hero-banner-2026.webp',
+  history: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/silsilat-al-nasb.webp',
+  town: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/town-overview-v2.webp',
+  camels: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/abnaa-izz-din-abu-himara.webp',
+  horses: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/nasb-kull-ibn.webp',
+  sheep: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/silsilat-al-nasb.webp',
+  wasm: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/tribe-flag.webp',
+  poetry: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/tribe-logo-calligraphy.webp',
+  coffee: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/banner.webp',
+  traditions: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/tribe-flag.webp',
+  tent: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/mawlid-wa-nashaa.webp',
+  badia: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/syrian-badia-2026.webp',
+  blog: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/banner.webp',
+  search: 'https://qabilat-alnaim.qabilat-alnaim.workers.dev/images/logo.webp',
 } as const
 
 export const seoConfig: Record<string, SEOProps> = {

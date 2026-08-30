@@ -43,7 +43,7 @@ export default function BadiaPage() {
   return (
     <div className="min-h-screen bg-[#0a1628] text-white" dir="rtl">
       <SEO {...seoConfig.badia} />
-      <FAQSchema faqs={badiaFaqs} pageUrl="https://qabilat-al-naim.vercel.app/badia" />
+      <FAQSchema faqs={badiaFaqs} pageUrl="https://qabilat-alnaim.qabilat-alnaim.workers.dev/badia" />
       <h1 className="sr-only">البادية السورية (الحماد) - مهد قبيلة النعيم أهل الصفرا ٥١٥</h1>
 
       {/* Header */}

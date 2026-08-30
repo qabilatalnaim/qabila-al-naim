@@ -365,7 +365,7 @@ function App() {
     <Routes>
       <Route path="/" element={
         <>
-          <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-al-naim.vercel.app/" />
+          <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-alnaim.qabilat-alnaim.workers.dev/" />
           <SEO {...seoConfig.home} />
           <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}

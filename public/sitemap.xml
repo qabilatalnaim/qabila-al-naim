@@ -3,7 +3,6 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/</loc>
     <lastmod>2026-08-17</lastmod>
@@ -23,7 +22,6 @@
     </image:image>
   </url>
 
-  <!-- النسب والتاريخ (الأهم - أولوية 0.9) -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/history</loc>
     <lastmod>2026-08-17</lastmod>
@@ -52,7 +50,6 @@
     </image:image>
   </url>
 
-  <!-- بلدة عز الدين -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/town</loc>
     <lastmod>2026-08-17</lastmod>
@@ -65,7 +62,6 @@
     </image:image>
   </url>
 
-  <!-- الإبل -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/camels</loc>
     <lastmod>2026-08-17</lastmod>
@@ -74,7 +70,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/camels"/>
   </url>
 
-  <!-- الخيل -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/horses</loc>
     <lastmod>2026-08-17</lastmod>
@@ -83,7 +78,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/horses"/>
   </url>
 
-  <!-- الغنم -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/sheep</loc>
     <lastmod>2026-08-17</lastmod>
@@ -92,7 +86,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/sheep"/>
   </url>
 
-  <!-- الوسم -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/wasm</loc>
     <lastmod>2026-08-17</lastmod>
@@ -101,7 +94,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/wasm"/>
   </url>
 
-  <!-- الشعر النبطي -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/poetry</loc>
     <lastmod>2026-08-17</lastmod>
@@ -110,7 +102,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/poetry"/>
   </url>
 
-  <!-- القهوة العربية -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/coffee</loc>
     <lastmod>2026-08-17</lastmod>
@@ -119,7 +110,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/coffee"/>
   </url>
 
-  <!-- بيت الشعر -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/tent</loc>
     <lastmod>2026-08-17</lastmod>
@@ -128,7 +118,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/tent"/>
   </url>
 
-  <!-- البادية السورية (الحماد) -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/badia</loc>
     <lastmod>2026-08-17</lastmod>
@@ -141,7 +130,6 @@
     </image:image>
   </url>
 
-  <!-- العادات والتقاليد -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/traditions</loc>
     <lastmod>2026-08-17</lastmod>
@@ -150,7 +138,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/traditions"/>
   </url>
 
-  <!-- مدونة -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog</loc>
     <lastmod>2026-08-17</lastmod>
@@ -159,7 +146,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog"/>
   </url>
 
-  <!-- مقالات المدونة -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/blog/tribe-history-overview</loc>
     <lastmod>2026-08-17</lastmod>
@@ -197,7 +183,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- بحث -->
   <url>
     <loc>https://qabilat-alnaim.qabilat-alnaim.workers.dev/search</loc>
     <lastmod>2026-08-17</lastmod>
