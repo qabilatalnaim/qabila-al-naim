@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Pages (Backup)
+name: Deploy to Cloudflare Worker (Backup)
 
 on:
   push:
@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Deploy to Cloudflare Pages
+    name: Deploy to Cloudflare Worker
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -39,7 +39,7 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: 🚀 Deploy to Cloudflare Pages
+      - name: 🚀 Deploy to Cloudflare Worker
         uses: cloudflare/wrangler-action@v3
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -47,5 +47,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./dist --project-name=qabila-al-naim
+          command: deploy
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
