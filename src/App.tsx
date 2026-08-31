@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef, lazy, Suspense } from 'react'
+import { useState, useEffect, useRef, lazy, Suspense } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import SEO from './components/SEO'
 import { seoConfig } from './lib/seo-config'
@@ -365,7 +365,7 @@ function App() {
     <Routes>
       <Route path="/" element={
         <>
-          <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-alnaim.vercel.app/" />
+          <FAQSchema faqs={homeFAQs} pageUrl="https://qabilat-al-naim.vercel.app/" />
           <SEO {...seoConfig.home} />
           <div className="min-h-screen bg-[#0a1628]">
           {/* Navigation */}

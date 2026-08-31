@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://qabilat-alnaim.vercel.app/sitemap.xml
+Sitemap: https://qabilat-al-naim.vercel.app/sitemap.xml
