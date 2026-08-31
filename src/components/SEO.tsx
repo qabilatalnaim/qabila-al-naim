@@ -16,7 +16,7 @@ export interface SEOProps {
 
 const SITE_NAME = 'قبيلة النعيم أهل الصفرا ٥١٥ - أهل الصفرا'
 const SITE_URL = 'https://qabilat-alnaim.qabilat-alnaim.workers.dev'
-const DEFAULT_IMAGE = `${SITE_URL}/images/logo.png`
+const DEFAULT_IMAGE = `${SITE_URL}/images/logo.webp`
 const DEFAULT_AUTHOR = 'قبيلة النعيم أهل الصفرا ٥١٥'
 
 export default function SEO({
