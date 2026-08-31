@@ -14,7 +14,7 @@ export interface SEOProps {
   noindex?: boolean
 }
 
-const SITE_NAME = 'قبيلة النعيم أهل الصفرا ٥١٥ - أهل الصفرا'
+const SITE_NAME = 'قبيلة النعيم أهل الصفرا ٥١٥'
 const SITE_URL = 'https://qabilat-al-naim.vercel.app'
 const DEFAULT_IMAGE = `${SITE_URL}/images/logo.webp`
 const DEFAULT_AUTHOR = 'قبيلة النعيم أهل الصفرا ٥١٥'
