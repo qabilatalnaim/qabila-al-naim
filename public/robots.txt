@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://qabilat-alnaim.qabilat-alnaim.workers.dev/sitemap.xml
+Sitemap: https://qabilat-alnaim.vercel.app/sitemap.xml

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import FAQSchema from '../components/FAQSchema';
@@ -43,7 +43,7 @@ export default function BadiaPage() {
   return (
     <div className="min-h-screen bg-[#0a1628] text-white" dir="rtl">
       <SEO {...seoConfig.badia} />
-      <FAQSchema faqs={badiaFaqs} pageUrl="https://qabilat-alnaim.qabilat-alnaim.workers.dev/badia" />
+      <FAQSchema faqs={badiaFaqs} pageUrl="https://qabilat-alnaim.vercel.app/badia" />
       <h1 className="sr-only">البادية السورية (الحماد) - مهد قبيلة النعيم أهل الصفرا ٥١٥</h1>
 
       {/* Header */}
