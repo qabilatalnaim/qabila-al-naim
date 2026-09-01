@@ -110,6 +110,10 @@ export default function BlogPage() {
 
 function BlogPostCard({ post, formatDate }: { post: BlogPost; formatDate: (d: string) => string }) {
   return (
+    <Link
+      to={`/blog/${post.id}`}
+      className="block group"
+    >
     <article className="group bg-gradient-to-br from-[#0a1628] to-[#162544] rounded-2xl overflow-hidden border border-white/10 hover:border-[#D4AF37]/50 transition-all hover:transform hover:scale-[1.02]">
       {/* Image */}
       {post.image && (
@@ -156,5 +160,6 @@ function BlogPostCard({ post, formatDate }: { post: BlogPost; formatDate: (d: st
         </div>
       </div>
     </article>
+    </Link>
   )
 }
